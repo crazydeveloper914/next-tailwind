@@ -1,27 +1,47 @@
 {
-  "name": "heboconsult",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.1"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.1"
-  }
+	"name": "heboconsult",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.7.14",
+		"cookie": "^0.6.0",
+		"dateformat": "^5.0.3",
+		"dompurify": "^3.0.3",
+		"eslint-config-next": "^14.0.2",
+		"formik": "^2.2.9",
+		"graphql": "^16.6.0",
+		"isomorphic-dompurify": "^1.6.0",
+		"lodash": "^4.17.21",
+		"next": "^14.0.2",
+		"nodemailer": "^6.9.1",
+		"posthog-js": "^1.56.0",
+		"react": "^18",
+		"react-dom": "^18",
+		"react-google-recaptcha": "^3.1.0",
+		"sass": "^1.59.3"
+	},
+	"devDependencies": {
+		"@types/cookie": "^0.5.2",
+		"@types/dateformat": "^5.0.0",
+		"@types/lodash": "^4.14.198",
+		"@types/node": "^20",
+		"@types/nodemailer": "^6.4.7",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@types/react-google-recaptcha": "^2.1.5",
+		"@types/validator": "^13.11.1",
+		"autoprefixer": "^10.0.1",
+		"eslint": "^8",
+		"framer-motion": "^10.12.9",
+		"postcss": "^8",
+		"sitemap": "^7.1.1",
+		"tailwindcss": "^3.3.0",
+		"typescript": "^5"
+	}
 }

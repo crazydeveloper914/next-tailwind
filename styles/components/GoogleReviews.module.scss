@@ -1,0 +1,14 @@
+// Imports
+@import "../fonts";
+@import "../colors";
+
+.googleReviews {
+	svg:hover {
+		fill: none;
+
+		g,
+		path {
+			fill: none;
+		}
+	}
+}

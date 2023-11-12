@@ -1,0 +1,17 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.navbar {
+	ul {
+		font-family: $body;
+	}
+
+	.aboutUsSublinks,
+	.businessServicesSublinks {
+		li:nth-last-child(0) {
+			display: none;
+			@apply border-none;
+		}
+	}
+}

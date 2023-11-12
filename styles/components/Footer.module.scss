@@ -1,0 +1,26 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.footer {
+	h3 {
+		font-family: $body;
+	}
+	h3 {
+		font-family: $main;
+	}
+
+	.socialLinks {
+		svg:hover {
+			fill: $yellow;
+
+			g,
+			path {
+				fill: $yellow;
+			}
+			line {
+				fill: $yellow;
+			}
+		}
+	}
+}

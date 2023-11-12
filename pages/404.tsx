@@ -1,18 +1,17 @@
 // Imports
-import {IPageContext} from "@/types/context";
+import {postType, errorPage, flexibleContentType} from "@/context/pages";
 import {GetStaticProps, NextPage} from "next";
-import {homePage, postType, flexibleContentType} from "@/context/pages";
+import {IPageContext} from "@/types/context";
 
 // Queries Functions
-import {getAllSeoContent} from "@/functions/graphql/Queries/GetAllSeoContent";
 import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAllFlexibleContentComponents";
+import {getAllSeoContent} from "@/functions/graphql/Queries/GetAllSeoContent";
 
 // Components
-import Layout from "@/components/Layout/Layout";
 import PageContextProvider from "@/components/Context/PageContextProvider";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
-const HomePage: NextPage<IPageContext> = ({
+const noPageExits: NextPage<IPageContext> = ({
 	seo,
 	content,
 	postTypeFlexibleContent,
@@ -24,9 +23,7 @@ const HomePage: NextPage<IPageContext> = ({
 				content={content}
 				postTypeFlexibleContent={postTypeFlexibleContent}
 			>
-				<Layout>
-					<RenderFlexibleContent />
-				</Layout>
+				<RenderFlexibleContent />
 			</PageContextProvider>
 		</>
 	);
@@ -34,10 +31,10 @@ const HomePage: NextPage<IPageContext> = ({
 
 export const getStaticProps: GetStaticProps = async () => {
 	// Fetch priority content
-	const seoContent: any = await getAllSeoContent(homePage, postType?.pages);
+	const seoContent: any = await getAllSeoContent(errorPage, postType?.pages);
 
 	const flexibleContentComponents: any = await getAllFlexibleContentComponents(
-		homePage,
+		errorPage,
 		postType?.pages,
 		flexibleContentType?.pages
 	);
@@ -52,4 +49,4 @@ export const getStaticProps: GetStaticProps = async () => {
 	};
 };
 
-export default HomePage;
+export default noPageExits;
