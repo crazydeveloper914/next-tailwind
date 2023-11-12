@@ -51,7 +51,7 @@ const RequestQuoteFormBlocks: FC<IRequestQuoteFormBlocks> = ({
 				style={{
 					backgroundImage: `linear-gradient(
 							0deg,
-							rgba(0, 0, 0, 0.50),
+							rgba(0, 0, 0, 0.5),
 							rgba(0, 0, 0, 0.85),
 							rgba(0, 0, 0, 0.95)
 					 ),url("${backgroundImage}")`,

@@ -1,5 +1,5 @@
 // Imports
-import {FC} from "react";
+import {FC, Fragment} from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {IOurPartners} from "@/types/components/index";
@@ -55,8 +55,8 @@ const OurPartners: FC<IOurPartners> = ({
 						>
 							{imageGrid?.length > 0 ? (
 								imageGrid.map((item: any, keys: any) => (
-									<>
-										<div className="" key={keys}>
+									<Fragment key={keys}>
+										<div>
 											<Image
 												alt={item?.image?.altText}
 												src={item?.image?.sourceUrl}
@@ -64,12 +64,12 @@ const OurPartners: FC<IOurPartners> = ({
 												height={item?.image?.mediaDetails?.height}
 												className={
 													item?.image?.sourceUrl
-														? `block w-[150px] h-full sm:w-[150px] lg:w-full lg:h-[125px] object-contain object-center`
+														? `block w-[150px] mx-auto h-full sm:w-[150px] lg:w-full lg:h-[125px] object-contain object-center`
 														: `hidden`
 												}
 											/>
 										</div>
-									</>
+									</Fragment>
 								))
 							) : (
 								<></>
