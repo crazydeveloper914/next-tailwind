@@ -10,7 +10,7 @@ import Paragraph from "./Elements/Paragraph";
 import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 import OperationalInsightsCard from "./Cards/OperationalInsightsCard";
 
-const OperationalInsights: FC<IOperationalInsights> = ({
+const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 	title,
 	italic,
 	paragraph,
@@ -59,38 +59,29 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="grid gap-4 mb-32 -m-4 sm:gap-y-2 sm:gap-x-0 lg:gap-4 grid-col md:grid-cols-2 lg:grid-cols-3"
+					className="grid gap-4 -m-4 sm:gap-y-2 sm:gap-x-0 lg:gap-4 grid-col md:grid-cols-2 lg:grid-cols-3"
 				>
-					{globalContext?.operationalInsights?.length > 0 ? (
-						globalContext?.operationalInsights?.map((item: any, keys: any) => (
-							<Fragment key={keys}>
-								<OperationalInsightsCard
-									key={keys}
-									uri={item?.node?.uri}
-									title={item?.node?.title}
-									paragraph={item?.node?.excerpt}
-									featuredImage={item?.node?.featuredImage}
-								/>
-							</Fragment>
-						))
+					{globalContext?.operationalInsightsThreeCards?.length > 0 ? (
+						globalContext?.operationalInsightsThreeCards?.map(
+							(item: any, keys: any) => (
+								<Fragment key={keys}>
+									<OperationalInsightsCard
+										key={keys}
+										uri={item?.node?.uri}
+										title={item?.node?.title}
+										paragraph={item?.node?.excerpt}
+										featuredImage={item?.node?.featuredImage}
+									/>
+								</Fragment>
+							)
+						)
 					) : (
 						<></>
 					)}
-				</motion.div>
-				<motion.div
-					initial={initial}
-					whileInView={fadeInUp}
-					viewport={{once: true}}
-					className="text-center"
-				>
-					<ButtonBorderSliced
-						title="Load more articles"
-						tailwindColor="red-default"
-					/>
 				</motion.div>
 			</div>
 		</div>
 	);
 };
 
-export default OperationalInsights;
+export default OperationalInsightsThreeCards;

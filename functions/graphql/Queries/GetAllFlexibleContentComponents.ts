@@ -389,6 +389,12 @@ export async function getAllFlexibleContentComponents(
 												italic
 												paragraph
 											}
+											... on ${postTypeFlexibleContent}_OperationalInsightsThreeCards {
+												fieldGroupName
+												title
+												italic
+												paragraph
+											}
 											... on ${postTypeFlexibleContent}_Cta {
 												fieldGroupName
 												title

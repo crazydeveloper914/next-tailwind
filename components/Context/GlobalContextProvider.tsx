@@ -16,6 +16,8 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 				operationalInsights: globalProps?.operationalInsights,
 				themesOptionsContent: globalProps?.themesOptionsContent,
 				businessServicesSublinks: globalProps?.businessServicesSublinks,
+				operationalInsightsThreeCards:
+					globalProps?.operationalInsightsThreeCards,
 			}}
 		>
 			{children}

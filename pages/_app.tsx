@@ -21,7 +21,10 @@ import {
 	getBusinessServicesSublinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
 import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
-import {getAllOperationalInsightsContent} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
+import {
+	getAllOperationalInsightsContent,
+	getThreeOperationalInsightsContent,
+} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
 
 // Components
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
@@ -136,6 +139,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		themesOptionsContent,
 		businessServicesSublinks,
 		operationalInsights,
+		operationalInsightsThreeCards,
 	]: any = await Promise.all([
 		getNavbarMenuLinks(),
 		getAboutUsSublinks(),
@@ -143,6 +147,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getThemesOptionsContent(),
 		getBusinessServicesSublinks(),
 		getAllOperationalInsightsContent(),
+		getThreeOperationalInsightsContent(),
 	]);
 
 	const globalProps: IGlobalProps = {
@@ -152,6 +157,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		operationalInsights: operationalInsights,
 		themesOptionsContent: themesOptionsContent,
 		businessServicesSublinks: businessServicesSublinks,
+		operationalInsightsThreeCards: operationalInsightsThreeCards,
 	};
 
 	return {

@@ -40,7 +40,7 @@ export async function getAllOperationalInsightsContent() {
 	try {
 		const content: DocumentNode = gql`
 			{
-				mainContent: posts(where: {status: PUBLISH}, last: 10) {
+				operationalInsightsContent: posts(where: {status: PUBLISH}, last: 100) {
 					edges {
 						node {
 							id
@@ -68,7 +68,49 @@ export async function getAllOperationalInsightsContent() {
 			query: content,
 		});
 
-		return response?.data?.mainContent?.edges;
+		return response?.data?.operationalInsightsContent?.edges;
+	} catch (error) {
+		console.log(error);
+		throw new Error(
+			"Something went wrong trying to fetch all the operational insight posts"
+		);
+	}
+}
+
+// Latest Three Operational Insights Content
+export async function getThreeOperationalInsightsContent() {
+	try {
+		const content: DocumentNode = gql`
+			{
+				operationalInsightsContent: posts(where: {status: PUBLISH}, first: 3) {
+					edges {
+						node {
+							id
+							uri
+							date
+							excerpt
+							title(format: RENDERED)
+							featuredImage {
+								node {
+									altText
+									sourceUrl
+									mediaDetails {
+										height
+										width
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		`;
+
+		const response: any = await client.query({
+			query: content,
+		});
+
+		return response?.data?.operationalInsightsContent?.edges;
 	} catch (error) {
 		console.log(error);
 		throw new Error(

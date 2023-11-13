@@ -1,6 +1,6 @@
 // Imports
-import {FC, Fragment} from "react";
 import Image from "next/image";
+import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IOurPartners} from "@/types/components/index";
 import {fadeIn, initial, stagger, initialTwo} from "../animations/animations";
@@ -44,7 +44,7 @@ const OurPartners: FC<IOurPartners> = ({
 					<Paragraph
 						content={paragraph}
 						tailwindStyling="lg:max-w-3xl mx-auto
-						mb-10 text-black leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+						mb-10 text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
 					/>
 					<div className="max-w-6xl mx-auto">
 						<motion.div

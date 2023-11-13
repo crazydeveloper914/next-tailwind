@@ -20,6 +20,7 @@ import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import RequestQuoteFormBlocks from "../RequestQuoteFormBlocks";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
 import TitleContentValuesBlocks from "../TitleContentValuesBlocks";
+import OperationalInsightsThreeCards from "../OperationalInsightsThreeCards";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
@@ -146,6 +147,15 @@ const RenderFlexibleContent: FC = () => {
 						  `${FlexibleContent}_OperationalInsightsGrid` ? (
 							<>
 								<OperationalInsights
+									title={item?.title}
+									italic={item?.italic}
+									paragraph={item?.paragraph}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_OperationalInsightsThreeCards` ? (
+							<>
+								<OperationalInsightsThreeCards
 									title={item?.title}
 									italic={item?.italic}
 									paragraph={item?.paragraph}

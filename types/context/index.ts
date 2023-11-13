@@ -131,6 +131,7 @@ export type IGlobalProps = {
 	operationalInsights: IOperationalInsights;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
+	operationalInsightsThreeCards: IOperationalInsights;
 };
 
 export type IGlobalContext = {
@@ -140,6 +141,7 @@ export type IGlobalContext = {
 	operationalInsights: IOperationalInsights;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
+	operationalInsightsThreeCards: IOperationalInsights;
 };
 
 export type IGlobalContextProvider = {

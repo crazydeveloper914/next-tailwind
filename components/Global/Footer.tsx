@@ -30,8 +30,8 @@ const Footer: FC = () => {
 			}}
 		>
 			<div className="container relative z-50 px-4 mx-auto ">
-				<div className=" py-28 flex flex-col items-center justify-between gap-6 px-6 -m-6 md:items-start lg:px-4 md:flex-row">
-					<div className="flex flex-col items-center justify-between w-full py-6 md:py-0 md:items-start md:w-auto">
+				<div className="py-36 md:py-28 flex flex-col items-center justify-between gap-6 px-6 -m-6 md:items-start lg:px-8 lg:flex-row">
+					<div className="flex flex-col items-center justify-between w-full lg:w-[35%] py-6 md:py-0 lg:items-start">
 						<div className="mb-10">
 							<Link href="/">
 								<Image
@@ -226,16 +226,16 @@ const Footer: FC = () => {
 							</motion.div>
 						</motion.div>
 					</div>
-					<div className="flex flex-col items-center justify-center w-full gap-6 lg:gap-16 md:items-start md:flex-row lg:justify-end lg:w-1/2">
-						<div className="flex flex-col px-2 sm:px-6">
-							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left">
+					<div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-8 lg:mt-0 items-center justify-center w-full lg:w-[65%] gap-6 xl:items-start xl:justify-end">
+						<div className="flex flex-col items-center justify-center lg:items-baseline px-0">
+							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase lg:text-left">
 								Company
 							</h4>
 							<motion.ul
 								initial={initial}
 								whileInView={stagger}
 								viewport={{once: true}}
-								className="flex flex-col items-center justify-center gap-2 py-6 md:items-baseline"
+								className="flex flex-col items-center justify-center gap-2 py-6 lg:items-baseline"
 							>
 								{globalContext?.footerMenuLinks?.length > 0 ? (
 									globalContext?.footerMenuLinks?.map(
@@ -249,7 +249,7 @@ const Footer: FC = () => {
 												>
 													<Link
 														href={item?.node?.url}
-														className="text-white text-base text-left hover:text-red-Two"
+														className="text-white text-base text-center lg:text-left hover:text-red-Two"
 													>
 														{item?.node?.label}
 													</Link>
@@ -262,7 +262,42 @@ const Footer: FC = () => {
 								)}
 							</motion.ul>
 						</div>
-						<div className="flex flex-col justify-between">
+						<div className="flex flex-col items-center justify-center lg:items-baseline px-0">
+							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase lg:text-left">
+								Services
+							</h4>
+							<motion.ul
+								initial={initial}
+								whileInView={stagger}
+								viewport={{once: true}}
+								className="flex flex-col items-center justify-center gap-2 py-6 lg:items-baseline"
+							>
+								{globalContext?.businessServicesSublinks?.length > 0 ? (
+									globalContext?.businessServicesSublinks?.map(
+										(item: any, keys: any) => (
+											<Fragment key={keys}>
+												<motion.li
+													className="px-0"
+													initial={initial}
+													whileInView={fadeInUp}
+													viewport={{once: true}}
+												>
+													<Link
+														href={item?.node?.url}
+														className="text-white text-base text-center lg:text-left hover:text-red-Two"
+													>
+														{item?.node?.label}
+													</Link>
+												</motion.li>
+											</Fragment>
+										)
+									)
+								) : (
+									<></>
+								)}
+							</motion.ul>
+						</div>
+						<div className="flex flex-col items-center justify-center lg:justify-between">
 							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left">
 								Other Links
 							</h4>
@@ -274,7 +309,7 @@ const Footer: FC = () => {
 										viewport={{once: true}}
 										className={
 											styles.borderButton +
-											" block group w-[200px] h-full min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
+											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
 										}
 									>
 										<span>
@@ -305,7 +340,7 @@ const Footer: FC = () => {
 										viewport={{once: true}}
 										className={
 											styles.borderButton +
-											" block group w-[200px] h-full min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
+											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
 										}
 									>
 										<span>
@@ -347,7 +382,7 @@ const Footer: FC = () => {
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={stagger}
-						className="flex flex-wrap -m-6 w-auto p-6"
+						className="flex flex-col sm:flex-row -m-6 w-auto p-6"
 					>
 						<motion.div
 							initial={initialTwo}
