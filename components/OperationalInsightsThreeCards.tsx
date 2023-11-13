@@ -29,7 +29,7 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="max-w-3xl mx-auto mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[3rem] text-4xl lg:text-5xl text-black"
+						className="max-w-3xl mx-auto mb-6 text-4xl text-darkBlue sm:text-6xl lg:text-7xl"
 					>
 						<motion.span
 							initial={initial}

@@ -13,7 +13,7 @@ export const getAllOperationalInsightsPostsSlugs = async (): Promise<ISlug> => {
 	try {
 		const content: DocumentNode = gql`
 			{
-				operationalInsightsSlugs: posts(where: {status: PUBLISH}) {
+				operationalInsightsSlugs: posts(where: {status: PUBLISH}, last: 100) {
 					nodes {
 						slug
 						modified

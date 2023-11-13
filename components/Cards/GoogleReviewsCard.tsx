@@ -25,7 +25,7 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 				viewport={{once: true}}
 				className={
 					styles.googleReviews +
-					" flex flex-col justify-start gap-4 p-8 border-2 border-solid rounded-lg shadow-2xl border-yellow-default min-h-[400px] sm:min-h-[300px]"
+					" flex flex-col justify-start gap-4 p-8 border-2 border-solid border-yellow-default min-h-[400px] sm:min-h-[225px]"
 				}
 			>
 				<div className="flex flex-row justify-between item-center">
@@ -37,16 +37,48 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 							src={
 								profilePhoto
 									? `${profilePhoto}`
-									: `/img/Logos/default-avatar-profile.jpg`
+									: `/img/logos/default-avatar-profile.jpg`
 							}
 							className="object-cover object-center mx-auto sm:mx-0 w-16 h-16 transition-all duration-200 ease-in-out rounded-full cursor-pointer ring-[3px] ring-yellow-default"
 						/>
-						<div className="flex flex-col gap-1">
+						<div className="flex flex-col gap-2">
 							<span className="font-semibold tracking-normal text-center text-black lg:text-left text-medium">
 								{name}
 							</span>
-							<span className="text-base font-semibold tracking-normal text-center text-black lg:text-left">
-								{dateFormat(date, "mmmm d, yyyy")}
+							<span className="flex flex-row items-center justify-start gap-1 text-lg font-semibold tracking-normal text-center text-black">
+								{ratingArray?.length > 0 ? (
+									ratingArray?.map((index: any) => (
+										<>
+											<Fragment key={index}>
+												<svg
+													height="200px"
+													width="200px"
+													version="1.1"
+													id="Capa_1"
+													fill="#000000"
+													viewBox="0 0 47.94 47.94"
+													xmlns="http://www.w3.org/2000/svg"
+													className="object-contain object-center w-[15px] h-[15px]"
+												>
+													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+													<g
+														id="SVGRepo_tracerCarrier"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													></g>
+													<g id="SVGRepo_iconCarrier">
+														<path
+															fill="#fac546"
+															d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"
+														></path>
+													</g>
+												</svg>
+											</Fragment>
+										</>
+									))
+								) : (
+									<></>
+								)}
 							</span>
 						</div>
 					</div>
@@ -75,34 +107,7 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 						/>
 					</svg>
 				</div>
-				<div className="flex flex-col gap-4">
-					<span className="flex flex-row items-center justify-center gap-1 text-lg font-semibold tracking-normal text-center text-black">
-						{ratingArray?.length > 0 ? (
-							ratingArray?.map((index: any) => (
-								<>
-									<Fragment key={index}>
-										<svg
-											width="800px"
-											height="800px"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-											className="object-contain object-center w-[30px] h-[30px]"
-										>
-											<path
-												d="M6.03954 7.77203C3.57986 8.32856 2.35002 8.60682 2.05742 9.54773C1.76482 10.4886 2.60325 11.4691 4.2801 13.4299L4.71392 13.9372C5.19043 14.4944 5.42868 14.773 5.53586 15.1177C5.64305 15.4624 5.60703 15.8341 5.53498 16.5776L5.4694 17.2544C5.21588 19.8706 5.08912 21.1787 5.85515 21.7602C6.62118 22.3417 7.77268 21.8115 10.0757 20.7512L10.6715 20.4768C11.3259 20.1755 11.6531 20.0248 12 20.0248C12.3469 20.0248 12.6741 20.1755 13.3285 20.4768L13.9243 20.7512C16.2273 21.8115 17.3788 22.3417 18.1449 21.7602C18.9109 21.1787 18.7841 19.8706 18.5306 17.2544M19.7199 13.4299C21.3968 11.4691 22.2352 10.4886 21.9426 9.54773C21.65 8.60682 20.4201 8.32856 17.9605 7.77203L17.3241 7.62805C16.6251 7.4699 16.2757 7.39083 15.9951 7.17781C15.7144 6.96479 15.5345 6.64193 15.1745 5.99623L14.8468 5.40837C13.5802 3.13612 12.9469 2 12 2C11.0531 2 10.4198 3.13613 9.15316 5.40838"
-												stroke="#f6ad37"
-												stroke-width="1.5"
-												stroke-linecap="round"
-											/>
-										</svg>
-									</Fragment>
-								</>
-							))
-						) : (
-							<></>
-						)}
-					</span>
+				<div className="flex flex-col gap-4 mt-4">
 					<span className="max-w-lg text-base tracking-normal text-center text-black lg:text-left sm:text-paragraph">
 						{textarea}
 					</span>

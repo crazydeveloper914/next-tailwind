@@ -73,7 +73,7 @@ const Navbar: FC = () => {
 						<li className="relative">
 							<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
 								<Link
-									href="/about-us"
+									href="/about"
 									className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
 								>
 									About Us
@@ -119,13 +119,10 @@ const Navbar: FC = () => {
 							) : null}
 						</li>
 						<li className="relative">
-							<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
-								<Link
-									href="/about-us"
-									className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
-								>
-									Our Business Services
-								</Link>
+							<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+								<span className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500">
+									Our Services
+								</span>
 								<Image
 									width={550}
 									height={550}
@@ -134,7 +131,7 @@ const Navbar: FC = () => {
 									src="/img/navigation-menu-dropdown-arrow-white.png"
 									className="w-[25px] h-[25px] object-contain object-center"
 								/>
-							</span>
+							</div>
 							{businessServicesSublinksOpen ? (
 								<>
 									<motion.ul

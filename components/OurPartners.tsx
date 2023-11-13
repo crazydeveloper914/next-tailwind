@@ -43,15 +43,14 @@ const OurPartners: FC<IOurPartners> = ({
 					</motion.h2>
 					<Paragraph
 						content={paragraph}
-						tailwindStyling="lg:max-w-3xl mx-auto
-						mb-10 text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
+						tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
 					/>
 					<div className="max-w-6xl mx-auto">
 						<motion.div
 							initial={initial}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="grid items-center justify-center grid-cols-2 gap-4 lg:grid-cols-6 lg:justify-between"
+							className="grid items-center justify-center grid-cols-2 gap-4 lg:grid-cols-6 lg:justify-between py-12"
 						>
 							{imageGrid?.length > 0 ? (
 								imageGrid.map((item: any, keys: any) => (

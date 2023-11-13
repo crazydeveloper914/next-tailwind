@@ -55,6 +55,8 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 		setActiveSlide(0);
 	}, [width]);
 
+	console.log(reviewsArray);
+
 	return (
 		<>
 			<div className="bg-white">
@@ -74,7 +76,7 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 							{title}
 						</motion.h2>
 						<LazyMotion features={domMax}>
-							<div className="px-4 overflow-hidden lg:px-0">
+							<div className="px-4 overflow-hidden lg:px-6">
 								<div className="py-0 lg:py-10 pl-3/20">
 									<div className="relative">
 										{/* Prev */}

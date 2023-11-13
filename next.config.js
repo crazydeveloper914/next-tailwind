@@ -2,7 +2,12 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ["cmsbravogroup.co.uk", "bravo-group.local", "mydummysite.co.uk"],
+		domains: [
+			"cmsbravogroup.co.uk",
+			"bravo-group.local",
+			"mydummysite.co.uk",
+			"lh3.googleusercontent.com",
+		],
 	},
 };
 
