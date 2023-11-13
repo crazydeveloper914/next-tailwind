@@ -274,7 +274,7 @@ const Footer: FC = () => {
 										viewport={{once: true}}
 										className={
 											styles.borderButton +
-											" block group w-[200px] h-full min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
+											" block group w-[200px] h-full min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
 										}
 									>
 										<span>
@@ -305,7 +305,7 @@ const Footer: FC = () => {
 										viewport={{once: true}}
 										className={
 											styles.borderButton +
-											" block group w-[200px] h-full min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-pureBlack hover:before:bg-green-Two before:bg-white hover:before:bg-green-Two after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
+											" block group w-[200px] h-full min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
 										}
 									>
 										<span>

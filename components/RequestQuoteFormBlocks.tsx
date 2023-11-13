@@ -111,7 +111,7 @@ const RequestQuoteFormBlocks: FC<IRequestQuoteFormBlocks> = ({
 								className={`p-8 flex flex-col group gap-2 items-center justify-between text-center sm:text-left text-lg font-extrabold ${
 									contentTwoOpen
 										? "bg-red-Two"
-										: "bg-pureBlack hover:bg-red-dark"
+										: "bg-pureBlack hover:bg-red-Two"
 								}`}
 							>
 								<span>
