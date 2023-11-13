@@ -396,10 +396,6 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 };
-export type IOurLocation = {
-	title: string;
-	paragraph: string;
-};
 export type IOperationalInsights = {
 	title: string;
 	italic: string;

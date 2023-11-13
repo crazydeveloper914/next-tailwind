@@ -7,7 +7,6 @@ import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 import OperationalInsightsCard from "./Cards/OperationalInsightsCard";
 
 const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
@@ -30,7 +29,7 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="mb-6 text-4xl text-darkBlue sm:text-6xl lg:text-7xl"
+						className="max-w-3xl mx-auto mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[3rem] text-4xl lg:text-5xl text-black"
 					>
 						<motion.span
 							initial={initial}

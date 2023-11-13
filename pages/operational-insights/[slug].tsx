@@ -5,7 +5,7 @@ import {flexibleContentType, postType} from "@/context/pages";
 
 // Queries Functions
 import {getAllSeoContent} from "@/functions/graphql/Queries/GetAllSeoContent";
-import {getAllBlogPostsSlugs} from "@/functions/graphql/Queries/GetAllBlogPostsSlugs";
+import {getAllOperationalInsightsPostsSlugs} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
 import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAllFlexibleContentComponents";
 
 // Components
@@ -32,7 +32,7 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 };
 
 export async function getStaticPaths() {
-	const data = await getAllBlogPostsSlugs();
+	const data = await getAllOperationalInsightsPostsSlugs();
 	const paths = data.map((item: any) => ({
 		params: {
 			slug: item?.slug as String,

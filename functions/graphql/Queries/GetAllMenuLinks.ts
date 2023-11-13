@@ -68,6 +68,7 @@ export async function getBusinessServicesSublinks() {
 			{
 				businessServicesSublinks: menuItems(
 					where: {location: OUR_BUSINESS_SERVICES}
+					first: 10
 				) {
 					edges {
 						node {
@@ -88,7 +89,7 @@ export async function getBusinessServicesSublinks() {
 	} catch (error) {
 		console.log(error);
 		throw new Error(
-			"Something went wrong trying to fetch main menu links content"
+			"Something went wrong trying to fetch business services sublinks content"
 		);
 	}
 }

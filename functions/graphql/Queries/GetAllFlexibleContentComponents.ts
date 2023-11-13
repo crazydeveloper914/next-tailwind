@@ -399,11 +399,6 @@ export async function getAllFlexibleContentComponents(
 												fieldGroupName
 												title
 											}
-											... on ${postTypeFlexibleContent}_OurLocation {
-												fieldGroupName
-												title
-												paragraph
-											}
 											... on ${postTypeFlexibleContent}_Cta {
 												fieldGroupName
 												title

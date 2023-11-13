@@ -393,11 +393,6 @@ export const getAllPreviewFlexibleContentComponents = async (
 								fieldGroupName
 								title
 							}
-							... on ${postTypeFlexibleContent}_OurLocation {
-								fieldGroupName
-								title
-								paragraph
-							}
 							... on ${postTypeFlexibleContent}_Cta {
 								fieldGroupName
 								title

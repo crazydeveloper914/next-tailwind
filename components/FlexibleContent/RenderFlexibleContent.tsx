@@ -8,7 +8,6 @@ import {usePageContext} from "@/context/pages";
 import CTA from "../CTA";
 import Hero from "../Hero";
 import HeroTwo from "../HeroTwo";
-import OurLocation from "../OurLocation";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
 import Maintenance from "../Maintenance";
@@ -166,10 +165,6 @@ const RenderFlexibleContent: FC = () => {
 									italic={item?.italic}
 									paragraph={item?.paragraph}
 								/>
-							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_OurLocation` ? (
-							<>
-								<OurLocation title={item?.title} paragraph={item?.paragraph} />
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Cta` ? (
 							<>

@@ -30,7 +30,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="mb-6 text-4xl text-darkBlue sm:text-6xl lg:text-7xl"
+						className="max-w-3xl mx-auto mb-6 text-4xl text-darkBlue sm:text-6xl lg:text-7xl"
 					>
 						<motion.span
 							initial={initial}
