@@ -20,8 +20,8 @@ import {
 	getAboutUsSublinks,
 	getBusinessServicesSublinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
-import {getAllBlogsContent} from "@/functions/graphql/Queries/GetAllBlogPostsSlugs";
 import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
+import {getAllOperationalInsightsContent} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
 
 // Components
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
@@ -130,26 +130,26 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 	/* Fetch all global content
 	remaining content simultaneously */
 	const [
-		blogs,
 		navbarMenuLinks,
 		aboutUsSublinks,
 		footerMenuLinks,
 		themesOptionsContent,
 		businessServicesSublinks,
+		operationalInsights,
 	]: any = await Promise.all([
-		getAllBlogsContent(),
 		getNavbarMenuLinks(),
 		getAboutUsSublinks(),
 		getFooterMenuLinks(),
 		getThemesOptionsContent(),
 		getBusinessServicesSublinks(),
+		getAllOperationalInsightsContent(),
 	]);
 
 	const globalProps: IGlobalProps = {
-		blogs: blogs,
 		navbarMenuLinks: navbarMenuLinks,
 		aboutUsSublinks: aboutUsSublinks,
 		footerMenuLinks: footerMenuLinks,
+		operationalInsights: operationalInsights,
 		themesOptionsContent: themesOptionsContent,
 		businessServicesSublinks: businessServicesSublinks,
 	};

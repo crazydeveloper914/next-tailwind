@@ -8,12 +8,12 @@ type SlugResponse = {
 
 interface ISlug extends Array<SlugResponse> {}
 
-/* BLOGS POSTS SLUGS (URLS) */
-export const getAllBlogPostsSlugs = async (): Promise<ISlug> => {
+/* OPERATIONAL INSIGHTS SLUGS (URLS) */
+export const getAllOperationalInsightsPostsSlugs = async (): Promise<ISlug> => {
 	try {
 		const content: DocumentNode = gql`
 			{
-				blogsSlugs: posts(where: {status: PUBLISH}) {
+				operationalInsightsSlugs: posts(where: {status: PUBLISH}) {
 					nodes {
 						slug
 						modified
@@ -26,15 +26,17 @@ export const getAllBlogPostsSlugs = async (): Promise<ISlug> => {
 			query: content,
 		});
 
-		return response?.data?.blogsSlugs?.nodes;
+		return response?.data?.operationalInsightsSlugs?.nodes;
 	} catch (error) {
 		console.log(error);
-		throw new Error("Something went wrong trying to get blogs slugs");
+		throw new Error(
+			"Something went wrong trying to fetch the operational insight slugs"
+		);
 	}
 };
 
-// Blog Post Content
-export async function getAllBlogsContent() {
+// All Operational Insights Content
+export async function getAllOperationalInsightsContent() {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -70,7 +72,7 @@ export async function getAllBlogsContent() {
 	} catch (error) {
 		console.log(error);
 		throw new Error(
-			"Something went wrong trying to fetch themes options content"
+			"Something went wrong trying to fetch all the operational insight posts"
 		);
 	}
 }

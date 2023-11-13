@@ -1,13 +1,13 @@
 "use client";
 
 // Imports
-import {useState} from "react";
+import {FC, useState} from "react";
 import postHog from "posthog-js";
 import {motion} from "framer-motion";
 import Paragraph from "../Elements/Paragraph";
 import {fadeInUp, initial, stagger} from "@/animations/animations";
 
-const CookiePolicyCard = () => {
+const CookiePolicyCard: FC = () => {
 	const [showCookiePolicyCard, setShowCookiePolicyCard] = useState(true);
 
 	const acceptCookies = () => {
@@ -33,7 +33,10 @@ const CookiePolicyCard = () => {
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="px-6 pt-4 pb-6 mb-8 text-white bg-green-dark"
+					className="px-6 pt-4 pb-10 mb-8 lg:pb-12  text-white bg-red-dark"
+					style={{
+						clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
+					}}
 				>
 					<motion.h3
 						initial={initial}
@@ -58,7 +61,7 @@ const CookiePolicyCard = () => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="inline-block px-6 py-3 mr-2 text-xs leading-none bg-green-default hover:bg-red-TwoDarker"
+							className="inline-block px-6 py-3 mr-2 text-xs leading-none text-white transition-all duration-200 ease-in-out bg-red-Two hover:bg-red-darker"
 						>
 							Accept Cookies
 						</motion.button>
@@ -67,7 +70,7 @@ const CookiePolicyCard = () => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="inline-block px-6 py-3 text-xs leading-none text-white border border-green-default hover:border-green-Two hover:bg-green-Two"
+							className="inline-block px-6 py-3 text-xs leading-none text-white bg-red-darker hover:bg-red-darkerTwo"
 						>
 							Refuse Cookies
 						</motion.button>

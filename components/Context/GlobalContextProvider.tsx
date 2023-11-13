@@ -10,10 +10,10 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 	return (
 		<GlobalContext.Provider
 			value={{
-				blogs: globalProps?.blogs,
 				navbarMenuLinks: globalProps?.navbarMenuLinks,
 				aboutUsSublinks: globalProps?.aboutUsSublinks,
 				footerMenuLinks: globalProps?.footerMenuLinks,
+				operationalInsights: globalProps?.operationalInsights,
 				themesOptionsContent: globalProps?.themesOptionsContent,
 				businessServicesSublinks: globalProps?.businessServicesSublinks,
 			}}

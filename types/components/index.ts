@@ -396,6 +396,11 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 };
+export type IOperationalInsights = {
+	title: string;
+	italic: string;
+	paragraph: string;
+};
 
 // Global
 export type ILayout = {
@@ -456,7 +461,21 @@ export type IValuesBlocksImageCard = {
 		};
 	};
 };
-
+export type IOperationalInsightsCard = {
+	uri: string;
+	title: string;
+	paragraph: string;
+	featuredImage: {
+		node: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+};
 // Elements
 export type ITitle = {
 	content: string;
@@ -465,4 +484,8 @@ export type ITitle = {
 export type IParagraph = {
 	content: string;
 	tailwindStyling: string;
+};
+export type IButtonBorderSliced = {
+	title: string;
+	tailwindColor: string;
 };

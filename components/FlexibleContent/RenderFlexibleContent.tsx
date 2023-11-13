@@ -7,7 +7,6 @@ import {usePageContext} from "@/context/pages";
 // Components
 import CTA from "../CTA";
 import Hero from "../Hero";
-import Blogs from "../Blogs";
 import HeroTwo from "../HeroTwo";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
@@ -16,6 +15,7 @@ import ErrorPage from "../Global/ErrorPage";
 import TitleParagraph from "../TitleParagraph";
 import FeaturedProjects from "../FeaturedProjects";
 import JumboContentImage from "../JumboContentImage";
+import OperationalInsights from "../OperationalInsights";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import RequestQuoteFormBlocks from "../RequestQuoteFormBlocks";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
@@ -142,9 +142,14 @@ const RenderFlexibleContent: FC = () => {
 									backgroundImage={item?.backgroundImage?.sourceUrl}
 								/>
 							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_BlogsGrid` ? (
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_OperationalInsightsGrid` ? (
 							<>
-								<Blogs />
+								<OperationalInsights
+									title={item?.title}
+									italic={item?.italic}
+									paragraph={item?.paragraph}
+								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Maintenance` ? (
 							<>

@@ -57,7 +57,7 @@ const OurServices: FC<IOurServices> = ({title, paragraph, servicesGrid}) => {
 													backgroundImage: `url("${item?.card?.image?.sourceUrl}")`,
 												}}
 											>
-												<div className="p-6 w-full xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center w-full sm:mih-[22vh] transition-all ease-in-out duration-500 bg-pureBlack">
+												<div className="p-6 xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center w-full sm:mih-[22vh] transition-all ease-in-out duration-500 bg-pureBlack">
 													<Image
 														alt={item?.card?.icon?.altText}
 														src={item?.card?.icon?.sourceUrl}

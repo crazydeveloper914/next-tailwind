@@ -28,7 +28,7 @@ export type ISeo = {
 	};
 };
 
-export type IBlogs = [
+export type IOperationalInsights = [
 	{
 		node: {
 			id: string;
@@ -125,19 +125,19 @@ export type IFlexibleContentType = {
 };
 
 export type IGlobalProps = {
-	blogs: IBlogs;
 	navbarMenuLinks: INavbarMenuLinks;
 	aboutUsSublinks: IAboutUsSublinks;
 	footerMenuLinks: IFooterMenuLinks;
+	operationalInsights: IOperationalInsights;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
 };
 
 export type IGlobalContext = {
-	blogs: IBlogs;
 	navbarMenuLinks: INavbarMenuLinks;
 	aboutUsSublinks: IAboutUsSublinks;
 	footerMenuLinks: IFooterMenuLinks;
+	operationalInsights: IOperationalInsights;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
 };
