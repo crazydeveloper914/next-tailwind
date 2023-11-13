@@ -2,13 +2,13 @@
 import {Readable} from "stream";
 import {SitemapStream, streamToPromise} from "sitemap";
 import {getAllPagesSlugs} from "@/functions/graphql/Queries/GetAllPagesSlugs";
-import {getAllBlogPostsSlugs} from "@/functions/graphql/Queries/GetAllBlogPostsSlugs";
+import {getAllOperationalInsightsPostsSlugs} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: any, res: any) => {
 	const [pagesSlugs, postsSlugs] = await Promise.all([
 		getAllPagesSlugs(),
-		getAllBlogPostsSlugs(),
+		getAllOperationalInsightsPostsSlugs(),
 	]);
 
 	// Pages & Blogs Arrays

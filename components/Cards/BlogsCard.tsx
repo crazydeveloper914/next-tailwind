@@ -51,7 +51,7 @@ const BlogsCard: FC<IBlogsCard> = ({
 					</motion.h2>
 				</Link>
 
-				<span className="mt-2 font-semibold text-goldPrimeDark text-tiny">
+				<span className="mt-2 font-semibold text-yellow-default text-tiny">
 					{dateFormat(date, "dddd, mmmm d, yyyy")}
 				</span>
 

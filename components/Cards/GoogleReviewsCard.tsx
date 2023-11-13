@@ -25,7 +25,7 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 				viewport={{once: true}}
 				className={
 					styles.googleReviews +
-					" flex flex-col justify-start gap-4 p-8 border-2 border-solid rounded-lg shadow-2xl border-goldPrimeDark min-h-[400px] sm:min-h-[300px]"
+					" flex flex-col justify-start gap-4 p-8 border-2 border-solid rounded-lg shadow-2xl border-yellow-default min-h-[400px] sm:min-h-[300px]"
 				}
 			>
 				<div className="flex flex-row justify-between item-center">
@@ -39,7 +39,7 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 									? `${profilePhoto}`
 									: `/img/Logos/default-avatar-profile.jpg`
 							}
-							className="object-cover object-center mx-auto sm:mx-0 w-16 h-16 transition-all duration-200 ease-in-out rounded-full cursor-pointer ring-[3px] ring-goldPrimeDark"
+							className="object-cover object-center mx-auto sm:mx-0 w-16 h-16 transition-all duration-200 ease-in-out rounded-full cursor-pointer ring-[3px] ring-yellow-default"
 						/>
 						<div className="flex flex-col gap-1">
 							<span className="font-semibold tracking-normal text-center text-black lg:text-left text-medium">

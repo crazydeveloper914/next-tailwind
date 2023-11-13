@@ -69,7 +69,7 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-black flex items-center justify-center gap-4 text-center tracking-normal leading-normal sm:leading-[2.75rem] font-[600] mb-4 sm:mb-10 text-lg sm:text-3xl md:text-4xl"
+							className="mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[3rem] text-4xl lg:text-5xl text-black"
 						>
 							{title}
 						</motion.h2>
@@ -92,7 +92,7 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 											<Image
 												width={500}
 												height={500}
-												src="/svg/circle-arrow-gold.svg"
+												src="/svg/circle-arrow-left.svg"
 												alt="White arrow in a gold circle"
 												className="transition-opacity duration-200 ease-in-out hover:opacity-70"
 											/>
@@ -134,14 +134,14 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 											className={
 												activeReview
 													? "hidden"
-													: "absolute z-10 w-8 transform rotate-180 -translate-y-1/2  bottom-[-2.5%] lg:top-0 right-[2.5%] lg:right-0 lg:w-12"
+													: "absolute z-10 w-8 transform -translate-y-1/2  bottom-[-2.5%] lg:top-0 right-[2.5%] lg:right-0 lg:w-12"
 											}
 											onClick={() => arrowHandler("next")}
 										>
 											<Image
 												width={500}
 												height={500}
-												src="/svg/circle-arrow-gold.svg"
+												src="/svg/circle-arrow-right.svg"
 												alt="White arrow in a gold circle"
 												className="transition-opacity duration-200 ease-in-out hover:opacity-70"
 											/>

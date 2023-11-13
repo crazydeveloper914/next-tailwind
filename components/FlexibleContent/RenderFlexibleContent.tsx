@@ -8,10 +8,12 @@ import {usePageContext} from "@/context/pages";
 import CTA from "../CTA";
 import Hero from "../Hero";
 import HeroTwo from "../HeroTwo";
+import OurLocation from "../OurLocation";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
 import Maintenance from "../Maintenance";
 import ErrorPage from "../Global/ErrorPage";
+import GoogleReviews from "../GoogleReviews";
 import TitleParagraph from "../TitleParagraph";
 import FeaturedProjects from "../FeaturedProjects";
 import JumboContentImage from "../JumboContentImage";
@@ -114,6 +116,10 @@ const RenderFlexibleContent: FC = () => {
 									imageGrid={item?.imageGrid}
 								/>
 							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_GoogleReviews` ? (
+							<>
+								<GoogleReviews title={item?.title} />
+							</>
 						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_FeaturedProjects` ? (
 							<>
@@ -161,15 +167,9 @@ const RenderFlexibleContent: FC = () => {
 									paragraph={item?.paragraph}
 								/>
 							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_Maintenance` ? (
+						) : item?.fieldGroupName === `${FlexibleContent}_OurLocation` ? (
 							<>
-								<Maintenance
-									title={item?.title}
-									paragraph={item?.paragraph}
-									backgroundImage={item?.backgroundImage}
-									backgroundVideoUrl={item?.backgroundVideoUrl}
-									backgroundImageOrVideo={item?.backgroundImageOrVideo}
-								/>
+								<OurLocation title={item?.title} paragraph={item?.paragraph} />
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Cta` ? (
 							<>
@@ -182,6 +182,16 @@ const RenderFlexibleContent: FC = () => {
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_ContactForm` ? (
 							<></>
+						) : item?.fieldGroupName === `${FlexibleContent}_Maintenance` ? (
+							<>
+								<Maintenance
+									title={item?.title}
+									paragraph={item?.paragraph}
+									backgroundImage={item?.backgroundImage}
+									backgroundVideoUrl={item?.backgroundVideoUrl}
+									backgroundImageOrVideo={item?.backgroundImageOrVideo}
+								/>
+							</>
 						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_ErrorPageContent` ? (
 							<>

@@ -395,6 +395,15 @@ export async function getAllFlexibleContentComponents(
 												italic
 												paragraph
 											}
+											... on ${postTypeFlexibleContent}_GoogleReviews {
+												fieldGroupName
+												title
+											}
+											... on ${postTypeFlexibleContent}_OurLocation {
+												fieldGroupName
+												title
+												paragraph
+											}
 											... on ${postTypeFlexibleContent}_Cta {
 												fieldGroupName
 												title
