@@ -11,17 +11,28 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	let sgvColor: string;
 	let textColor: string;
 	let borderColor: string;
+	let textColorHover: string;
 	let borderColorHover: string;
 	let backgroundColorHover: string;
 	let afterBackgroundColorHover: string;
 	let beforeBackgroundColorHover: string;
-	let textColorHover: string = "hover:text-white";
 
 	switch (tailwindColor) {
+		case "white":
+			sgvColor = "#ffffff";
+			textColor = "text-white";
+			borderColor = "border-white";
+			textColorHover = "hover:text-black";
+			borderColorHover = "hover:border-white";
+			backgroundColorHover = "hover:bg-white";
+			afterBackgroundColorHover = "hover:after:bg-white";
+			beforeBackgroundColorHover = "hover:before:bg-white";
+			break;
 		case "red-default":
 			sgvColor = "#cb0007";
 			textColor = "text-red-default";
 			borderColor = "border-red-default";
+			textColorHover = "hover:text-white";
 			borderColorHover = "hover:border-red-default";
 			backgroundColorHover = "hover:bg-red-default";
 			afterBackgroundColorHover = "hover:after:bg-red-default";
@@ -30,6 +41,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 		case "yellow-default":
 			sgvColor = "#f6ad37";
 			textColor = "text-yellow-default";
+			textColorHover = "hover:text-white";
 			borderColor = "border-yellow-default";
 			borderColorHover = "hover:border-yellow-default";
 			backgroundColorHover = "hover:bg-yellow-default";
@@ -39,6 +51,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 		case "green-default":
 			sgvColor = "#4d6c13";
 			textColor = "text-green-default";
+			textColorHover = "hover:text-white";
 			borderColor = "border-green-default";
 			borderColorHover = "hover:border-green-default";
 			backgroundColorHover = "hover:bg-green-default";
@@ -49,6 +62,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			sgvColor = "#cb0007";
 			textColor = "text-red-default";
 			borderColor = "border-red-default";
+			textColorHover = "hover:text-white";
 			borderColorHover = "hover:border-red-default";
 			backgroundColorHover = "hover:bg-red-default";
 			afterBackgroundColorHover = "hover:after:bg-red-default";

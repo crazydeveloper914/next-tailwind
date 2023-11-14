@@ -44,7 +44,7 @@ const ErrorPage: FC<IErrorPage> = ({
 							type="button"
 						>
 							<Link
-								href={buttonLink?.url ? buttonLink?.url : `/`}
+								href={buttonLink?.url}
 								target={buttonLink?.target}
 								className="flex flex-row px-6 py-4 leading-4 text-white transition-all duration-500 ease-in-out rounded-lg lg:py-6 lg:px-20 bg-red-default hover:bg-red-darker"
 							>

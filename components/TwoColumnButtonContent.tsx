@@ -94,10 +94,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							content={paragraph}
 							tailwindStyling="max-w-xl text-black leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
 						/>
-						<Link
-							href={buttonLink?.url ? buttonLink?.url : `/`}
-							target={buttonLink?.target}
-						>
+						<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
 							<motion.button
 								initial={initial}
 								whileInView={fadeInUp}

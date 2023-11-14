@@ -119,7 +119,7 @@ const Navbar: FC = () => {
 							) : null}
 						</li>
 						<li className="relative">
-							<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+							<div className="flex flex-row justify-center items-center gap-2 cursor-default">
 								<span className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500">
 									Our Services
 								</span>

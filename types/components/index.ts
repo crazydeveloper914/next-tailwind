@@ -9,6 +9,45 @@ export type ICTA = {
 		target: string;
 	};
 };
+export type IFAQ = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	displayCtaBlock: boolean;
+	displayDownloadButtonLinks: boolean;
+	cta: {
+		title: string;
+		paragraph: string;
+		backgroundImage: {
+			sourceUrl: string;
+		};
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+	};
+	faqContent: [
+		{
+			card: {
+				title: string;
+				paragraph: string;
+			};
+		}
+	];
+	downloadLinksTitle: string;
+	downloadButtonLinks: [
+		{
+			pdfLink: boolean;
+			buttonColor: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+		}
+	];
+};
 export type IEnquiryRequestForm = {
 	title: string;
 	contentOneOpen: boolean;
@@ -418,6 +457,11 @@ export type IErrorPage = {
 };
 
 // Cards
+export type IFAQCard = {
+	index: number;
+	title: string;
+	paragraph: string;
+};
 export type IBlogsCard = {
 	uri: string;
 	date: string;
@@ -476,6 +520,7 @@ export type IOperationalInsightsCard = {
 		};
 	};
 };
+
 // Elements
 export type ITitle = {
 	content: string;
@@ -488,4 +533,9 @@ export type IParagraph = {
 export type IButtonBorderSliced = {
 	title: string;
 	tailwindColor: string;
+};
+export type IDownloadButtonLinks = {
+	title: string;
+	pdfLink: boolean;
+	buttonColor: string;
 };

@@ -32,7 +32,7 @@ const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
 				/>
 			</div>
 			<Link
-				href={buttonLink?.url ? buttonLink?.url : `/`}
+				href={buttonLink?.url}
 				target={buttonLink?.target}
 				className={displayButton ? "block" : "hidden"}
 			>

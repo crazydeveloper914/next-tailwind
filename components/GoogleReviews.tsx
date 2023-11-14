@@ -144,7 +144,7 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 												width={500}
 												height={500}
 												src="/svg/circle-arrow-right.svg"
-												alt="White arrow in a gold circle"
+												alt="White arrow in a black circle"
 												className="transition-opacity duration-200 ease-in-out hover:opacity-70"
 											/>
 										</motion.button>

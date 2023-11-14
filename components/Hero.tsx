@@ -91,10 +91,7 @@ const Hero: FC<IHero> = ({
 								viewport={{once: true}}
 								className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start"
 							>
-								<Link
-									href={buttonLink?.url ? buttonLink?.url : `/`}
-									target={buttonLink?.target}
-								>
+								<Link href={buttonLink?.url} target={buttonLink?.target}>
 									<motion.button
 										initial={initial}
 										whileInView={fadeInUp}

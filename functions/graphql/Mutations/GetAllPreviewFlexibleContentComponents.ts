@@ -389,6 +389,42 @@ export const getAllPreviewFlexibleContentComponents = async (
 								italic
 								paragraph
 							}
+							... on ${postTypeFlexibleContent}_Faq {
+								fieldGroupName
+								title
+								subtitle
+								paragraph
+								displayCtaBlock
+								faqContent {
+									card {
+										title
+										paragraph
+									}
+								}
+								cta {
+									title
+									paragraph
+									buttonLink {
+										url
+										title
+										target
+									}
+									backgroundImage {
+										sourceUrl
+									}
+								}
+								downloadLinksTitle
+								displayDownloadButtonLinks
+								downloadButtonLinks {
+									pdfLink
+									buttonColor
+									buttonLink {
+										url
+										title
+										target
+									}
+								}
+							}
 							... on ${postTypeFlexibleContent}_GoogleReviews {
 								fieldGroupName
 								title

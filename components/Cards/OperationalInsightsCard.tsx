@@ -19,7 +19,7 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 	return (
 		<div className="w-full h-full px-4">
 			<div
-				className="relative px-0 h-[300px] border-l-[5px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-pureBlack"
+				className="relative px-0 h-[300px] border-l-[5px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-red-default"
 				style={{
 					clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
 				}}

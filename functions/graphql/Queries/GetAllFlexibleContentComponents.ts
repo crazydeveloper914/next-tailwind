@@ -399,6 +399,42 @@ export async function getAllFlexibleContentComponents(
 												fieldGroupName
 												title
 											}
+											... on ${postTypeFlexibleContent}_Faq {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												displayCtaBlock
+												faqContent {
+													card {
+														title
+														paragraph
+													}
+												}
+												cta {
+													title
+													paragraph
+													buttonLink {
+														url
+														title
+														target
+													}
+													backgroundImage {
+														sourceUrl
+													}
+												}
+												downloadLinksTitle
+												displayDownloadButtonLinks
+												downloadButtonLinks {
+													pdfLink
+													buttonColor
+													buttonLink {
+														url
+														title
+														target
+													}
+												}
+											}
 											... on ${postTypeFlexibleContent}_Cta {
 												fieldGroupName
 												title

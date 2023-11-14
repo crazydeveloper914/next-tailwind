@@ -6,6 +6,7 @@ import {usePageContext} from "@/context/pages";
 
 // Components
 import CTA from "../CTA";
+import FAQ from "../FAQ";
 import Hero from "../Hero";
 import HeroTwo from "../HeroTwo";
 import OurPartners from "../OurPartners";
@@ -118,6 +119,20 @@ const RenderFlexibleContent: FC = () => {
 						) : item?.fieldGroupName === `${FlexibleContent}_GoogleReviews` ? (
 							<>
 								<GoogleReviews title={item?.title} />
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_Faq` ? (
+							<>
+								<FAQ
+									cta={item?.cta}
+									title={item?.title}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									faqContent={item?.faqContent}
+									displayCtaBlock={item?.displayCtaBlock}
+									downloadLinksTitle={item?.downloadLinksTitle}
+									downloadButtonLinks={item?.downloadButtonLinks}
+									displayDownloadButtonLinks={item?.displayDownloadButtonLinks}
+								/>
 							</>
 						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_FeaturedProjects` ? (

@@ -6,14 +6,14 @@ import {getAllOperationalInsightsPostsSlugs} from "@/functions/graphql/Queries/G
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: any, res: any) => {
-	const [pagesSlugs, postsSlugs] = await Promise.all([
+	const [pagesSlugs, operationalInsightsPostsSlugs] = await Promise.all([
 		getAllPagesSlugs(),
 		getAllOperationalInsightsPostsSlugs(),
 	]);
 
-	// Pages & Blogs Arrays
-	const postsLinks: any = [];
+	// Pages & Operational Insights Arrays
 	const pagesLinks: any = [];
+	const operationalInsightsPostsLinks: any = [];
 
 	// Pages Dynamic Links
 	pagesSlugs?.map((keys: any) => {
@@ -27,20 +27,20 @@ export default async (req: any, res: any) => {
 		pagesLinks.push(object);
 	});
 
-	// Blogs Dynamic Links
-	postsSlugs?.map((keys: any) => {
+	// Operational Insights Dynamic Links
+	operationalInsightsPostsSlugs?.map((keys: any) => {
 		const object = {
-			url: `/blogs/${keys?.slug}`,
+			url: `/operational-insights/${keys?.slug}`,
 			changefreq: "daily",
 			lastmod: `${keys?.modified}`,
 			priority: 0.8,
 		};
 
-		postsLinks.push(object);
+		operationalInsightsPostsLinks.push(object);
 	});
 
 	// Arrays with your all dynamic links
-	const allLinks: any = [...pagesLinks, ...postsLinks];
+	const allLinks: any = [...pagesLinks, ...operationalInsightsPostsLinks];
 
 	// Create a stream to write to
 	const stream = new SitemapStream({hostname: process.env.SITE_URL});
