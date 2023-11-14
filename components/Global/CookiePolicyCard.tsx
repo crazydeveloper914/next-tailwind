@@ -42,7 +42,7 @@ const CookiePolicyCard: FC = () => {
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="font-bold text-lg lg:text-xl tracking-wider"
+						className="font-bold text-lg tracking-wide"
 					>
 						Cookie Policy
 					</motion.h3>
@@ -61,7 +61,7 @@ const CookiePolicyCard: FC = () => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="inline-block px-6 py-3 mr-2 text-xs leading-none text-white transition-all duration-200 ease-in-out bg-red-Two hover:bg-red-darker"
+							className="inline-block px-6 py-3 mr-2 text-xs leading-none text-white transition-all duration-200 ease-in-out bg-red-Two hover:bg-yellow-default"
 						>
 							Accept Cookies
 						</motion.button>
