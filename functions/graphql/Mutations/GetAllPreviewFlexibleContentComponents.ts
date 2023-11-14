@@ -417,7 +417,6 @@ export const getAllPreviewFlexibleContentComponents = async (
 								displayDownloadButtonLinks
 								downloadButtonLinks {
 									pdfLink
-									buttonColor
 									buttonLink {
 										url
 										title

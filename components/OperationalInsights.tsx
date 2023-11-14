@@ -83,6 +83,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 					className="text-center"
 				>
 					<ButtonBorderSliced
+						fullWidth={false}
 						title="Load more articles"
 						tailwindColor="red-default"
 					/>

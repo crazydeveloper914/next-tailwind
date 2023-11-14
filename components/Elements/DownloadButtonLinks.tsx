@@ -4,20 +4,7 @@ import {motion} from "framer-motion";
 import {IDownloadButtonLinks} from "@/types/components";
 import {initial, fadeInUp} from "@/animations/animations";
 
-const DownloadButtonLinks: FC<IDownloadButtonLinks> = ({
-	title,
-	pdfLink,
-	buttonColor,
-}) => {
-	const inlineStyles = {
-		flex: "1 0 auto",
-		// ... other styles
-		color: buttonColor,
-		transition: "color 0.5s ease-in-out", // Add transition for a smooth effect
-		":hover": {
-			color: buttonColor,
-		},
-	};
+const DownloadButtonLinks: FC<IDownloadButtonLinks> = ({title, pdfLink}) => {
 	return (
 		<>
 			<motion.button
@@ -26,12 +13,10 @@ const DownloadButtonLinks: FC<IDownloadButtonLinks> = ({
 				viewport={{once: true}}
 				className={
 					title
-						? `flex items-center justify-center group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-[${buttonColor}] hover:bg-[${buttonColor}] hover:border-[${buttonColor}] transition-all ease-in-out duration-500 text-[${buttonColor}] hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-lightGrey hover:before:bg-[${buttonColor}] after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-lightGrey hover:after:bg-[${buttonColor}]`
+						? `flex items-center justify-start text-left group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-full sm:mx-0 border-2 border-solid border-red-default hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500 text-red-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-lightGrey hover:before:bg-red-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-lightGrey hover:after:bg-red-default`
 						: `hidden`
 				}
-				style={inlineStyles}
 			>
-				<span>{title}</span>
 				<span className={pdfLink ? "hidden group-hover:block" : "hidden"}>
 					<svg
 						id="_x32_"
@@ -120,6 +105,7 @@ const DownloadButtonLinks: FC<IDownloadButtonLinks> = ({
 						</g>
 					</svg>
 				</span>
+				<span>{title}</span>
 			</motion.button>
 		</>
 	);

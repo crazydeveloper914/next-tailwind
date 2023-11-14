@@ -39,7 +39,6 @@ export type IFAQ = {
 	downloadButtonLinks: [
 		{
 			pdfLink: boolean;
-			buttonColor: string;
 			buttonLink: {
 				url: string;
 				title: string;
@@ -532,10 +531,10 @@ export type IParagraph = {
 };
 export type IButtonBorderSliced = {
 	title: string;
+	fullWidth: boolean;
 	tailwindColor: string;
 };
 export type IDownloadButtonLinks = {
 	title: string;
 	pdfLink: boolean;
-	buttonColor: string;
 };

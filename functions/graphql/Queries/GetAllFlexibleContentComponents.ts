@@ -427,7 +427,6 @@ export async function getAllFlexibleContentComponents(
 												displayDownloadButtonLinks
 												downloadButtonLinks {
 													pdfLink
-													buttonColor
 													buttonLink {
 														url
 														title

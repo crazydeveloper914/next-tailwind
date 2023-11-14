@@ -70,7 +70,11 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 						target="_blank"
 						className={uri ? "block" : "hidden"}
 					>
-						<ButtonBorderSliced title="Read more" tailwindColor="red-default" />
+						<ButtonBorderSliced
+							fullWidth={true}
+							title="Read more"
+							tailwindColor="red-default"
+						/>
 					</Link>
 				</motion.div>
 			</motion.div>

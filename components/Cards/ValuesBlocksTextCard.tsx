@@ -2,7 +2,7 @@
 import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import fadeInUp, {fadeIn, initial, initialTwo} from "@/animations/animations";
+import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Components
 import Paragraph from "../Elements/Paragraph";
@@ -37,6 +37,7 @@ const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
 				className={displayButton ? "block" : "hidden"}
 			>
 				<ButtonBorderSliced
+					fullWidth={true}
 					title={buttonLink?.title}
 					tailwindColor="red-default"
 				/>
