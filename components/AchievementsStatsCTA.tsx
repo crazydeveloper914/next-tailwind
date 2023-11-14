@@ -26,7 +26,12 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						displayAchievementsContent ? "block" : "hidden"
 					}`}
 				>
-					<div className="grid-cols-1 grid px-4 py-16 lg:px-0 md:grid-cols-2 gap-8 w-full lg:w-[55%] 2xl:w-[60%] lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end">
+					<motion.div
+						initial={initialTwo}
+						whileInView={stagger}
+						viewport={{once: true}}
+						className="grid-cols-1 grid px-4 py-16 lg:px-0 md:grid-cols-2 gap-8 w-full lg:w-[55%] 2xl:w-[60%] lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end"
+					>
 						{achievements?.length > 0 ? (
 							achievements?.map((item: any, keys: any) => (
 								<div
@@ -83,7 +88,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						) : (
 							<></>
 						)}
-					</div>
+					</motion.div>
 				</div>
 				<div
 					className="px-4 py-20 bg-center bg-no-repeat bg-cover lg:px-0"
@@ -98,7 +103,10 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 				>
 					<div className="container p-0 mx-auto">
 						<div className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row">
-							<div
+							<motion.div
+								initial={initialTwo}
+								whileInView={stagger}
+								viewport={{once: true}}
 								className={`w-full flex flex-col items-center justify-between gap-4  ${
 									displayAchievementsContent
 										? "lg:w-[45%] lg:items-start"
@@ -129,7 +137,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 										{buttonLink?.title}
 									</motion.button>
 								</Link>
-							</div>
+							</motion.div>
 						</div>
 					</div>
 				</div>

@@ -155,7 +155,7 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 							viewport={{once: true}}
 							className="flex items-center justify-center my-4 mb-8 gap-x-2"
 						>
-							<h4 className="text-xl font-semibold text-center uppercase text-blue">
+							<h4 className="mb-10 text-center font-semibold leading-tight lg:text-left text-2xl text-black">
 								Sending Message...
 							</h4>
 						</motion.div>
@@ -166,7 +166,7 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 							viewport={{once: true}}
 							className="flex items-center justify-center my-4 mb-8 gap-x-2"
 						>
-							<h4 className="text-xl font-semibold text-center uppercase text-goldPrime">
+							<h4 className="mb-10 text-center font-semibold leading-tight lg:text-left text-2xl text-yellow-default">
 								Message Sent
 							</h4>
 						</motion.div>
@@ -177,7 +177,7 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 							viewport={{once: true}}
 							className="flex items-center justify-center my-4 mb-8 gap-x-2"
 						>
-							<h4 className="text-xl font-semibold text-center uppercase text-darkBlue">
+							<h4 className="mb-10 text-center font-semibold leading-tight lg:text-left text-2xl text-red-default">
 								Error Message: Something went wrong with sending your message.
 								Please try again.
 							</h4>
@@ -187,7 +187,7 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-8 font-extrabold text-center lg:text-left leading-[2.5rem] lg:leading-[3rem] text-2xl lg:text-4xl"
+							className="mb-10 text-center font-semibold leading-tight lg:text-left text-2xl text-black"
 						>
 							{title}
 						</motion.h4>

@@ -28,12 +28,12 @@ const OurServices: FC<IOurServices> = ({title, paragraph, servicesGrid}) => {
 				}}
 			>
 				<div className="container relative m-auto xl:px-16 flex flex-col items-center">
-					<div className="flex flex-col py-8">
+					<div className="flex flex-col py-8 items-center">
 						<motion.h2
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[4rem] text-4xl lg:text-5xl text-white"
+							className="mb-4 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
 						>
 							{title}
 						</motion.h2>

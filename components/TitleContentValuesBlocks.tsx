@@ -8,7 +8,6 @@ import {fadeIn, initial, stagger, initialTwo} from "../animations/animations";
 import styles from "../styles/components/TitleContentValuesBlocks.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
 import ValuesBlocksTextCard from "./Cards/ValuesBlocksTextCard";
 import ValuesBlocksImageCard from "./Cards/ValuesBlocksImageCard";
 

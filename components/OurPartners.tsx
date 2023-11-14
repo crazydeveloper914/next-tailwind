@@ -25,26 +25,28 @@ const OurPartners: FC<IOurPartners> = ({
 				}
 			>
 				<div className="container px-0 mx-auto">
-					<motion.h3
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
-						className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
-					>
-						{subtitle}
-					</motion.h3>
-					<motion.h2
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
-						className="mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[3rem] text-4xl lg:text-5xl text-black"
-					>
-						{title}
-					</motion.h2>
-					<Paragraph
-						content={paragraph}
-						tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
-					/>
+					<div className="flex flex-col items-center">
+						<motion.h3
+							initial={initialTwo}
+							whileInView={fadeIn}
+							viewport={{once: true}}
+							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
+						>
+							{subtitle}
+						</motion.h3>
+						<motion.h2
+							initial={initialTwo}
+							whileInView={fadeIn}
+							viewport={{once: true}}
+							className="my-2 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
+						>
+							{title}
+						</motion.h2>
+						<Paragraph
+							content={paragraph}
+							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
+						/>
+					</div>
 					<div className="max-w-6xl mx-auto">
 						<motion.div
 							initial={initial}

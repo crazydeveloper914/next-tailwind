@@ -16,6 +16,7 @@ import {IJumboContentImage} from "@/types/components/index";
 import styles from "../styles/components/JumboContentImage.module.scss";
 
 // Components
+import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
 
 const JumboContentImage: FC<IJumboContentImage> = ({
@@ -52,7 +53,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[3rem] max-w-2xl lg:text-left text-4xl lg:text-5xl text-black"
+							className="my-2 max-w-3xl text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
 						>
 							{title}
 						</motion.h2>

@@ -23,19 +23,18 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="max-w-2xl mx-auto mb-24 text-center lg:max-w-5xl"
+					className="max-w-2xl mx-auto mb-24 text-center flex flex-col items-center lg:max-w-5xl"
 				>
 					<motion.h2
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="max-w-3xl mx-auto mb-6 text-4xl text-darkBlue sm:text-6xl lg:text-7xl"
+						className="max-w-2xl mx-auto mb-6 text-center font-semibold leading-tight text-4xl lg:text-5xl"
 					>
 						<motion.span
 							initial={initial}
 							viewport={{once: true}}
 							whileInView={fadeInUp}
-							className="font-bold"
 						>
 							{title}
 						</motion.span>
@@ -43,7 +42,7 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 							initial={initial}
 							viewport={{once: true}}
 							whileInView={fadeInUp}
-							className="ml-4 font-serif italic"
+							className="ml-4 font-serif font-normal italic"
 						>
 							{italic}
 						</motion.span>

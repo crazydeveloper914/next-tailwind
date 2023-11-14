@@ -50,10 +50,16 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 						{title}
 					</motion.h2>
 				</Link>
-				<Paragraph
-					content={paragraph ? paragraph.substring(0, 350) + "..." : ""}
-					tailwindStyling="block px-0 text-base sm:text-paragraph text-darkGrey"
-				/>
+				<motion.div
+					initial={initial}
+					viewport={{once: true}}
+					whileInView={fadeInUp}
+				>
+					<Paragraph
+						content={paragraph ? paragraph.substring(0, 350) + "..." : ""}
+						tailwindStyling="block px-0 text-base sm:text-paragraph text-darkGrey"
+					/>
+				</motion.div>
 				<motion.div
 					initial={initial}
 					viewport={{once: true}}

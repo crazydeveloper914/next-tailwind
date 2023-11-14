@@ -55,8 +55,6 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 		setActiveSlide(0);
 	}, [width]);
 
-	console.log(reviewsArray);
-
 	return (
 		<>
 			<div className="bg-white">
@@ -65,13 +63,13 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="flex flex-col py-16"
+						className="flex flex-col py-16 items-center"
 					>
 						<motion.h2
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="mb-4 text-center uppercase font-extrabold leading-[2.5rem] lg:leading-[3rem] text-4xl lg:text-5xl text-black"
+							className="mb-4 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
 						>
 							{title}
 						</motion.h2>
@@ -106,23 +104,21 @@ const GoogleReviews: FC<IGoogleReviews> = ({title}) => {
 											className="flex flex-row items-center py-16"
 										>
 											{reviewsArray?.length > 0 ? (
-												reviewsArray?.map((item: any, index: any) => (
-													<>
-														<Fragment key={index}>
-															<div
-																ref={largeSlideRef}
-																className={`flex-shrink-0 w-4/5 lg:w-2/6 pr-3 sm:pr-4 transition-opacity duration-200 ease-in-out opacity-100`}
-															>
-																<GoogleReviewsCard
-																	name={item?.author_name}
-																	date={item?.time}
-																	rating={item?.rating}
-																	textarea={item?.text}
-																	profilePhoto={item?.profile_photo_url}
-																/>
-															</div>
-														</Fragment>
-													</>
+												reviewsArray?.map((item: any, keys: any) => (
+													<Fragment key={keys}>
+														<div
+															ref={largeSlideRef}
+															className={`flex-shrink-0 w-4/5 lg:w-2/6 pr-3 sm:pr-4 transition-opacity duration-200 ease-in-out opacity-100`}
+														>
+															<GoogleReviewsCard
+																name={item?.author_name}
+																date={item?.time}
+																rating={item?.rating}
+																textarea={item?.text}
+																profilePhoto={item?.profile_photo_url}
+															/>
+														</div>
+													</Fragment>
 												))
 											) : (
 												<></>

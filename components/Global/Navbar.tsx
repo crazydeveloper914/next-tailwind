@@ -61,6 +61,7 @@ const Navbar: FC = () => {
 					<div>
 						<Link href="/">
 							<Image
+								priority
 								height={500}
 								width={500}
 								alt="Bravo Group"

@@ -43,7 +43,7 @@ const Hero: FC<IHero> = ({
 					}}
 				>
 					{/* Background Video */}
-					<div className="absolute top-0 bottom-0 left-0 w-full h-full overflow-hidden">
+					{/* <div className="absolute top-0 bottom-0 left-0 w-full h-full overflow-hidden">
 						<div
 							className={
 								displayVideo
@@ -68,7 +68,7 @@ const Hero: FC<IHero> = ({
 									: "Hidden"
 							}
 						/>
-					</div>
+					</div> */}
 					<div className="container relative flex flex-col items-center sm:items-baseline justify-center py-20 px-4 m-auto text-center sm:text-left">
 						<div className="max-w-3xl">
 							<motion.h1

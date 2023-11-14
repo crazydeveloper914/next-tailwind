@@ -35,8 +35,9 @@ const Footer: FC = () => {
 						<div className="mb-10">
 							<Link href="/">
 								<Image
-									height={500}
+									priority
 									width={500}
+									height={500}
 									alt="Bravo Group"
 									src="/img/logos/bravo-group-logo-white.png"
 									className="object-contain object-center w-full h-[30px]"
