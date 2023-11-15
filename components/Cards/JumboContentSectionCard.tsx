@@ -101,7 +101,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								initial={initial}
 								whileInView={stagger}
 								viewport={{once: true}}
-								className="flex flex-col justify-center max-w-2xl items-center lg:items-baseline"
+								className="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 items-center lg:items-baseline"
 							>
 								<motion.h3
 									initial={initial}
@@ -121,7 +121,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								</motion.h2>
 								<Paragraph
 									content={paragraph}
-									tailwindStyling={`w-full lg:max-w-2xl mx-auto py-6 ${paragraphColor} text-left text-base sm:text-paragraph`}
+									tailwindStyling={`w-full lg:max-w-2xl mx-auto py-6 ${paragraphColor} text-center lg:text-left text-base sm:text-paragraph`}
 								/>
 								<div className={buttonLink?.url ? "mx-auto lg:mx-0" : "hidden"}>
 									<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
