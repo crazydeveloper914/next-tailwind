@@ -15,7 +15,7 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 		<>
 			<div className={styles.hero}>
 				<div
-					className="relative flex flex-col h-[75vh] bg-center bg-no-repeat bg-cover"
+					className="relative flex flex-col h-[45vh] lg:h-[75vh] bg-center bg-no-repeat bg-cover"
 					style={{
 						backgroundImage: `linear-gradient(
 							0deg,
