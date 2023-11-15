@@ -130,7 +130,7 @@ const Hero: FC<IHero> = ({
 							initial={initialTwo}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="hidden sm:grid grid-cols-4 w-full lg:w-[70%] xl:w-[60%] 2xl:w-[55%] absolute mb-[100px] lg:mb-[0px] right-0 flex-row items-center justify-end"
+							className="hidden sm:grid grid-cols-4 w-full lg:w-[70%] xl:w-[60%] 2xl:w-[55%] absolute mb-[180px] lg:mb-[0px] right-0 flex-row items-center justify-end"
 						>
 							{servicesLinks?.length > 0 ? (
 								servicesLinks?.map((item: any, keys: any) => (
