@@ -17,6 +17,7 @@ import GoogleReviews from "../GoogleReviews";
 import TitleParagraph from "../TitleParagraph";
 import FeaturedProjects from "../FeaturedProjects";
 import JumboContentImage from "../JumboContentImage";
+import JumboContentSection from "../JumboContentSection";
 import OperationalInsights from "../OperationalInsights";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import RequestQuoteFormBlocks from "../RequestQuoteFormBlocks";
@@ -72,6 +73,13 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									paragraph={item?.paragraph}
 									servicesGrid={item?.servicesGrid}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_JumboContentSection` ? (
+							<>
+								<JumboContentSection
+									jumboContentSection={item?.contentSection}
 								/>
 							</>
 						) : item?.fieldGroupName ===

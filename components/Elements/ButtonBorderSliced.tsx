@@ -2,7 +2,7 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {IButtonBorderSliced} from "@/types/components";
-import {initial, fadeInUp} from "@/animations/animations";
+import {initialTwo, fadeIn} from "@/animations/animations";
 
 const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	title,
@@ -12,6 +12,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	let sgvColor: string;
 	let textColor: string;
 	let borderColor: string;
+	let sgvColorHover: string;
 	let textColorHover: string;
 	let borderColorHover: string;
 	let backgroundColorHover: string;
@@ -21,6 +22,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	switch (tailwindColor) {
 		case "white":
 			sgvColor = "#ffffff";
+			sgvColorHover = "#000";
 			textColor = "text-white";
 			borderColor = "border-white";
 			textColorHover = "hover:text-black";
@@ -31,6 +33,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			break;
 		case "red-default":
 			sgvColor = "#cb0007";
+			sgvColorHover = "#ffffff";
 			textColor = "text-red-default";
 			borderColor = "border-red-default";
 			textColorHover = "hover:text-white";
@@ -41,6 +44,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			break;
 		case "yellow-default":
 			sgvColor = "#f6ad37";
+			sgvColorHover = "#ffffff";
 			textColor = "text-yellow-default";
 			textColorHover = "hover:text-white";
 			borderColor = "border-yellow-default";
@@ -51,6 +55,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			break;
 		case "green-default":
 			sgvColor = "#4d6c13";
+			sgvColorHover = "#ffffff";
 			textColor = "text-green-default";
 			textColorHover = "hover:text-white";
 			borderColor = "border-green-default";
@@ -61,6 +66,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			break;
 		default:
 			sgvColor = "#cb0007";
+			sgvColorHover = "#ffffff";
 			textColor = "text-red-default";
 			borderColor = "border-red-default";
 			textColorHover = "hover:text-white";
@@ -73,8 +79,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	return (
 		<>
 			<motion.button
-				initial={initial}
-				whileInView={fadeInUp}
+				initial={initialTwo}
+				whileInView={fadeIn}
 				viewport={{once: true}}
 				className={
 					title
@@ -96,7 +102,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 					>
 						<path
 							d="M15.0377 6.34326L13.6268 7.76078L16.897 11.0157L3.29199 11.0294L3.294 13.0294L16.8618 13.0158L13.6466 16.246L15.0641 17.6569L20.7078 11.9869L15.0377 6.34326Z"
-							fill="#ffffff"
+							fill={sgvColorHover}
 						/>
 					</svg>
 				</span>

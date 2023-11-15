@@ -45,7 +45,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
+							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-Two"
 						>
 							{subtitle}
 						</motion.h3>

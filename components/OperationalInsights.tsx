@@ -18,8 +18,8 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 	const globalContext = useGlobalContext();
 
 	return (
-		<div className="py-24 bg-white">
-			<div className="container px-4 mx-auto">
+		<>
+			<div className="py-24 bg-white container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					whileInView={stagger}
@@ -30,7 +30,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="max-w-2xl mx-auto mb-6 text-center font-semibold leading-tight text-4xl lg:text-5xl"
+						className="my-2 mb-6 max-w-2xl mx-auto text-center font-semibold leading-tight text-4xl lg:text-5xl"
 					>
 						<motion.span
 							initial={initial}
@@ -50,10 +50,9 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 					</motion.h2>
 					<Paragraph
 						content={paragraph}
-						tailwindStyling="max-w-3xl mx-auto mt-10 text-black text-base sm:text-paragraph"
+						tailwindStyling="max-w-3xl mx-auto text-black text-base sm:text-paragraph"
 					/>
 				</motion.div>
-
 				<motion.div
 					initial={initial}
 					whileInView={stagger}
@@ -89,7 +88,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 					/>
 				</motion.div>
 			</div>
-		</div>
+		</>
 	);
 };
 

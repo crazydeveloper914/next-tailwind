@@ -2,7 +2,7 @@
 @import "../base/fonts";
 @import "../base/colors";
 
-.jumboContentImage {
+.jumboContentSectionCard {
 	h2,
 	h4,
 	h5,
@@ -13,7 +13,21 @@
 		font-family: $main;
 	}
 
+	ul {
+		@apply px-10;
+
+		li {
+			@apply px-0 list-disc;
+		}
+	}
+
 	p {
+		h2 {
+			strong {
+				@apply tracking-tight font-extrabold;
+			}
+		}
+
 		a {
 			@apply font-semibold underline text-red-Two hover:text-yellow-Two transition-all ease-in-out duration-500;
 		}

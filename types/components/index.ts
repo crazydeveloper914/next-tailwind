@@ -361,6 +361,32 @@ export type IOurServices = {
 		}
 	];
 };
+export type IJumboContentSection = {
+	jumboContentSection: [
+		{
+			content: {
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				imageLocation: string;
+				backgroundDisplay: string;
+				image: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						height: number;
+						width: number;
+					};
+				};
+				buttonLink: {
+					url: string;
+					title: string;
+					target: string;
+				};
+			};
+		}
+	];
+};
 export type IJumboContentImage = {
 	title: string;
 	subtitle: string;
@@ -517,6 +543,26 @@ export type IOperationalInsightsCard = {
 				height: number;
 			};
 		};
+	};
+};
+export type IJumboContentSectionCard = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	imageLocation: string;
+	backgroundDisplay: string;
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
 	};
 };
 

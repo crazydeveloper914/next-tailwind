@@ -22,7 +22,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({title, paragraph}) => {
 				initial={initial}
 				whileInView={fadeInUp}
 				viewport={{once: true}}
-				className="py-16 sm:py-20 md:py-28 px-4"
+				className="py-10 px-4"
 			>
 				<motion.h2
 					initial={initial}

@@ -1,10 +1,10 @@
 // Imports
-import {FC} from "react";
+import {FC, Fragment} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {fadeIn, initialTwo, stagger} from "../animations/animations";
 import {IAchievementsStatsCTA} from "@/types/components/index";
+import {fadeIn, initialTwo, stagger} from "../animations/animations";
 
 // Components
 import Title from "./Elements/Title";
@@ -20,7 +20,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 }) => {
 	return (
 		<>
-			<div className="flex flex-col">
+			<div className="flex flex-col lg:mt-24">
 				<div
 					className={`bg-white relative ${
 						displayAchievementsContent ? "block" : "hidden"
@@ -34,56 +34,57 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 					>
 						{achievements?.length > 0 ? (
 							achievements?.map((item: any, keys: any) => (
-								<div
-									key={keys}
-									className="w-full h-[500px] flex flex-col justify-end xl:shadow-2xl relative xl:p-8 bg-center bg-no-repeat bg-cover"
-									style={{
-										backgroundImage: `linear-gradient(
+								<Fragment key={keys}>
+									<div
+										className="w-full h-[500px] flex flex-col justify-end xl:shadow-2xl relative xl:p-8 bg-center bg-no-repeat bg-cover"
+										style={{
+											backgroundImage: `linear-gradient(
 											0deg,
 											rgba(0, 0, 0, 0.05),
 											rgba(0, 0, 0, 0.05),
 											rgba(0, 0, 0, 0.05)
 										),url("${item?.card?.image?.sourceUrl}")`,
-									}}
-								>
-									<motion.div
-										initial={initialTwo}
-										whileInView={stagger}
-										viewport={{once: true}}
-										className={`p-6 w-full xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center w-full sm:mih-[22vh] transition-all ease-in-out duration-500 ${
-											keys === 0
-												? "bg-green-Three"
-												: keys === 1
-												? "bg-green-Three"
-												: "bg-green-default"
-										}`}
+										}}
 									>
-										<Image
-											alt={item?.card?.icon?.altText}
-											src={item?.card?.icon?.sourceUrl}
-											width={item?.card?.icon?.mediaDetails?.width}
-											height={item?.card?.icon?.mediaDetails?.height}
-											className={
-												item?.card?.icon?.sourceUrl
-													? `block object-contain object-center w-full h-[50px] lg:h-[60px] mb-6`
-													: `hidden`
-											}
-										/>
-
-										<motion.h4
+										<motion.div
 											initial={initialTwo}
-											whileInView={fadeIn}
+											whileInView={stagger}
 											viewport={{once: true}}
-											className="text-white font-extrabold text-4xl py-4 2xl:text-5xl leading-[1.5rem] text-center tracking-[0.10rem]"
+											className={`p-6 w-full xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center w-full sm:mih-[22vh] transition-all ease-in-out duration-500 ${
+												keys === 0
+													? "bg-green-Three"
+													: keys === 1
+													? "bg-green-Three"
+													: "bg-green-default"
+											}`}
 										>
-											{item?.card?.title}
-										</motion.h4>
-										<Paragraph
-											content={item?.card?.paragraph}
-											tailwindStyling="w-full lg:max-w-[40rem] mt-4 text-center text-white text-base"
-										/>
-									</motion.div>
-								</div>
+											<Image
+												alt={item?.card?.icon?.altText}
+												src={item?.card?.icon?.sourceUrl}
+												width={item?.card?.icon?.mediaDetails?.width}
+												height={item?.card?.icon?.mediaDetails?.height}
+												className={
+													item?.card?.icon?.sourceUrl
+														? `block object-contain object-center w-full h-[50px] lg:h-[60px] mb-6`
+														: `hidden`
+												}
+											/>
+
+											<motion.h4
+												initial={initialTwo}
+												whileInView={fadeIn}
+												viewport={{once: true}}
+												className="text-white font-extrabold text-4xl py-4 2xl:text-5xl leading-[1.5rem] text-center tracking-[0.10rem]"
+											>
+												{item?.card?.title}
+											</motion.h4>
+											<Paragraph
+												content={item?.card?.paragraph}
+												tailwindStyling="w-full lg:max-w-[40rem] mt-4 text-center text-white text-base"
+											/>
+										</motion.div>
+									</div>
+								</Fragment>
 							))
 						) : (
 							<></>

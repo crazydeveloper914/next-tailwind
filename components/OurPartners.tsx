@@ -19,18 +19,14 @@ const OurPartners: FC<IOurPartners> = ({
 }) => {
 	return (
 		<>
-			<div
-				className={
-					styles.ourPartners + ` py-20 lg:pb-36 2xl:pb-28 px-4 lg:px-0 bg-white`
-				}
-			>
+			<div className={styles.ourPartners + ` py-16 px-4 lg:px-0 bg-white`}>
 				<div className="container px-0 mx-auto">
 					<div className="flex flex-col items-center">
 						<motion.h3
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
+							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-Two"
 						>
 							{subtitle}
 						</motion.h3>

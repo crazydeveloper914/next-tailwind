@@ -36,17 +36,13 @@ const FAQ: FC<IFAQ> = ({
 
 	return (
 		<>
-			<div
-				className={
-					styles.faq + ` py-20 lg:pb-36 2xl:pb-28 px-4 lg:px-0 bg-white`
-				}
-			>
+			<div className={styles.faq + ` py-16 px-4 lg:px-0 bg-white`}>
 				<div className="container px-0 mx-auto">
 					<motion.h3
 						initial={initialTwo}
 						whileInView={fadeIn}
 						viewport={{once: true}}
-						className="my-2 uppercase text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
+						className="my-2 uppercase font-semibold text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
 					>
 						{subtitle}
 					</motion.h3>
@@ -54,7 +50,7 @@ const FAQ: FC<IFAQ> = ({
 						initial={initialTwo}
 						whileInView={fadeIn}
 						viewport={{once: true}}
-						className="mb-4 text-center font-semibold leading-tight text-4xl lg:text-5xl text-black"
+						className="my-2 text-center font-semibold leading-tight text-4xl lg:text-5xl text-black"
 					>
 						{title}
 					</motion.h2>
@@ -62,7 +58,7 @@ const FAQ: FC<IFAQ> = ({
 						content={paragraph}
 						tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
 					/>
-					<div className="flex flex-col-reverse xl:flex-row items-start justify-between gap-8 py-12">
+					<div className="flex flex-col-reverse xl:flex-row items-start justify-between gap-8 mt-10 py-12">
 						<motion.div
 							initial={initial}
 							whileInView={stagger}

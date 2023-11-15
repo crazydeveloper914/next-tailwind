@@ -112,6 +112,31 @@ export const getAllPreviewFlexibleContentComponents = async (
 									}
 								}
 							}
+							... on ${postTypeFlexibleContent}_JumboContentSection {
+								fieldGroupName
+								contentSection {
+									content {
+										title
+										subtitle
+										paragraph
+										imageLocation
+										backgroundDisplay
+										buttonLink {
+											url
+											title
+											target
+										}
+										image {
+											altText
+											sourceUrl
+											mediaDetails {
+												height
+												width
+											}
+										}
+									}
+								}
+							}
 							... on ${postTypeFlexibleContent}_JumboContentImage {
 								fieldGroupName
 								title

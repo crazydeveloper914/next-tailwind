@@ -1,10 +1,16 @@
 // Imports
+import {
+	fadeIn,
+	stagger,
+	initial,
+	fadeInUp,
+	initialTwo,
+} from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {IOperationalInsightsCard} from "@/types/components";
-import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "../Elements/Paragraph";
@@ -61,9 +67,9 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 					/>
 				</motion.div>
 				<motion.div
-					initial={initial}
+					initial={initialTwo}
 					viewport={{once: true}}
-					whileInView={fadeInUp}
+					whileInView={fadeIn}
 				>
 					<Link
 						href={uri ? `operational-insights${uri}` : `/`}

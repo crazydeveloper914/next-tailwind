@@ -63,8 +63,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 		<>
 			<div
 				className={
-					styles.twoColumnButtonContent +
-					` py-20 lg:py-36 px-4 ${backgroundColor}`
+					styles.twoColumnButtonContent + ` py-10 px-4 ${backgroundColor}`
 				}
 			>
 				<div className="container m-auto xl:px-16 flex flex-col lg:flex-row gap-16 lg:gap-x-16">
@@ -78,7 +77,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
+							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-Two"
 						>
 							{subtitle}
 						</motion.h3>
@@ -86,7 +85,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-4 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
+							className="my-2 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
 						>
 							{title}
 						</motion.h2>
