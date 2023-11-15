@@ -40,16 +40,16 @@ const FAQCard: FC<IFAQCard> = ({index, title, paragraph}) => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="flex font-bold items-center justify-center gap-4 text-center leading-[2.5rem] text-medium text-black"
+								className="flex font-bold gap-4 items-center text-center leading-[2.5rem] text-medium text-black"
 							>
-								<span>
+								<span className="hidden md:block">
 									<svg
 										width="15"
 										height="15"
 										fill="none"
 										viewBox="0 0 15 15"
 										xmlns="http://www.w3.org/2000/svg"
-										className="object-contain object-center w-full h-[25px]"
+										className="object-contain object-center w-full h-[25px] "
 									>
 										<path
 											d="M5.14229 5.625C5.48549 4.89675 6.41152 4.375 7.50003 4.375C8.88075 4.375 10 5.21447 10 6.25C10 7.12465 9.20152 7.85942 8.12142 8.06662C7.78242 8.13166 7.50003 8.40482 7.50003 8.75M7.5 10.625H7.50625M13.125 7.5C13.125 10.6066 10.6066 13.125 7.5 13.125C4.3934 13.125 1.875 10.6066 1.875 7.5C1.875 4.3934 4.3934 1.875 7.5 1.875C10.6066 1.875 13.125 4.3934 13.125 7.5Z"
@@ -77,7 +77,7 @@ const FAQCard: FC<IFAQCard> = ({index, title, paragraph}) => {
 						{accordionOpen ? (
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="mt-4 text-black leading-[1.75rem] text-base text-center lg:text-left"
+								tailwindStyling="mt-4 text-black leading-[1.75rem] text-base text-left"
 							/>
 						) : null}
 					</div>
