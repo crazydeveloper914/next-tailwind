@@ -4,12 +4,13 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {useState, FC, Fragment, useEffect} from "react";
-import {initialTwo, stagger} from "@/animations/animations";
+import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Styling
 import styles from "./../../styles/components/Navbar.module.scss";
 
 // Components
+import SideMenu from "../Elements/SideMenu";
 
 const Navbar: FC = () => {
 	const globalContext = useGlobalContext();
@@ -30,10 +31,17 @@ const Navbar: FC = () => {
 		};
 	}, []);
 
-	// Display all sublinks
+	// Display all sublinks & Mobile Links
+	const [menuActive, setMenuActive] = useState(true);
 	const [aboutUsSublinksOpen, setAboutUsSublinksOpen]: any = useState(false);
 	const [businessServicesSublinksOpen, setBusinessServicesSublinksOpen]: any =
 		useState(false);
+
+	/* Hides or Displays the Full Nav Menu */
+
+	function toggleMenu() {
+		setMenuActive(!menuActive);
+	}
 
 	// Hides or Display about us sublinks
 	function displayAboutUsSublinks() {
@@ -57,20 +65,29 @@ const Navbar: FC = () => {
 					}`
 				}
 			>
-				<div className="container mx-auto flex flex-row items-center justify-between py-6 px-4">
-					<div>
+				<div className="container mx-auto flex flex-row items-center justify-between py-5 xl:py-6 px-4">
+					<motion.div
+						initial={initialTwo}
+						whileInView={fadeIn}
+						viewport={{once: true}}
+					>
 						<Link href="/">
 							<Image
 								priority
-								height={500}
 								width={500}
+								height={500}
 								alt="Bravo Group"
 								src="/img/logos/bravo-group-logo-white.png"
-								className="object-contain object-center w-full h-[30px]"
+								className="object-contain object-center w-full h-[25px] lg:h-[30px]"
 							/>
 						</Link>
-					</div>
-					<ul className="hidden lg:flex lg:items-center lg:gap-x-6">
+					</motion.div>
+					<motion.ul
+						initial={initial}
+						whileInView={stagger}
+						viewport={{once: true}}
+						className="hidden xl:flex lg:items-center lg:gap-x-6"
+					>
 						<li className="relative">
 							<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
 								<Link
@@ -121,7 +138,7 @@ const Navbar: FC = () => {
 						</li>
 						<li className="relative">
 							<div className="flex flex-row justify-center items-center gap-2 cursor-default">
-								<span className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500">
+								<span className="text-white text-base text-center tracking-[0.05rem] transition-all ease-in-out duration-500">
 									Our Services
 								</span>
 								<Image
@@ -178,7 +195,24 @@ const Navbar: FC = () => {
 						) : (
 							<></>
 						)}
-					</ul>
+					</motion.ul>
+					<motion.div
+						initial={initialTwo}
+						whileInView={fadeIn}
+						viewport={{once: true}}
+						className="block xl:hidden"
+					>
+						<button
+							type="button"
+							onClick={toggleMenu}
+							aria-label="toggle menu"
+							className={menuActive ? styles.navToggleOpen : styles.navToggle}
+						>
+							<span aria-hidden="true"></span>
+						</button>
+						{/* Hidden Side Menu */}
+						<SideMenu menuActive={menuActive} />
+					</motion.div>
 				</div>
 			</nav>
 		</>

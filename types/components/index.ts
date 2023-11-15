@@ -567,6 +567,9 @@ export type IJumboContentSectionCard = {
 };
 
 // Elements
+export type ISideMenu = {
+	menuActive: boolean;
+};
 export type ITitle = {
 	content: string;
 	tailwindStyling: string;

@@ -127,11 +127,7 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={
-										globalContext?.themesOptionsContent?.facebookLink
-											? globalContext?.themesOptionsContent?.facebookLink
-											: "/"
-									}
+									href={`${globalContext?.themesOptionsContent?.facebookLink}`}
 								>
 									<svg
 										height="100%"
@@ -161,11 +157,7 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={
-										globalContext?.themesOptionsContent?.twitterLink
-											? globalContext?.themesOptionsContent?.twitterLink
-											: "/"
-									}
+									href={`${globalContext?.themesOptionsContent?.twitterLink}`}
 								>
 									<svg
 										height="100%"
@@ -195,11 +187,7 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={
-										globalContext?.themesOptionsContent?.telegramLink
-											? globalContext?.themesOptionsContent?.telegramLink
-											: "/"
-									}
+									href={`${globalContext?.themesOptionsContent?.telegramLink}`}
 								>
 									<svg
 										height="100%"
