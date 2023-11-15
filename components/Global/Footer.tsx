@@ -20,17 +20,14 @@ const Footer: FC = () => {
 	const globalContext = useGlobalContext();
 
 	return (
-		<section
+		<footer
 			className={
 				styles.footer +
 				" px-0 overflow-hidden border-t-4 bg-pureBlack border-yellow-default"
 			}
-			style={{
-				clipPath: `polygon(66% 6%, 100% 2%, 100% 100%, 0 100%, 0 1%)`,
-			}}
 		>
 			<div className="container relative z-50 px-4 mx-auto ">
-				<div className="py-36 md:py-28 flex flex-col items-center justify-between gap-6 px-6 -m-6 md:items-start lg:px-8 lg:flex-row">
+				<div className="py-28 flex flex-col items-center justify-between gap-6 px-6 -m-6 md:items-start lg:px-8 lg:flex-row">
 					<div className="flex flex-col items-center justify-between w-full lg:w-[35%] py-6 md:py-0 lg:items-start">
 						<div className="mb-10">
 							<Link href="/">
@@ -424,7 +421,7 @@ const Footer: FC = () => {
 					</motion.ul>
 				</div>
 			</div>
-		</section>
+		</footer>
 	);
 };
 

@@ -49,7 +49,7 @@ const Navbar: FC = () => {
 
 	return (
 		<>
-			<div
+			<nav
 				className={
 					styles.navbar +
 					` z-[999] w-full fixed transition-all ease-in-out hover:bg-pureBlack duration-500 ${
@@ -180,7 +180,7 @@ const Navbar: FC = () => {
 						)}
 					</ul>
 				</div>
-			</div>
+			</nav>
 		</>
 	);
 };

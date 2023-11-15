@@ -3,6 +3,8 @@
 @import "../base/colors";
 
 .footer {
+	clip-path: none;
+
 	h3 {
 		font-family: $body;
 	}
@@ -22,5 +24,9 @@
 				fill: $yellow;
 			}
 		}
+	}
+
+	@media screen and (min-width: 768px) {
+		clip-path: polygon(66% 6%, 100% 2%, 100% 100%, 0 100%, 0 1%);
 	}
 }
