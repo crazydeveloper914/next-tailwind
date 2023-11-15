@@ -32,7 +32,7 @@ const Navbar: FC = () => {
 	}, []);
 
 	// Display all sublinks & Mobile Links
-	const [menuActive, setMenuActive] = useState(true);
+	const [menuActive, setMenuActive] = useState(false);
 	const [aboutUsSublinksOpen, setAboutUsSublinksOpen]: any = useState(false);
 	const [businessServicesSublinksOpen, setBusinessServicesSublinksOpen]: any =
 		useState(false);
