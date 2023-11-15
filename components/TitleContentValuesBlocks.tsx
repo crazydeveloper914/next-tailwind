@@ -57,7 +57,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 			<div
 				className={
 					styles.titleContentValuesBlocks +
-					" bg-white py-36 lg:py-20 bg-center bg-no-repeat bg-cover"
+					" bg-white px-4 py-6 pb-28 md:py-10 md:pb-20 lg:py-20 bg-center bg-no-repeat bg-cover"
 				}
 				style={{
 					backgroundImage: `linear-gradient(
