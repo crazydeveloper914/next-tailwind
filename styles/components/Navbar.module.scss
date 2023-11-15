@@ -63,12 +63,13 @@
 		position: fixed;
 		z-index: 999;
 		right: 25px;
-		top: 2.5px;
+		top: 2px;
 		padding: 0px;
 		width: 55px;
 		height: 55px;
 		border: none;
 		line-height: 0.6;
+		border-radius: 100%;
 		text-align: center;
 		background: $pureBlack;
 		transition: all 1s ease-in-out;
