@@ -40,7 +40,7 @@ const FAQCard: FC<IFAQCard> = ({index, title, paragraph}) => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="flex font-bold gap-4 items-center text-left leading-[2.5rem] text-medium text-black"
+								className="flex font-bold gap-4 items-center text-left leading-tight text-medium text-black"
 							>
 								<span className="hidden lg:block">
 									<svg

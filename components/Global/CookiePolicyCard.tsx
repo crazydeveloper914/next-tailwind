@@ -33,7 +33,7 @@ const CookiePolicyCard: FC = () => {
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="px-6 pt-4 pb-10 mb-8 lg:pb-12  text-white bg-red-dark"
+					className="px-6 py-4 mb-8 text-white bg-red-dark"
 				>
 					<motion.h3
 						initial={initial}
@@ -58,7 +58,7 @@ const CookiePolicyCard: FC = () => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="inline-block px-6 py-3 mr-2 text-xs leading-none text-white transition-all duration-200 ease-in-out bg-red-Two hover:bg-yellow-default"
+							className="inline-block px-6 py-3 mr-2 text-xs leading-none text-white transition-all duration-200 ease-in-out bg-red-Two hover:bg-yellow-dark"
 						>
 							Accept Cookies
 						</motion.button>

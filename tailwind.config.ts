@@ -51,6 +51,7 @@ const config: Config = {
 				default: "#f6ad37",
 				Two: "#e8b042",
 				Three: "#fac546",
+				dark: "#e4a002",
 			},
 			green: {
 				default: "#4d6c13",

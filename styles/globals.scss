@@ -16,15 +16,15 @@ body {
 }
 
 body::-webkit-scrollbar {
-	@apply block w-[0.85rem] h-[0.85rem];
+	@apply block w-[0.90rem] h-[0.90rem];
 }
 
 body::-webkit-scrollbar-track {
-	@apply bg-white;
+	@apply bg-pureBlack;
 }
 
 body::-webkit-scrollbar-thumb {
-	@apply rounded-[2px] bg-yellow-default transition-all duration-500 hover:bg-red-default;
+	@apply rounded-[2px] bg-red-Two transition-all duration-500 hover:bg-red-default;
 }
 
 a {
