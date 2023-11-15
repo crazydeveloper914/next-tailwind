@@ -46,7 +46,7 @@ const RequestQuoteFormBlocks: FC<IRequestQuoteFormBlocks> = ({
 			<div
 				className={
 					styles.requestQuoteFormBlocks +
-					" bg-white py-36 lg:py-20 bg-center bg-no-repeat bg-cover"
+					" bg-white p-6 md:py-36 lg:py-20 bg-center bg-no-repeat bg-cover"
 				}
 				style={{
 					backgroundImage: `linear-gradient(

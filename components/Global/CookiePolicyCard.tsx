@@ -34,9 +34,6 @@ const CookiePolicyCard: FC = () => {
 					whileInView={stagger}
 					viewport={{once: true}}
 					className="px-6 pt-4 pb-10 mb-8 lg:pb-12  text-white bg-red-dark"
-					style={{
-						clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
-					}}
 				>
 					<motion.h3
 						initial={initial}
