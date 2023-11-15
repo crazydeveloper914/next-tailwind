@@ -348,7 +348,7 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 								className="w-full xl:w-1/3 flex flex-col gap-4"
 							>
 								<ReCAPTCHA
-									sitekey={`6LeJJqwlAAAAAByEDQJTbNFkPL9DSjMBwnE7smkU`}
+									sitekey={`6Lc5GhApAAAAAOycPfDyNCIuJiGQy4u95pZN6kp4`}
 									onChange={handleReCaptchaChange}
 								/>
 								<motion.button

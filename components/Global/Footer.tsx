@@ -368,7 +368,7 @@ const Footer: FC = () => {
 					</div>
 				</div>
 				<div className="border-b border-lightGrey" />
-				<div className="py-6 flex flex-col-reverse items-center justify-between -m-6 lg:flex-row">
+				<div className="py-6 flex flex-col-reverse items-center justify-between m-0 lg:-m-6 lg:flex-row">
 					<div className="w-auto p-6">
 						<motion.p
 							initial={initialTwo}
@@ -379,17 +379,16 @@ const Footer: FC = () => {
 							{globalContext?.themesOptionsContent?.copyrightText}
 						</motion.p>
 					</div>
-					<motion.div
+					<motion.ul
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={stagger}
-						className="flex flex-col sm:flex-row -m-6 w-auto p-6"
+						className="flex flex-col sm:flex-row -m-6 w-auto gap-6 p-6"
 					>
-						<motion.div
+						<motion.li
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="w-auto p-6"
 						>
 							<Link
 								className="text-white transition-all duration-200 ease-in-out text-tiny hover:text-red-Two"
@@ -397,12 +396,11 @@ const Footer: FC = () => {
 							>
 								Privacy Policy
 							</Link>
-						</motion.div>
-						<motion.div
+						</motion.li>
+						<motion.li
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="w-auto p-6"
 						>
 							<Link
 								className="text-white transition-all duration-200 ease-in-out text-tiny hover:text-red-Two"
@@ -410,12 +408,11 @@ const Footer: FC = () => {
 							>
 								Cookie Policy
 							</Link>
-						</motion.div>
-						<motion.div
+						</motion.li>
+						<motion.li
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="w-auto p-6"
 						>
 							<Link
 								href="/terms-of-use"
@@ -423,8 +420,8 @@ const Footer: FC = () => {
 							>
 								Terms Of Use
 							</Link>
-						</motion.div>
-					</motion.div>
+						</motion.li>
+					</motion.ul>
 				</div>
 			</div>
 		</section>
