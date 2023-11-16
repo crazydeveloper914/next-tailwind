@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
-import {useState, FC, Fragment, useEffect} from "react";
+import {FC, Fragment} from "react";
 import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Styling
@@ -19,17 +19,17 @@ const SubMegaMenuLinks: FC = () => {
 	return (
 		<>
 			<div className="fixed mt-[1.65rem] w-full left-0 flex">
-				<div className="w-[30%]" />
-				<div className="w-[70%] bg-pureBlack grid grid-cols-3 gap-4 items-center justify-between">
-					<motion.div
-						initial={initial}
-						whileInView={stagger}
-						viewport={{once: true}}
-						className="flex flex-col items-center justify-center"
-					>
-						<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left">
+				<div className="w-[20%] 2xl:w-[25%]" />
+				<div className="w-[80%] 2xl:w-[75%] bg-pureBlack grid grid-cols-3 gap-4 items-start justify-between">
+					<div className="flex flex-col items-center justify-center py-10 border-r-[1px] border-red-darker">
+						<motion.h4
+							initial={initialTwo}
+							whileInView={fadeIn}
+							viewport={{once: true}}
+							className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left"
+						>
 							Services Links
-						</h4>
+						</motion.h4>
 
 						<motion.ul
 							initial={initialTwo}
@@ -62,17 +62,22 @@ const SubMegaMenuLinks: FC = () => {
 								<></>
 							)}
 						</motion.ul>
-					</motion.div>
-					<motion.div
-						initial={initial}
-						whileInView={stagger}
-						viewport={{once: true}}
-						className="flex flex-col"
-					>
-						<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase">
+					</div>
+					<div className="flex flex-col justify-start h-full items-center py-10">
+						<motion.h4
+							initial={initialTwo}
+							whileInView={fadeIn}
+							viewport={{once: true}}
+							className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase"
+						>
 							Other Links
-						</h4>
-						<div className="flex flex-col 2xl:flex-row items-center justify-center gap-4">
+						</motion.h4>
+						<motion.div
+							initial={initial}
+							whileInView={stagger}
+							viewport={{once: true}}
+							className="flex flex-col 2xl:flex-row items-center justify-center gap-4"
+						>
 							<Link href="http://www.bravo.co.tz/" target="_blank">
 								<motion.button
 									initial={initial}
@@ -80,7 +85,7 @@ const SubMegaMenuLinks: FC = () => {
 									viewport={{once: true}}
 									className={
 										styles.borderButton +
-										" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
+										" group w-[200px] h-full xl:h-[125px] 2xl:min-h-[150px] relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
 									}
 								>
 									<span>
@@ -111,7 +116,7 @@ const SubMegaMenuLinks: FC = () => {
 									viewport={{once: true}}
 									className={
 										styles.borderButton +
-										" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
+										" group w-[200px] h-full xl:h-[125px] 2xl:min-h-[150px] relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
 									}
 								>
 									<span>
@@ -133,13 +138,13 @@ const SubMegaMenuLinks: FC = () => {
 									<span>Agricom</span>
 								</motion.button>
 							</Link>
-						</div>
-					</motion.div>
+						</motion.div>
+					</div>
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
 						viewport={{once: true}}
-						className="px-10 py-16 flex flex-col items-center justify-between bg-cover bg-center bg-no-repeat"
+						className="px-10 py-16 h-full flex flex-col items-center justify-between bg-cover bg-center bg-no-repeat"
 						style={{
 							backgroundImage: `linear-gradient(
 							    	0deg,
