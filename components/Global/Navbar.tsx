@@ -11,6 +11,7 @@ import styles from "./../../styles/components/Navbar.module.scss";
 
 // Components
 import SideMenu from "../Elements/SideMenu";
+import SubMegaMenuLinks from "../Elements/SubMegaMenuLinks";
 
 const Navbar: FC = () => {
 	const globalContext = useGlobalContext();
@@ -33,6 +34,8 @@ const Navbar: FC = () => {
 
 	// Display all sublinks & Mobile Links
 	const [menuActive, setMenuActive] = useState(false);
+	const [navBackgroundSublinksOpen, setNavBackgroundSublinksOpen]: any =
+		useState(false);
 	const [aboutUsSublinksOpen, setAboutUsSublinksOpen]: any = useState(false);
 	const [businessServicesSublinksOpen, setBusinessServicesSublinksOpen]: any =
 		useState(false);
@@ -41,6 +44,12 @@ const Navbar: FC = () => {
 
 	function toggleMenu() {
 		setMenuActive(!menuActive);
+	}
+
+	/* Display's Navbar background Color
+	when Mega sublinks are hovered*/
+	function displayNavBackgroundColour() {
+		setNavBackgroundSublinksOpen(!navBackgroundSublinksOpen);
 	}
 
 	// Hides or Display about us sublinks
@@ -55,13 +64,21 @@ const Navbar: FC = () => {
 		setBusinessServicesSublinksOpen(!businessServicesSublinksOpen);
 	}
 
+	function resetNavbarStyling() {
+		setAboutUsSublinksOpen(false);
+		setNavBackgroundSublinksOpen(false);
+		setBusinessServicesSublinksOpen(false);
+	}
+
 	return (
 		<>
 			<nav
 				className={
 					styles.navbar +
 					` z-[999] w-full fixed transition-all ease-in-out hover:bg-pureBlack duration-500 ${
-						scrollPosition > 50 ? "bg-pureBlack" : "bg-transparent"
+						scrollPosition > 50 || navBackgroundSublinksOpen
+							? "bg-pureBlack"
+							: "bg-transparent"
 					}`
 				}
 			>
@@ -111,6 +128,7 @@ const Navbar: FC = () => {
 										initial={initialTwo}
 										whileInView={stagger}
 										viewport={{once: true}}
+										onMouseLeave={resetNavbarStyling}
 										className={
 											styles.aboutUsSublinks +
 											"flex flex-col justify-center items-center absolute mt-4 ml-[-25px] z-[999]"
@@ -136,8 +154,8 @@ const Navbar: FC = () => {
 								</>
 							) : null}
 						</li>
-						<li className="relative">
-							<div className="flex flex-row justify-center items-center gap-2 cursor-default">
+						<li className="relative" onClick={displayBusinessServicesSublinks}>
+							<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
 								<span className="text-white text-base text-center tracking-[0.05rem] transition-all ease-in-out duration-500">
 									Our Services
 								</span>
@@ -145,39 +163,18 @@ const Navbar: FC = () => {
 									width={550}
 									height={550}
 									alt="White Arrow Icon"
-									onClick={displayBusinessServicesSublinks}
 									src="/img/navigation-menu-dropdown-arrow-white.png"
-									className="w-[25px] h-[25px] object-contain object-center"
+									className=" cursor-pointer w-[25px] h-[25px] object-contain object-center"
 								/>
 							</div>
 							{businessServicesSublinksOpen ? (
 								<>
-									<motion.ul
-										initial={initialTwo}
-										whileInView={stagger}
-										viewport={{once: true}}
-										className={
-											styles.businessServicesSublinks +
-											"flex flex-col justify-center items-center absolute mt-4 ml-[-25px] z-[999]"
-										}
+									<div
+										onMouseLeave={resetNavbarStyling}
+										onMouseEnter={displayNavBackgroundColour}
 									>
-										{/* Menu Link*/}
-										{globalContext?.businessServicesSublinks?.length > 0 ? (
-											globalContext?.businessServicesSublinks?.map(
-												(item: any, keys: any) => (
-													<Fragment key={keys}>
-														<Link href={item?.node?.url}>
-															<li className="text-base font-semibold px-4 py-2 bg-white hover:bg-red-dark text-black hover:text-white transition-all ease-in-out duration-500 border-b-[1px] border-b-solid border-grey lg:min-w-[13rem] cursor-pointer">
-																{item?.node?.label}
-															</li>
-														</Link>
-													</Fragment>
-												)
-											)
-										) : (
-											<></>
-										)}
-									</motion.ul>
+										<SubMegaMenuLinks />
+									</div>
 								</>
 							) : null}
 						</li>

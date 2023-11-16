@@ -115,6 +115,18 @@ export type IThemesOptionsContent = {
 	telegramLink: string;
 	displayNoticeBanner: boolean;
 	noticeBannerTextarea: string;
+	megaMenuContent: {
+		title: string;
+		paragraph: string;
+		backgroundImage: {
+			sourceUrl: string;
+		};
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+	};
 };
 
 /* CONTEXT PROVIDERS  */

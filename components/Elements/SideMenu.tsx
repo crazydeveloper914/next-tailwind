@@ -141,7 +141,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										viewport={{once: true}}
 										className={
 											styles.businessServicesSublinks +
-											` flex flex-col my-4  z-[999]`
+											` flex flex-col my-4 z-[999]`
 										}
 									>
 										{/* Menu Link*/}

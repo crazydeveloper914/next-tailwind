@@ -8,7 +8,7 @@ export async function getThemesOptionsContent() {
 	try {
 		const content: DocumentNode = gql`
 			{
-				themeOptions(where: {id: 103, status: PUBLISH}) {
+				themeOptions(where: {name: "Global Content", status: PUBLISH}) {
 					edges {
 						node {
 							themeOptions {
@@ -23,6 +23,18 @@ export async function getThemesOptionsContent() {
 								telegramLink
 								displayNoticeBanner
 								noticeBannerTextarea
+								megaMenuContent {
+									title
+									paragraph
+									buttonLink {
+										url
+										title
+										target
+									}
+									backgroundImage {
+										sourceUrl
+									}
+								}
 							}
 						}
 					}
