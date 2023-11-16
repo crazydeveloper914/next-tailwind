@@ -88,11 +88,11 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								height={image?.mediaDetails?.height}
 								className={
 									image?.sourceUrl
-										? `block object-cover object-center w-full h-[350px] sm:h-[500px]`
+										? `block object-cover object-center w-full h-[350px] sm:h-[400px]`
 										: `hidden`
 								}
 								style={{
-									clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
+									clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
 								}}
 							/>
 						</motion.div>
@@ -152,11 +152,11 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								height={image?.mediaDetails?.height}
 								className={
 									image?.sourceUrl
-										? `block object-cover object-center w-full h-[350px] sm:h-[500px]`
+										? `block object-cover object-center w-full h-[350px] sm:h-[400px]`
 										: `hidden`
 								}
 								style={{
-									clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
+									clipPath: `polygon(0 0, 100% 0%, 100% 98%, 7% 95%)`,
 								}}
 							/>
 						</motion.div>

@@ -352,7 +352,7 @@ const Footer: FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className="border-b border-lightGrey" />
+				<div className="border-b border-black" />
 				<div className="py-6 flex flex-col-reverse items-center justify-between m-0 lg:-m-6 lg:flex-row">
 					<div className="w-auto p-6">
 						<motion.p

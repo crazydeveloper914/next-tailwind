@@ -578,6 +578,9 @@ export type IParagraph = {
 	content: string;
 	tailwindStyling: string;
 };
+export type IBackHoverButton = {
+	link: string;
+};
 export type IButtonBorderSliced = {
 	title: string;
 	fullWidth: boolean;

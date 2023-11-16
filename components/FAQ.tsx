@@ -12,9 +12,6 @@ import {motion} from "framer-motion";
 import {IFAQ} from "@/types/components/index";
 import {useGlobalContext} from "@/context/global";
 
-// Styling
-import styles from "../styles/components/FAQ.module.scss";
-
 // Components
 import FAQCard from "./Cards/FAQCard";
 import Paragraph from "./Elements/Paragraph";
@@ -36,7 +33,7 @@ const FAQ: FC<IFAQ> = ({
 
 	return (
 		<>
-			<div className={styles.faq + ` py-16 px-4 lg:px-0 bg-white`}>
+			<div className="py-16 px-4 lg:px-0 bg-white">
 				<div className="container px-0 mx-auto">
 					<motion.h3
 						initial={initialTwo}

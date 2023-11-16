@@ -10,6 +10,8 @@ import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAl
 
 // Components
 import Layout from "@/components/Layout/Layout";
+import BackHoverButton from "@/components/Elements/BackHoverButton";
+import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
@@ -25,6 +27,8 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 			postTypeFlexibleContent={postTypeFlexibleContent}
 		>
 			<Layout>
+				<BackToTopButton link={`#`} />
+				<BackHoverButton link={`/operational-insights`} />
 				<RenderFlexibleContent />
 			</Layout>
 		</PageContextProvider>

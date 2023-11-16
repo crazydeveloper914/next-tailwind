@@ -20,8 +20,8 @@ const SubMegaMenuLinks: FC = () => {
 		<>
 			<div className="fixed mt-[1.65rem] w-full left-0 flex">
 				<div className="w-[20%] 2xl:w-[25%]" />
-				<div className="w-[80%] 2xl:w-[75%] bg-pureBlack grid grid-cols-3 gap-4 items-start justify-between">
-					<div className="flex flex-col items-center justify-center py-10 border-r-[1px] border-red-darker">
+				<div className="w-[80%] 2xl:w-[75%] bg-pureBlack grid grid-cols-3 gap-4 items-start justify-between border-b-[2px] border-b-black">
+					<div className="flex flex-col items-center justify-center py-10 border-r-[2px] border-black">
 						<motion.h4
 							initial={initialTwo}
 							whileInView={fadeIn}
@@ -46,7 +46,7 @@ const SubMegaMenuLinks: FC = () => {
 									(item: any, keys: any) => (
 										<Fragment key={keys}>
 											<Link href={item?.node?.url}>
-												<li className="w-full hover:bg-red-default border-b-[1px] border-red-default border-opacity-50">
+												<li className="w-full hover:bg-red-default border-b-[2px] border-black border-opacity-50">
 													<Link
 														href={item?.node?.url}
 														className="block p-4 text-base font-semibold text-white"

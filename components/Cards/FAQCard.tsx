@@ -5,9 +5,6 @@ import {motion} from "framer-motion";
 import {IFAQCard} from "@/types/components/index";
 import {fadeIn, initialTwo} from "../../animations/animations";
 
-// Styling
-import styles from "../../styles/components/FAQ.module.scss";
-
 // Components
 import Paragraph from "../Elements/Paragraph";
 
@@ -23,7 +20,7 @@ const FAQCard: FC<IFAQCard> = ({index, title, paragraph}) => {
 
 	return (
 		<>
-			<div className={styles.faqCard + " flex flex-col w-full"}>
+			<div className="flex flex-col w-full">
 				<div
 					className={`w-full p-6 border-solid transition-all duration-200 ease-in-out ${
 						accordionOpen
