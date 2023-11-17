@@ -230,6 +230,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 								fieldGroupName
 								title
 								paragraph
+								displayParagraph
 							}
 							... on ${postTypeFlexibleContent}_FeaturedProjects {
 								fieldGroupName

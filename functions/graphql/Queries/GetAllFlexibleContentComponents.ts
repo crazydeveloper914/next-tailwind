@@ -236,6 +236,7 @@ export async function getAllFlexibleContentComponents(
 												fieldGroupName
 												title
 												paragraph
+												displayParagraph
 											}
 											... on ${postTypeFlexibleContent}_FeaturedProjects {
 												fieldGroupName

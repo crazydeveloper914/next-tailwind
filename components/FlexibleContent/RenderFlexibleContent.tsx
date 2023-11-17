@@ -113,6 +113,7 @@ const RenderFlexibleContent: FC = () => {
 								<TitleParagraph
 									title={item?.title}
 									paragraph={item?.paragraph}
+									displayParagraph={item?.displayParagraph}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_OurPartners` ? (

@@ -438,6 +438,7 @@ export type IGoogleReviews = {
 export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
+	displayParagraph: boolean;
 };
 export type IOperationalInsights = {
 	title: string;
