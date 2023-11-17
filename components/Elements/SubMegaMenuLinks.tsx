@@ -1,9 +1,9 @@
 // Imports
 import Link from "next/link";
 import Image from "next/image";
+import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
-import {FC, Fragment} from "react";
 import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Styling
@@ -20,13 +20,13 @@ const SubMegaMenuLinks: FC = () => {
 		<>
 			<div className="fixed mt-[1.65rem] w-full left-0 flex">
 				<div className="w-[20%] 2xl:w-[25%]" />
-				<div className="w-[80%] 2xl:w-[75%] bg-pureBlack grid grid-cols-3 gap-4 items-start justify-between border-b-[2px] border-b-black">
+				<div className="w-[80%] 2xl:w-[75%] bg-white grid grid-cols-3 gap-4 items-start justify-between">
 					<div className="flex flex-col items-center justify-center py-10 border-r-[2px] border-black">
 						<motion.h4
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left"
+							className="mb-5 text-lg font-semibold tracking-normal text-center uppercase md:text-left text-pureBlack"
 						>
 							Services Links
 						</motion.h4>
@@ -46,10 +46,10 @@ const SubMegaMenuLinks: FC = () => {
 									(item: any, keys: any) => (
 										<Fragment key={keys}>
 											<Link href={item?.node?.url}>
-												<li className="w-full hover:bg-red-default border-b-[2px] border-black border-opacity-50">
+												<li className="w-full group hover:bg-red-default border-b-[2px] border-red-default">
 													<Link
 														href={item?.node?.url}
-														className="block p-4 text-base font-semibold text-white"
+														className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
 													>
 														{item?.node?.label}
 													</Link>
@@ -68,7 +68,7 @@ const SubMegaMenuLinks: FC = () => {
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase"
+							className="mb-5 text-lg font-semibold tracking-normal text-center text-pureBlack uppercase"
 						>
 							Other Links
 						</motion.h4>
@@ -85,7 +85,7 @@ const SubMegaMenuLinks: FC = () => {
 									viewport={{once: true}}
 									className={
 										styles.borderButton +
-										" group w-[200px] h-full xl:h-[125px] 2xl:min-h-[150px] relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
+										" group w-[200px] h-full xl:h-[125px] 2xl:min-h-[150px] relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-red-Two border-solid border-2 bg-transparent hover:bg-red-Two hover:border-lightGrey transition-all ease-in-out duration-500"
 									}
 								>
 									<span>
@@ -116,7 +116,7 @@ const SubMegaMenuLinks: FC = () => {
 									viewport={{once: true}}
 									className={
 										styles.borderButton +
-										" group w-[200px] h-full xl:h-[125px] 2xl:min-h-[150px] relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-pureBlack after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
+										" group w-[200px] h-full xl:h-[125px] 2xl:min-h-[150px] relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-green-Two hover:bg-green-Two transition-all ease-in-out duration-500 text-pureBlack hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-green-Two after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-green-Two hover:after:bg-green-Two"
 									}
 								>
 									<span>
