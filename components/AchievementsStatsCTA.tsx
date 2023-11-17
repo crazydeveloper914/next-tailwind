@@ -30,7 +30,11 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						initial={initialTwo}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="grid-cols-1 grid px-4 py-16 lg:px-0 md:grid-cols-2 gap-8 w-full lg:w-[55%] 2xl:w-[60%] lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end"
+						className={`${
+							achievements?.length >= 2
+								? "grid grid-cols-1 md:grid-cols-2 lg:w-[55%] 2xl:w-[60%]"
+								: "flex lg:w-[35%] 2xl:w-[40%]"
+						} px-4 py-16 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end`}
 					>
 						{achievements?.length > 0 ? (
 							achievements?.map((item: any, keys: any) => (
@@ -50,7 +54,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 											initial={initialTwo}
 											whileInView={stagger}
 											viewport={{once: true}}
-											className={`p-6 w-full xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center w-full sm:mih-[22vh] transition-all ease-in-out duration-500 ${
+											className={`p-6 w-[80%] sm:w-[40%] lg:w-full xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:mih-[22vh] transition-all ease-in-out duration-500 ${
 												keys === 0
 													? "bg-green-Three"
 													: keys === 1
@@ -74,7 +78,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 												initial={initialTwo}
 												whileInView={fadeIn}
 												viewport={{once: true}}
-												className="text-white font-extrabold text-4xl py-4 2xl:text-5xl leading-[1.5rem] text-center tracking-[0.10rem]"
+												className="text-white font-extrabold text-xl lg:text-4xl py-4 2xl:text-5xl text-center tracking-[0.10rem]"
 											>
 												{item?.card?.title}
 											</motion.h4>
@@ -92,7 +96,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 					</motion.div>
 				</div>
 				<div
-					className="px-4 py-20 bg-center bg-no-repeat bg-cover lg:px-0"
+					className="px-4 py-20 bg-center bg-no-repeat bg-cover lg:px-0 min-h-[400px]"
 					style={{
 						backgroundImage: `linear-gradient(
 							0deg,
@@ -108,23 +112,33 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 								initial={initialTwo}
 								whileInView={stagger}
 								viewport={{once: true}}
-								className={`w-full flex flex-col items-center justify-between gap-4  ${
-									displayAchievementsContent
+								className={`w-full flex flex-col items-center justify-between gap-4 ${
+									displayAchievementsContent && achievements?.length >= 2
 										? "lg:w-[45%] lg:items-start"
+										: displayAchievementsContent && achievements?.length <= 1
+										? "lg:w-[55%] lg:items-start"
 										: "lg:w-full lg:flex-row lg:items-center"
 								}`}
 							>
 								<div>
 									<Title
 										content={title}
-										tailwindStyling="mb-4 max-w-xl text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
+										tailwindStyling="mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
 									/>
 									<Paragraph
 										content={paragraph}
-										tailwindStyling="max-w-lg text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+										tailwindStyling={`${
+											achievements?.length >= 2
+												? "max-w-none lg:max-w-sm 2xl:max-w-lg"
+												: "max-w-none lg:max-w-6xl"
+										} text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left`}
 									/>
 								</div>
-								<Link href={buttonLink?.url} target={buttonLink?.target}>
+								<Link
+									href={`${buttonLink?.url}`}
+									target={buttonLink?.target}
+									className={buttonLink?.url ? "block" : "hidden"}
+								>
 									<motion.button
 										initial={initialTwo}
 										whileInView={fadeIn}

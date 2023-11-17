@@ -35,7 +35,11 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								tailwindStyling="max-w-lg text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
 							/>
 						</div>
-						<Link href={buttonLink?.url} target={buttonLink?.target}>
+						<Link
+							href={buttonLink?.url}
+							target={buttonLink?.target}
+							className={buttonLink?.url ? "block" : "hidden"}
+						>
 							<motion.button
 								initial={initialTwo}
 								whileInView={fadeIn}
