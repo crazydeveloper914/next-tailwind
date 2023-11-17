@@ -122,37 +122,43 @@ const Navbar: FC = () => {
 									className="w-[25px] h-[25px] object-contain object-center"
 								/>
 							</span>
-							{aboutUsSublinksOpen ? (
-								<>
-									<motion.ul
-										initial={initialTwo}
-										whileInView={stagger}
-										viewport={{once: true}}
-										onMouseLeave={resetNavbarStyling}
-										className={
-											styles.aboutUsSublinks +
-											"flex flex-col justify-center items-center absolute mt-4 ml-[-25px] z-[999]"
-										}
-									>
-										{/* Menu Link*/}
-										{globalContext?.aboutUsSublinks?.length > 0 ? (
-											globalContext?.aboutUsSublinks?.map(
-												(item: any, keys: any) => (
-													<Fragment key={keys}>
-														<Link href={item?.node?.url}>
-															<li className="text-base font-semibold px-4 py-2 bg-white hover:bg-red-dark text-black hover:text-white transition-all ease-in-out duration-500 border-b-[1px] border-b-solid border-grey lg:min-w-[13rem] cursor-pointer">
-																{item?.node?.label}
-															</li>
-														</Link>
-													</Fragment>
+							<div className="fixed mt-[1.65rem] w-[20%] 2xl:w-[15%] bg-white flex flex-col items-center justify-center">
+								{aboutUsSublinksOpen ? (
+									<>
+										<motion.ul
+											initial={initialTwo}
+											whileInView={stagger}
+											viewport={{once: true}}
+											className={
+												styles.businessServicesSublinks +
+												" py-6 px-4 w-full flex flex-col z-[999]"
+											}
+										>
+											{/* Menu Link*/}
+											{globalContext?.aboutUsSublinks?.length > 0 ? (
+												globalContext?.aboutUsSublinks?.map(
+													(item: any, keys: any) => (
+														<Fragment key={keys}>
+															<Link href={item?.node?.url}>
+																<li className="w-full group hover:bg-red-default border-b-[2px] border-lightGrey hover:border-red-default">
+																	<Link
+																		href={item?.node?.url}
+																		className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
+																	>
+																		{item?.node?.label}
+																	</Link>
+																</li>
+															</Link>
+														</Fragment>
+													)
 												)
-											)
-										) : (
-											<></>
-										)}
-									</motion.ul>
-								</>
-							) : null}
+											) : (
+												<></>
+											)}
+										</motion.ul>
+									</>
+								) : null}
+							</div>
 						</li>
 						<li className="relative" onClick={displayBusinessServicesSublinks}>
 							<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
@@ -193,12 +199,7 @@ const Navbar: FC = () => {
 							<></>
 						)}
 					</motion.ul>
-					<motion.div
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
-						className="block xl:hidden"
-					>
+					<motion.div className="block xl:hidden">
 						<button
 							type="button"
 							onClick={toggleMenu}

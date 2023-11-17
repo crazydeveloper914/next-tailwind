@@ -223,6 +223,32 @@ const Footer: FC = () => {
 								viewport={{once: true}}
 								className="flex flex-col items-center justify-center gap-2 py-6 lg:items-baseline"
 							>
+								<motion.li
+									className="px-0"
+									initial={initial}
+									whileInView={fadeInUp}
+									viewport={{once: true}}
+								>
+									<Link
+										href="/about"
+										className="text-white text-base text-center lg:text-left hover:text-red-Two"
+									>
+										About
+									</Link>
+								</motion.li>
+								<motion.li
+									className="px-0"
+									initial={initial}
+									whileInView={fadeInUp}
+									viewport={{once: true}}
+								>
+									<Link
+										href="/executive-leadership"
+										className="text-white text-base text-center lg:text-left hover:text-red-Two"
+									>
+										Executive leadership
+									</Link>
+								</motion.li>
 								{globalContext?.footerMenuLinks?.length > 0 ? (
 									globalContext?.footerMenuLinks?.map(
 										(item: any, keys: any) => (

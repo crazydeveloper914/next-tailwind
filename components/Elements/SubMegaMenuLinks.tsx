@@ -46,7 +46,7 @@ const SubMegaMenuLinks: FC = () => {
 									(item: any, keys: any) => (
 										<Fragment key={keys}>
 											<Link href={item?.node?.url}>
-												<li className="w-full group hover:bg-red-default border-b-[2px] border-red-default">
+												<li className="w-full group hover:bg-red-default border-b-[2px] border-lightGrey hover:border-red-default">
 													<Link
 														href={item?.node?.url}
 														className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
@@ -140,10 +140,7 @@ const SubMegaMenuLinks: FC = () => {
 							</Link>
 						</motion.div>
 					</div>
-					<motion.div
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
+					<div
 						className="px-10 py-16 h-full flex flex-col items-center justify-between bg-cover bg-center bg-no-repeat"
 						style={{
 							backgroundImage: `linear-gradient(
@@ -202,7 +199,7 @@ const SubMegaMenuLinks: FC = () => {
 								/>
 							</Link>
 						</motion.div>
-					</motion.div>
+					</div>
 				</div>
 			</div>
 		</>
