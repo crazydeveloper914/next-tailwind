@@ -48,7 +48,9 @@ const OurPartners: FC<IOurPartners> = ({
 							initial={initial}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="grid items-center justify-center grid-cols-2 gap-4 lg:grid-cols-6 lg:justify-between py-12"
+							className={`grid items-center justify-center grid-cols-2 gap-4 ${
+								imageGrid?.length <= 4 ? "lg:grid-cols-4" : "lg:grid-cols-6"
+							} lg:items-center lg:justify-between py-12`}
 						>
 							{imageGrid?.length > 0 ? (
 								imageGrid.map((item: any, keys: any) => (
