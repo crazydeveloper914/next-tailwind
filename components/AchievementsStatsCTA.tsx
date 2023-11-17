@@ -54,7 +54,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 											initial={initialTwo}
 											whileInView={stagger}
 											viewport={{once: true}}
-											className={`p-6 w-[80%] sm:w-[40%] lg:w-full xl:shadow-2xl xl:w-[50%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:mih-[22vh] transition-all ease-in-out duration-500 ${
+											className={`p-6 w-[80%] sm:w-[40%] md:w-[60%] lg:w-full xl:shadow-2xl xl:w-[55%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:mih-[22vh] transition-all ease-in-out duration-500 ${
 												keys === 0
 													? "bg-green-Three"
 													: keys === 1

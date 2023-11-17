@@ -48,7 +48,7 @@ const Navbar: FC = () => {
 
 	/* Display's Navbar background Color
 	when Mega sublinks are hovered*/
-	function displayNavBackgroundColour() {
+	function displayNavBackgroundColor() {
 		setNavBackgroundSublinksOpen(!navBackgroundSublinksOpen);
 	}
 
@@ -122,7 +122,10 @@ const Navbar: FC = () => {
 									className="w-[25px] h-[25px] object-contain object-center"
 								/>
 							</span>
-							<div className="fixed mt-[1.65rem] w-[20%] 2xl:w-[15%] bg-white flex flex-col items-center justify-center">
+							<div
+								onMouseLeave={resetNavbarStyling}
+								className="fixed mt-[1.65rem] w-[20%] bg-white flex flex-col items-center justify-center"
+							>
 								{aboutUsSublinksOpen ? (
 									<>
 										<motion.ul
@@ -131,7 +134,7 @@ const Navbar: FC = () => {
 											viewport={{once: true}}
 											className={
 												styles.businessServicesSublinks +
-												" py-6 px-4 w-full flex flex-col z-[999]"
+												" p-4 w-full flex flex-col z-[999]"
 											}
 										>
 											{/* Menu Link*/}
@@ -177,7 +180,7 @@ const Navbar: FC = () => {
 								<>
 									<div
 										onMouseLeave={resetNavbarStyling}
-										onMouseEnter={displayNavBackgroundColour}
+										onMouseEnter={displayNavBackgroundColor}
 									>
 										<SubMegaMenuLinks />
 									</div>

@@ -18,9 +18,8 @@ const SubMegaMenuLinks: FC = () => {
 
 	return (
 		<>
-			<div className="fixed mt-[1.65rem] w-full left-0 flex">
-				<div className="w-[20%] 2xl:w-[25%]" />
-				<div className="w-[80%] 2xl:w-[75%] bg-white grid grid-cols-3 gap-4 items-start justify-between">
+			<div className="fixed mt-[1.65rem] w-full left-0 flex justify-end">
+				<div className="w-[80%] 2xl:w-[75%] bg-white grid grid-cols-3 gap-4 items-else justify-between">
 					<div className="flex flex-col items-center justify-center py-10 border-r-[2px] border-black">
 						<motion.h4
 							initial={initialTwo}
