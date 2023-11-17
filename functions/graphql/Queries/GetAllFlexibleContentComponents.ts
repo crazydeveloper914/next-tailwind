@@ -352,14 +352,7 @@ export async function getAllFlexibleContentComponents(
 													}
 												valuesBlockOne {
 													title
-													paragraph
 													blockTitle
-													displayButton
-													buttonLink {
-														url
-														title
-														target
-													}
 													backgroundImage {
 														altText
 														sourceUrl
@@ -371,14 +364,7 @@ export async function getAllFlexibleContentComponents(
 												}
 												valuesBlockTwo {
 													title
-													paragraph
 													blockTitle
-													displayButton
-													buttonLink {
-														url
-														title
-														target
-													}
 													backgroundImage {
 														altText
 														sourceUrl
@@ -390,14 +376,7 @@ export async function getAllFlexibleContentComponents(
 												}
 												valuesBlockThree {
 													title
-													paragraph
 													blockTitle
-													displayButton
-													buttonLink {
-														url
-														title
-														target
-													}
 													backgroundImage {
 														altText
 														sourceUrl

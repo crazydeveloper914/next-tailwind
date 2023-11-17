@@ -346,14 +346,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 									}
 								valuesBlockOne {
 									title
-									paragraph
 									blockTitle
-									displayButton
-									buttonLink {
-										url
-										title
-										target
-									}
 									backgroundImage {
 										altText
 										sourceUrl
@@ -365,14 +358,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 								}
 								valuesBlockTwo {
 									title
-									paragraph
 									blockTitle
-									displayButton
-									buttonLink {
-										url
-										title
-										target
-									}
 									backgroundImage {
 										altText
 										sourceUrl
@@ -384,14 +370,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 								}
 								valuesBlockThree {
 									title
-									paragraph
 									blockTitle
-									displayButton
-									buttonLink {
-										url
-										title
-										target
-									}
 									backgroundImage {
 										altText
 										sourceUrl

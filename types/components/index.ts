@@ -199,14 +199,7 @@ export type IRequestQuoteFormBlocks = {
 	};
 	valuesBlockOne: {
 		title: string;
-		paragraph: string;
 		blockTitle: string;
-		displayButton: boolean;
-		buttonLink: {
-			url: string;
-			title: string;
-			target: string;
-		};
 		backgroundImage: {
 			altText: string;
 			sourceUrl: string;
@@ -218,14 +211,7 @@ export type IRequestQuoteFormBlocks = {
 	};
 	valuesBlockTwo: {
 		title: string;
-		paragraph: string;
 		blockTitle: string;
-		displayButton: boolean;
-		buttonLink: {
-			url: string;
-			title: string;
-			target: string;
-		};
 		businessIcon: {
 			altText: string;
 			sourceUrl: string;
@@ -245,14 +231,7 @@ export type IRequestQuoteFormBlocks = {
 	};
 	valuesBlockThree: {
 		title: string;
-		paragraph: string;
 		blockTitle: string;
-		displayButton: boolean;
-		buttonLink: {
-			url: string;
-			title: string;
-			target: string;
-		};
 		businessIcon: {
 			altText: string;
 			sourceUrl: string;
