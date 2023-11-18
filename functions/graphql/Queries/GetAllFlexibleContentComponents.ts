@@ -458,9 +458,10 @@ export async function getAllFlexibleContentComponents(
 													sourceUrl
 												}
 											}
-											... on ${postTypeFlexibleContent}_ContactForm {
+											... on ${postTypeFlexibleContent}_ContactInfo {
 												fieldGroupName
 												title
+												paragraph
 											}
 											... on ${postTypeFlexibleContent}_ErrorPageContent {
 												fieldGroupName

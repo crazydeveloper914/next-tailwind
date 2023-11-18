@@ -9,6 +9,7 @@ import CTA from "../CTA";
 import FAQ from "../FAQ";
 import Hero from "../Hero";
 import HeroTwo from "../HeroTwo";
+import ContactInfo from "../ContactInfo";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
 import Maintenance from "../Maintenance";
@@ -199,8 +200,10 @@ const RenderFlexibleContent: FC = () => {
 									backgroundImage={item?.backgroundImage?.sourceUrl}
 								/>
 							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_ContactForm` ? (
-							<></>
+						) : item?.fieldGroupName === `${FlexibleContent}_ContactInfo` ? (
+							<>
+								<ContactInfo title={item?.title} paragraph={item?.paragraph} />
+							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Maintenance` ? (
 							<>
 								<Maintenance

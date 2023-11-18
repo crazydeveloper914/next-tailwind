@@ -47,6 +47,10 @@ export type IFAQ = {
 		}
 	];
 };
+export type IContactInfo = {
+	title: string;
+	paragraph: string;
+};
 export type IEnquiryRequestForm = {
 	title: string;
 	contentOneOpen: boolean;
