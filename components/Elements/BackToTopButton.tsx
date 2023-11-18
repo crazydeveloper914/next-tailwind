@@ -11,7 +11,7 @@ import {IBackHoverButton} from "@/types/components";
 const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
 	return (
 		<>
-			<div className="relative w-fit h-fit xl:block z-[999]">
+			<div className="relative w-fit h-fit xl:block z-[998]">
 				<div className="fixed right-6 z-0 bottom-[2.5rem] flex justify-center">
 					<Link href={`${link}`} className={styles.backToTopButton}>
 						<span className={styles.span}>
