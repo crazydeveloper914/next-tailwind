@@ -199,7 +199,9 @@ export type IRequestQuoteFormBlocks = {
 	};
 	valuesBlockOne: {
 		title: string;
+		googleMap: string;
 		blockTitle: string;
+		displayImageOrMap: string;
 		backgroundImage: {
 			altText: string;
 			sourceUrl: string;
@@ -211,15 +213,9 @@ export type IRequestQuoteFormBlocks = {
 	};
 	valuesBlockTwo: {
 		title: string;
+		googleMap: string;
 		blockTitle: string;
-		businessIcon: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
+		displayImageOrMap: string;
 		backgroundImage: {
 			altText: string;
 			sourceUrl: string;
@@ -231,15 +227,9 @@ export type IRequestQuoteFormBlocks = {
 	};
 	valuesBlockThree: {
 		title: string;
+		googleMap: string;
 		blockTitle: string;
-		businessIcon: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
+		displayImageOrMap: string;
 		backgroundImage: {
 			altText: string;
 			sourceUrl: string;
@@ -501,6 +491,18 @@ export type IValuesBlocksTextCard = {
 	};
 };
 export type IValuesBlocksImageCard = {
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
+export type IValuesBlocksImageOrMapCard = {
+	googleMap: string;
+	displayImageOrMap: string;
 	image: {
 		altText: string;
 		sourceUrl: string;

@@ -347,7 +347,9 @@ export const getAllPreviewFlexibleContentComponents = async (
 									}
 								valuesBlockOne {
 									title
+									googleMap
 									blockTitle
+									displayImageOrMap
 									backgroundImage {
 										altText
 										sourceUrl
@@ -359,7 +361,9 @@ export const getAllPreviewFlexibleContentComponents = async (
 								}
 								valuesBlockTwo {
 									title
+									googleMap
 									blockTitle
+									displayImageOrMap
 									backgroundImage {
 										altText
 										sourceUrl
@@ -371,7 +375,9 @@ export const getAllPreviewFlexibleContentComponents = async (
 								}
 								valuesBlockThree {
 									title
+									googleMap
 									blockTitle
+									displayImageOrMap
 									backgroundImage {
 										altText
 										sourceUrl

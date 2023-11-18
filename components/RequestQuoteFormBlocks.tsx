@@ -10,7 +10,7 @@ import styles from "../styles/components/RequestQuoteFormBlocks.module.scss";
 
 // Components
 import EnquiryRequestForm from "./Forms/EnquiryRequestForm";
-import ValuesBlocksImageCard from "./Cards/ValuesBlocksImageCard";
+import ValuesBlocksImageOrMapCard from "./Cards/ValuesBlocksImageOrMapCard";
 
 const RequestQuoteFormBlocks: FC<IRequestQuoteFormBlocks> = ({
 	valuesBlockOne,
@@ -225,26 +225,34 @@ const RequestQuoteFormBlocks: FC<IRequestQuoteFormBlocks> = ({
 							<div className="w-full lg:w-1/3">
 								{contentOneOpen ? (
 									<>
-										<ValuesBlocksImageCard
+										<ValuesBlocksImageOrMapCard
+											googleMap={valuesBlockOne?.googleMap}
 											image={valuesBlockOne?.backgroundImage}
+											displayImageOrMap={valuesBlockOne?.displayImageOrMap}
 										/>
 									</>
 								) : contentTwoOpen ? (
 									<>
-										<ValuesBlocksImageCard
+										<ValuesBlocksImageOrMapCard
+											googleMap={valuesBlockTwo?.googleMap}
 											image={valuesBlockTwo?.backgroundImage}
+											displayImageOrMap={valuesBlockTwo?.displayImageOrMap}
 										/>
 									</>
 								) : contentThreeOpen ? (
 									<>
-										<ValuesBlocksImageCard
+										<ValuesBlocksImageOrMapCard
+											googleMap={valuesBlockThree?.googleMap}
 											image={valuesBlockThree?.backgroundImage}
+											displayImageOrMap={valuesBlockThree?.displayImageOrMap}
 										/>
 									</>
 								) : (
 									<>
-										<ValuesBlocksImageCard
+										<ValuesBlocksImageOrMapCard
+											googleMap={valuesBlockOne?.googleMap}
 											image={valuesBlockOne?.backgroundImage}
+											displayImageOrMap={valuesBlockOne?.displayImageOrMap}
 										/>
 									</>
 								)}

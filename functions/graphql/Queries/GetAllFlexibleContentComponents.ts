@@ -353,7 +353,9 @@ export async function getAllFlexibleContentComponents(
 													}
 												valuesBlockOne {
 													title
+													googleMap
 													blockTitle
+													displayImageOrMap
 													backgroundImage {
 														altText
 														sourceUrl
@@ -365,7 +367,9 @@ export async function getAllFlexibleContentComponents(
 												}
 												valuesBlockTwo {
 													title
+													googleMap
 													blockTitle
+													displayImageOrMap
 													backgroundImage {
 														altText
 														sourceUrl
@@ -377,7 +381,9 @@ export async function getAllFlexibleContentComponents(
 												}
 												valuesBlockThree {
 													title
+													googleMap
 													blockTitle
+													displayImageOrMap
 													backgroundImage {
 														altText
 														sourceUrl
