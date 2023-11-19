@@ -94,7 +94,11 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										: "bg-red-default hover:bg-red-Two"
 								}`}
 							>
-								<span>
+								<span
+									className={
+										valuesBlockOne?.icon?.sourceUrl ? "block" : "hidden"
+									}
+								>
 									<Image
 										alt={valuesBlockOne?.icon?.altText}
 										src={valuesBlockOne?.icon?.sourceUrl}
@@ -131,7 +135,11 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 									contentTwoOpen ? "bg-white" : "bg-red-dark hover:bg-red-Two"
 								}`}
 							>
-								<span>
+								<span
+									className={
+										valuesBlockTwo?.icon?.sourceUrl ? "block" : "hidden"
+									}
+								>
 									<Image
 										alt={valuesBlockTwo?.icon?.altText}
 										src={valuesBlockTwo?.icon?.sourceUrl}
@@ -170,7 +178,11 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										: "bg-red-darker hover:bg-red-Two"
 								}`}
 							>
-								<span>
+								<span
+									className={
+										valuesBlockThree?.icon?.sourceUrl ? "block" : "hidden"
+									}
+								>
 									<Image
 										alt={valuesBlockThree?.icon?.altText}
 										src={valuesBlockThree?.icon?.sourceUrl}
@@ -211,7 +223,11 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										: "bg-red-darkerTwo hover:bg-red-Two"
 								}`}
 							>
-								<span>
+								<span
+									className={
+										valuesBlockFour?.icon?.sourceUrl ? "block" : "hidden"
+									}
+								>
 									<Image
 										alt={valuesBlockFour?.icon?.altText}
 										src={valuesBlockFour?.icon?.sourceUrl}
