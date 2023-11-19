@@ -1,4 +1,5 @@
 // Imports
+import Image from "next/image";
 import {FC, useState} from "react";
 import {motion} from "framer-motion";
 import {ITitleContentValuesBlocks} from "@/types/components/index";
@@ -87,12 +88,36 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentOne}
-								className={`p-8 flex gap-4 justify-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
 									contentOneOpen
 										? "bg-white"
 										: "bg-red-default hover:bg-red-Two"
 								}`}
 							>
+								<span>
+									<Image
+										alt={valuesBlockOne?.icon?.altText}
+										src={valuesBlockOne?.icon?.sourceUrl}
+										width={valuesBlockOne?.icon?.mediaDetails?.width}
+										height={valuesBlockOne?.icon?.mediaDetails?.height}
+										className={
+											contentOneOpen
+												? `hidden`
+												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+										}
+									/>
+									<Image
+										alt={valuesBlockOne?.activeIcon?.altText}
+										src={valuesBlockOne?.activeIcon?.sourceUrl}
+										width={valuesBlockOne?.activeIcon?.mediaDetails?.width}
+										height={valuesBlockOne?.activeIcon?.mediaDetails?.height}
+										className={
+											contentOneOpen
+												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `hidden`
+										}
+									/>
+								</span>
 								<span className={contentOneOpen ? "text-black" : "text-white"}>
 									{valuesBlockOne?.blockTitle}
 								</span>
@@ -102,12 +127,34 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentTwo}
-								className={`p-8 flex gap-4 justify-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
-									contentTwoOpen
-										? "bg-white"
-										: "bg-red-default hover:bg-red-Two"
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+									contentTwoOpen ? "bg-white" : "bg-red-dark hover:bg-red-Two"
 								}`}
 							>
+								<span>
+									<Image
+										alt={valuesBlockTwo?.icon?.altText}
+										src={valuesBlockTwo?.icon?.sourceUrl}
+										width={valuesBlockTwo?.icon?.mediaDetails?.width}
+										height={valuesBlockTwo?.icon?.mediaDetails?.height}
+										className={
+											contentTwoOpen
+												? `hidden`
+												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+										}
+									/>
+									<Image
+										alt={valuesBlockTwo?.activeIcon?.altText}
+										src={valuesBlockTwo?.activeIcon?.sourceUrl}
+										width={valuesBlockTwo?.activeIcon?.mediaDetails?.width}
+										height={valuesBlockTwo?.activeIcon?.mediaDetails?.height}
+										className={
+											contentTwoOpen
+												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `hidden`
+										}
+									/>
+								</span>
 								<span className={contentTwoOpen ? "text-black" : "text-white"}>
 									{valuesBlockTwo?.blockTitle}
 								</span>
@@ -117,12 +164,36 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentThree}
-								className={`p-8 flex gap-4 justify-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
 									contentThreeOpen
 										? "bg-white"
-										: "bg-red-default hover:bg-red-Two"
+										: "bg-red-darker hover:bg-red-Two"
 								}`}
 							>
+								<span>
+									<Image
+										alt={valuesBlockThree?.icon?.altText}
+										src={valuesBlockThree?.icon?.sourceUrl}
+										width={valuesBlockThree?.icon?.mediaDetails?.width}
+										height={valuesBlockThree?.icon?.mediaDetails?.height}
+										className={
+											contentThreeOpen
+												? `hidden`
+												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+										}
+									/>
+									<Image
+										alt={valuesBlockThree?.activeIcon?.altText}
+										src={valuesBlockThree?.activeIcon?.sourceUrl}
+										width={valuesBlockThree?.activeIcon?.mediaDetails?.width}
+										height={valuesBlockThree?.activeIcon?.mediaDetails?.height}
+										className={
+											contentThreeOpen
+												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `hidden`
+										}
+									/>
+								</span>
 								<span
 									className={contentThreeOpen ? "text-black" : "text-white"}
 								>
@@ -134,12 +205,36 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentFour}
-								className={`p-8 flex gap-4 justify-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
 									contentFourOpen
 										? "bg-white"
-										: "bg-red-default hover:bg-red-Two"
+										: "bg-red-darkerTwo hover:bg-red-Two"
 								}`}
 							>
+								<span>
+									<Image
+										alt={valuesBlockFour?.icon?.altText}
+										src={valuesBlockFour?.icon?.sourceUrl}
+										width={valuesBlockFour?.icon?.mediaDetails?.width}
+										height={valuesBlockFour?.icon?.mediaDetails?.height}
+										className={
+											contentFourOpen
+												? `hidden`
+												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+										}
+									/>
+									<Image
+										alt={valuesBlockFour?.activeIcon?.altText}
+										src={valuesBlockFour?.activeIcon?.sourceUrl}
+										width={valuesBlockFour?.activeIcon?.mediaDetails?.width}
+										height={valuesBlockFour?.activeIcon?.mediaDetails?.height}
+										className={
+											contentFourOpen
+												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `hidden`
+										}
+									/>
+								</span>
 								<span className={contentFourOpen ? "text-black" : "text-white"}>
 									{valuesBlockFour?.blockTitle}
 								</span>

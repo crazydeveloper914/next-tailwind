@@ -130,6 +130,22 @@ export type ITitleContentValuesBlocks = {
 			title: string;
 			target: string;
 		};
+		icon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+		activeIcon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
 		image: {
 			altText: string;
 			sourceUrl: string;
@@ -148,6 +164,22 @@ export type ITitleContentValuesBlocks = {
 			url: string;
 			title: string;
 			target: string;
+		};
+		icon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+		activeIcon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 		image: {
 			altText: string;
@@ -168,6 +200,22 @@ export type ITitleContentValuesBlocks = {
 			title: string;
 			target: string;
 		};
+		icon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+		activeIcon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
 		image: {
 			altText: string;
 			sourceUrl: string;
@@ -186,6 +234,22 @@ export type ITitleContentValuesBlocks = {
 			url: string;
 			title: string;
 			target: string;
+		};
+		icon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+		activeIcon: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 		image: {
 			altText: string;

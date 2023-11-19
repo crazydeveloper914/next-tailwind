@@ -266,6 +266,22 @@ export const getAllPreviewFlexibleContentComponents = async (
 										title
 										target
 									}
+									icon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
+									}
+									activeIcon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
+									}
 									image {
 										altText
 										sourceUrl
@@ -284,6 +300,22 @@ export const getAllPreviewFlexibleContentComponents = async (
 										url
 										title
 										target
+									}
+									icon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
+									}
+									activeIcon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
 									}
 									image {
 										altText
@@ -304,6 +336,22 @@ export const getAllPreviewFlexibleContentComponents = async (
 										title
 										target
 									}
+									icon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
+									}
+									activeIcon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
+									}
 									image {
 										altText
 										sourceUrl
@@ -322,6 +370,22 @@ export const getAllPreviewFlexibleContentComponents = async (
 										url
 										title
 										target
+									}
+									icon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
+									}
+									activeIcon {
+										altText
+										sourceUrl
+										mediaDetails {
+										height
+										width
+										}
 									}
 									image {
 										altText

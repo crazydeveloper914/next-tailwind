@@ -272,6 +272,22 @@ export async function getAllFlexibleContentComponents(
 														title
 														target
 													}
+													icon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
+													}
+													activeIcon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
+													}
 													image {
 														altText
 														sourceUrl
@@ -290,6 +306,22 @@ export async function getAllFlexibleContentComponents(
 														url
 														title
 														target
+													}
+													icon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
+													}
+													activeIcon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
 													}
 													image {
 														altText
@@ -310,6 +342,22 @@ export async function getAllFlexibleContentComponents(
 														title
 														target
 													}
+													icon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
+													}
+													activeIcon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
+													}
 													image {
 														altText
 														sourceUrl
@@ -328,6 +376,22 @@ export async function getAllFlexibleContentComponents(
 														url
 														title
 														target
+													}
+													icon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
+													}
+													activeIcon {
+														altText
+														sourceUrl
+														mediaDetails {
+														height
+														width
+														}
 													}
 													image {
 														altText

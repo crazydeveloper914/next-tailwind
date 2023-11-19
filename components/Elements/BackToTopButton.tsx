@@ -1,6 +1,6 @@
 // Imports
-import {FC} from "react";
 import Link from "next/link";
+import {FC, useEffect, useState} from "react";
 
 // Styling
 import styles from "../../styles/components/Elements/BackHoverButton.module.scss";
@@ -9,9 +9,31 @@ import styles from "../../styles/components/Elements/BackHoverButton.module.scss
 import {IBackHoverButton} from "@/types/components";
 
 const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
+	// Background color scroll position change
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentPosition = window.scrollY;
+			setScrollPosition(currentPosition);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
 		<>
-			<div className="relative w-fit h-fit xl:block z-[998]">
+			<div
+				className={
+					scrollPosition > 1000
+						? "relative w-fit h-fit xl:block z-[998]"
+						: "hidden"
+				}
+			>
 				<div className="fixed right-6 z-0 bottom-[2.5rem] flex justify-center">
 					<Link href={`${link}`} className={styles.backToTopButton}>
 						<span className={styles.span}>

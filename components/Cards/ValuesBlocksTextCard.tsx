@@ -22,7 +22,7 @@ const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
 					initial={initialTwo}
 					whileInView={fadeIn}
 					viewport={{once: true}}
-					className="mb-4 text-center font-semibold leading-tight lg:text-left text-2xl text-black"
+					className="mb-4 lg:max-w-xl text-center font-semibold leading-tight lg:text-left text-2xl text-black"
 				>
 					{title}
 				</motion.h2>
