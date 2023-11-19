@@ -374,10 +374,27 @@ export type IOurServices = {
 		{
 			card: {
 				title: string;
+				paragraph: string;
 				Link: {
 					url: string;
 					title: string;
 					target: string;
+				};
+				icon: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+				hoverIcon: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
 				};
 				image: {
 					altText: string;

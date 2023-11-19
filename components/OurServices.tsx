@@ -51,7 +51,7 @@ const OurServices: FC<IOurServices> = ({
 							tailwindStyling="lg:max-w-3xl text-pureBlack leading-[1.75rem] text-base sm:text-paragraph text-center"
 						/>
 					</div>
-					<div className="w-full relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-4 items-center justify-center">
+					<div className="w-full relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-4 items-center justify-center overflow-hidden">
 						{servicesGrid?.length > 0 ? (
 							servicesGrid.map((item: any, keys: any) => (
 								<Fragment key={keys}>
@@ -59,51 +59,104 @@ const OurServices: FC<IOurServices> = ({
 										<Link
 											href={`${item?.card?.link?.url}`}
 											target={item?.card?.link?.target}
-											className="group"
+											className={styles.card + " group relative"}
 										>
 											<div
-												className="relative z-50 w-full h-[450px] bg-yellow-Two flex flex-col items-baseline justify-start bg-center bg-no-repeat bg-cover"
+												className="flex flex-col lg:h-[550px] bg-center bg-no-repeat bg-cover"
 												style={{
 													backgroundImage: `linear-gradient(
 														0deg,
-														rgba(0, 0, 4, 0.25),
-														rgba(0, 0, 4, 0.75),
-														rgba(0, 0, 4, 0.95)
+														rgba(167, 0, 7, 0.70),
+														rgba(167, 0, 7, 0.85),
+														rgba(167, 0, 7, 1)
 													),url("${item?.card?.image?.sourceUrl}")`,
 												}}
 											>
-												<div className="p-6 xl:shadow-2xl lg:absolute flex flex-col items-baseline justify-between w-full h-fit transition-all ease-in-out duration-500">
-													<motion.h4
+												<div
+													className={
+														styles.content +
+														" w-full h-3/4 group-hover:h-full p-10 gap-8 bg-white group-hover:border-none border-t-4 border-red-default flex flex-col"
+													}
+												>
+													<motion.div
 														initial={initialTwo}
 														whileInView={fadeIn}
 														viewport={{once: true}}
-														className="text-white font-extrabold text-4xl lg:text-6xl leading-tight text-left tracking-[0.10rem]"
 													>
-														{item?.card?.title}
-													</motion.h4>
+														<Image
+															alt={item?.card?.icon?.altText}
+															src={item?.card?.icon?.sourceUrl}
+															width={item?.card?.icon?.mediaDetails?.width}
+															height={item?.card?.icon?.mediaDetails?.height}
+															className={
+																item?.card?.icon?.sourceUrl
+																	? `block group-hover:hidden object-contain object-center w-full h-[50px] lg:h-[60px]`
+																	: `hidden`
+															}
+														/>
+														<Image
+															alt={item?.card?.hoverIcon?.altText}
+															src={item?.card?.hoverIcon?.sourceUrl}
+															width={item?.card?.hoverIcon?.mediaDetails?.width}
+															height={
+																item?.card?.hoverIcon?.mediaDetails?.height
+															}
+															className={
+																item?.card?.hoverIcon?.sourceUrl
+																	? `hidden group-hover:block object-contain object-center w-full h-[50px] lg:h-[60px]`
+																	: `hidden`
+															}
+														/>
+													</motion.div>
+													<motion.div
+														initial={initialTwo}
+														whileInView={fadeIn}
+														viewport={{once: true}}
+														className="flex flex-col gap-4"
+													>
+														<motion.h4
+															initial={initialTwo}
+															whileInView={fadeIn}
+															viewport={{once: true}}
+															className="text-pureBlack group-hover:text-white font-extrabold text-xl leading-tight text-center tracking-[0.10rem]"
+														>
+															{item?.card?.title}
+														</motion.h4>
+														<Paragraph
+															content={paragraph}
+															tailwindStyling="lg:max-w-3xl text-darkGrey group-hover:text-white leading-[1.75rem] text-base text-center lg:text-left"
+														/>
+													</motion.div>
+													<motion.button
+														initial={initialTwo}
+														whileInView={fadeIn}
+														viewport={{once: true}}
+														className="hidden group-hover:flex items-center justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-red-dark transition-all ease-in-out duration-500"
+													>
+														<h4 className="text-white">
+															{item?.card?.link?.title}
+														</h4>
+														<svg
+															fill="none"
+															width="800px"
+															height="800px"
+															viewBox="0 0 24 24"
+															xmlns="http://www.w3.org/2000/svg"
+															className="w-[25px] h-[25px] object-center object-contain rotate-[-45deg]"
+														>
+															<path
+																d="M15.0377 6.34326L13.6268 7.76078L16.897 11.0157L3.29199 11.0294L3.294 13.0294L16.8618 13.0158L13.6466 16.246L15.0641 17.6569L20.7078 11.9869L15.0377 6.34326Z"
+																fill="#ffffff"
+															/>
+														</svg>
+													</motion.button>
 												</div>
-												<div className="w-fit h-fit opacity-80 group-hover:opacity-100 z-[998]  transition-all ease-in-out duration-500">
-													<div className="absolute left-0 z-0 bottom-0 flex justify-center">
-														<span className="flex flex-row items-center justify-center gap-2 bg-pureBlack py-2 px-3 group-hover:bg-red-dark transition-all ease-in-out duration-500">
-															<h4 className="text-white">
-																{item?.card?.link?.title}
-															</h4>
-															<svg
-																fill="none"
-																width="800px"
-																height="800px"
-																viewBox="0 0 24 24"
-																xmlns="http://www.w3.org/2000/svg"
-																className="w-[25px] h-[25px] object-center object-contain rotate-[-45deg]"
-															>
-																<path
-																	d="M15.0377 6.34326L13.6268 7.76078L16.897 11.0157L3.29199 11.0294L3.294 13.0294L16.8618 13.0158L13.6466 16.246L15.0641 17.6569L20.7078 11.9869L15.0377 6.34326Z"
-																	fill="#ffffff"
-																/>
-															</svg>
-														</span>
-													</div>
-												</div>
+												<div
+													className="w-full h-1/4 h-[150px] block group-hover:hidden bg-center bg-no-repeat bg-cover"
+													style={{
+														backgroundImage: `url("${item?.card?.image?.sourceUrl}")`,
+													}}
+												></div>
 											</div>
 										</Link>
 									</>

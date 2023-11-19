@@ -93,19 +93,36 @@ export async function getAllFlexibleContentComponents(
 												subtitle
 												paragraph
 												servicesGrid {
-														card {
+													card {
 														title
+														paragraph
 														link {
 															url
 															title
 															target
 														}
+														icon {
+															altText
+															sourceUrl
+															mediaDetails {
+																height
+																width
+															}
+														}
+														hoverIcon {
+															altText
+															sourceUrl
+															mediaDetails {
+																height
+																width
+															}
+														}
 														image {
 															altText
 															sourceUrl
 															mediaDetails {
-															height
-															width
+																height
+																width
 															}
 														}
 													}
