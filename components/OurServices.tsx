@@ -70,7 +70,7 @@ const OurServices: FC<IOurServices> = ({
 													),url("${item?.card?.image?.sourceUrl}")`,
 												}}
 											>
-												<div className="p-6 xl:shadow-2xl lg:absolute flex flex-col items-center justify-center w-full h-fit transition-all ease-in-out duration-500 bg-pureBlack">
+												<div className="p-6 xl:shadow-2xl lg:absolute flex flex-col items-center justify-center w-full h-fit transition-all ease-in-out duration-500">
 													<Image
 														alt={item?.card?.icon?.altText}
 														src={item?.card?.icon?.sourceUrl}
