@@ -53,6 +53,7 @@ const config: Config = {
 				Two: "#e8b042",
 				Three: "#fac546",
 				dark: "#e4a002",
+				darker: "#bc7700",
 			},
 			green: {
 				default: "#4d6c13",

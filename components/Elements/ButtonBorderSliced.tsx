@@ -16,6 +16,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	let textColorHover: string;
 	let borderColorHover: string;
 	let backgroundColorHover: string;
+	let afterBackgroundColor: string;
+	let beforeBackgroundColor: string;
 	let afterBackgroundColorHover: string;
 	let beforeBackgroundColorHover: string;
 
@@ -28,8 +30,23 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			textColorHover = "hover:text-black";
 			borderColorHover = "hover:border-white";
 			backgroundColorHover = "hover:bg-white";
+			afterBackgroundColor = "after:bg-white";
+			beforeBackgroundColor = "before:bg-white";
 			afterBackgroundColorHover = "hover:after:bg-white";
 			beforeBackgroundColorHover = "hover:before:bg-white";
+			break;
+		case "lightGrey":
+			sgvColor = "#000";
+			sgvColorHover = "#ffffff";
+			textColor = "text-pureBlack";
+			borderColor = "border-pureBlack";
+			textColorHover = "hover:text-white";
+			borderColorHover = "hover:border-yellow-default";
+			backgroundColorHover = "hover:bg-yellow-default";
+			afterBackgroundColor = "after:bg-lightGrey";
+			beforeBackgroundColor = "before:bg-lightGrey";
+			afterBackgroundColorHover = "hover:after:bg-yellow-default";
+			beforeBackgroundColorHover = "hover:before:bg-yellow-default";
 			break;
 		case "red-default":
 			sgvColor = "#cb0007";
@@ -39,6 +56,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			textColorHover = "hover:text-white";
 			borderColorHover = "hover:border-red-default";
 			backgroundColorHover = "hover:bg-red-default";
+			afterBackgroundColor = "after:bg-white";
+			beforeBackgroundColor = "before:bg-white";
 			afterBackgroundColorHover = "hover:after:bg-red-default";
 			beforeBackgroundColorHover = "hover:before:bg-red-default";
 			break;
@@ -50,6 +69,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			borderColor = "border-yellow-default";
 			borderColorHover = "hover:border-yellow-default";
 			backgroundColorHover = "hover:bg-yellow-default";
+			afterBackgroundColor = "after:bg-white";
+			beforeBackgroundColor = "before:bg-white";
 			afterBackgroundColorHover = "hover:after:bg-yellow-default";
 			beforeBackgroundColorHover = "hover:before:bg-yellow-default";
 			break;
@@ -61,6 +82,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			borderColor = "border-green-default";
 			borderColorHover = "hover:border-green-default";
 			backgroundColorHover = "hover:bg-green-default";
+			afterBackgroundColor = "after:bg-white";
+			beforeBackgroundColor = "before:bg-white";
 			afterBackgroundColorHover = "hover:after:bg-green-default";
 			beforeBackgroundColorHover = "hover:before:bg-green-default";
 			break;
@@ -72,6 +95,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			textColorHover = "hover:text-white";
 			borderColorHover = "hover:border-red-default";
 			backgroundColorHover = "hover:bg-red-default";
+			afterBackgroundColor = "after:bg-white";
+			beforeBackgroundColor = "before:bg-white";
 			afterBackgroundColorHover = "hover:after:bg-red-default";
 			beforeBackgroundColorHover = "hover:before:bg-red-default";
 			break;
@@ -86,7 +111,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 					title
 						? `flex items-center justify-center group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base ${
 								fullWidth ? "w-full" : "w-fit"
-						  } sm:mx-0 border-2 border-solid ${borderColor} ${backgroundColorHover} ${borderColorHover} transition-all ease-in-out duration-500 ${textColor} ${textColorHover} before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white ${beforeBackgroundColorHover} after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white ${afterBackgroundColorHover}`
+						  } sm:mx-0 border-2 border-solid ${borderColor} ${backgroundColorHover} ${borderColorHover} transition-all ease-in-out duration-500 ${textColor} ${textColorHover} before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] ${beforeBackgroundColor} ${beforeBackgroundColorHover} after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] ${afterBackgroundColor} ${afterBackgroundColorHover}`
 						: `hidden`
 				}
 			>

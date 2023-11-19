@@ -42,12 +42,26 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			paragraphColor = "text-black";
 			backgroundImage = `none`;
 			break;
+		case "lightGrey":
+			titleColor = "text-black";
+			buttonColor = "lightGrey";
+			backgroundColor = "bg-lightGrey";
+			paragraphColor = "text-black";
+			backgroundImage = `none`;
+			break;
 		case "Red":
 			titleColor = "text-white";
 			buttonColor = "white";
 			paragraphColor = "text-white";
 			backgroundColor = "bg-red-darkerTwo";
-			backgroundImage = `/svg/background/blob-scene-haikei-red-darkRed.svg`;
+			backgroundImage = `/svg/background/blob-scene-haikei-red-darkRed-two.svg`;
+			break;
+		case "GoldYellow":
+			titleColor = "text-white";
+			buttonColor = "white";
+			paragraphColor = "text-white";
+			backgroundColor = "bg-yellow-darker";
+			backgroundImage = `/svg/background/background-left-triangle.svg`;
 			break;
 	}
 
@@ -60,6 +74,11 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 				}
 				style={{
 					backgroundImage: `url("${backgroundImage}")`,
+					clipPath: `${
+						backgroundDisplay === "GoldYellow" || "lightGrey"
+							? "polygon(0 0, 68% 0, 100% 0, 100% 99%, 25% 95%, 0 100%)"
+							: "none"
+					}`,
 				}}
 			>
 				<div className="container relative px-0 mx-auto lg:px-4">
