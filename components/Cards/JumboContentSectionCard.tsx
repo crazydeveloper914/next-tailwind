@@ -75,7 +75,8 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 				style={{
 					backgroundImage: `url("${backgroundImage}")`,
 					clipPath: `${
-						backgroundDisplay === "GoldYellow" || "lightGrey"
+						backgroundDisplay === "GoldYellow" ||
+						backgroundDisplay === "lightGrey"
 							? "polygon(0 0, 68% 0, 100% 0, 100% 99%, 25% 95%, 0 100%)"
 							: "none"
 					}`,
