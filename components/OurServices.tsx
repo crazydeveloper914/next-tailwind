@@ -85,7 +85,9 @@ const OurServices: FC<IOurServices> = ({
 												<div className="w-fit h-fit opacity-80 group-hover:opacity-100 z-[998]  transition-all ease-in-out duration-500">
 													<div className="absolute left-0 z-0 bottom-0 flex justify-center">
 														<span className="flex flex-row items-center justify-center gap-2 bg-pureBlack py-2 px-3 group-hover:bg-red-dark transition-all ease-in-out duration-500">
-															<h4 className="text-white">Discover More</h4>
+															<h4 className="text-white">
+																{item?.card?.link?.title}
+															</h4>
 															<svg
 																fill="none"
 																width="800px"
