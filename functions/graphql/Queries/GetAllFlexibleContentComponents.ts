@@ -100,14 +100,6 @@ export async function getAllFlexibleContentComponents(
 															title
 															target
 														}
-														icon {
-															altText
-															sourceUrl
-															mediaDetails {
-																height
-																width
-															}
-														}
 														image {
 															altText
 															sourceUrl

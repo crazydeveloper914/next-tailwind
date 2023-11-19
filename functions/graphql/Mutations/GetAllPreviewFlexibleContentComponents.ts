@@ -94,14 +94,6 @@ export const getAllPreviewFlexibleContentComponents = async (
 											title
 											target
 										}
-										icon {
-											altText
-											sourceUrl
-											mediaDetails {
-												height
-												width
-											}
-										}
 										image {
 											altText
 											sourceUrl

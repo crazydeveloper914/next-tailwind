@@ -315,14 +315,6 @@ export type IOurServices = {
 					title: string;
 					target: string;
 				};
-				icon: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
 				image: {
 					altText: string;
 					sourceUrl: string;
