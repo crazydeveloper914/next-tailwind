@@ -72,6 +72,7 @@ const RenderFlexibleContent: FC = () => {
 							<>
 								<OurServices
 									title={item?.title}
+									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									servicesGrid={item?.servicesGrid}
 								/>

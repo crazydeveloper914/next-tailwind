@@ -304,6 +304,7 @@ export type ITwoColumnButtonContent = {
 };
 export type IOurServices = {
 	title: string;
+	subtitle: string;
 	paragraph: string;
 	servicesGrid: [
 		{

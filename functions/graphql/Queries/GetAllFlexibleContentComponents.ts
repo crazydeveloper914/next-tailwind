@@ -90,6 +90,7 @@ export async function getAllFlexibleContentComponents(
 											... on ${postTypeFlexibleContent}_OurServices {
 												fieldGroupName
 												title
+												subtitle
 												paragraph
 												servicesGrid {
 														card {

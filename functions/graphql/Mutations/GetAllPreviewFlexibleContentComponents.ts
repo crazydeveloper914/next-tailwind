@@ -84,6 +84,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 							... on ${postTypeFlexibleContent}_OurServices {
 								fieldGroupName
 								title
+								subtitle
 								paragraph
 								servicesGrid {
 										card {

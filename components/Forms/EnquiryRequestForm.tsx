@@ -13,8 +13,8 @@ import {useRouter} from "next/router";
 import React, {useState, FC} from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import {useFormik, Formik, Field, Form} from "formik";
-import {sendContactForm} from "@/pages/api/contactForm";
 import {IEnquiryRequestForm} from "@/types/components";
+import {sendContactForm} from "@/pages/api/contactForm";
 
 // Styling
 import styles from "@/styles/components/EnquiryRequestForm.module.scss";
@@ -415,7 +415,7 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 												? "Message Sent!"
 												: errorMessage
 												? "Sending Error!"
-												: "Request A Quote"}
+												: "Send Message"}
 										</h4>
 									</span>
 								</motion.button>
