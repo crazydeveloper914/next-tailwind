@@ -1,10 +1,7 @@
 // Imports
 import {
-	fadeIn,
-	stagger,
 	initial,
 	fadeInUp,
-	initialTwo,
 	slideInLeftInitial,
 	slideInRightFinish,
 	slideInRightInitial,

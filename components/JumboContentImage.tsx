@@ -5,6 +5,8 @@ import {
 	initial,
 	fadeInUp,
 	initialTwo,
+	slideInRightFinish,
+	slideInRightInitial,
 } from "../animations/animations";
 import {FC} from "react";
 import Link from "next/link";
@@ -16,7 +18,6 @@ import {IJumboContentImage} from "@/types/components/index";
 import styles from "../styles/components/JumboContentImage.module.scss";
 
 // Components
-import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
 
 const JumboContentImage: FC<IJumboContentImage> = ({
@@ -182,8 +183,8 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 						</motion.div>
 					</motion.div>
 					<motion.div
-						initial={initialTwo}
-						whileInView={stagger}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						viewport={{once: true}}
 						className="w-full lg:w-[35%] relative flex flex-col items-center lg:items-baseline justify-center"
 					>

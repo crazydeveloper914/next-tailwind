@@ -75,7 +75,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 						<></>
 					)}
 				</motion.div>
-				<motion.div
+				{/* <motion.div
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
@@ -86,7 +86,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 						title="Load more articles"
 						tailwindColor="red-default"
 					/>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</>
 	);
