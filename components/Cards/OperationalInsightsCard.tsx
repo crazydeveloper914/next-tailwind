@@ -24,13 +24,13 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 }) => {
 	return (
 		<div
-			className="w-full h-full p-0"
+			className="w-full h-full p-0 border-l-[5px] border-pureBlack"
 			style={{
 				boxShadow: "28px 28px 2px -20px rgba(0,0,0,0.1)",
 			}}
 		>
 			<div
-				className="relative px-0 h-[300px] border-l-[5px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-red-default"
+				className="relative px-0 h-[300px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-pureBlack"
 				style={{
 					clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
 				}}
