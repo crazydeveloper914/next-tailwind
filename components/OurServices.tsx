@@ -125,7 +125,7 @@ const OurServices: FC<IOurServices> = ({
 														initial={initialTwo}
 														whileInView={fadeIn}
 														viewport={{once: true}}
-														className="flex sm:flex group-hover:hidden items-center justify-center lg:justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
+														className="flex sm:hidden group-hover:hidden items-center justify-center lg:justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
 													>
 														<h4 className="text-white">
 															{item?.card?.link?.title}
@@ -145,7 +145,7 @@ const OurServices: FC<IOurServices> = ({
 														</svg>
 													</motion.button>
 												</div>
-												<div className="py-0 group-hover:py-4 w-full min-h-[200px] flex flex-col items-center justify-center bg-center bg-no-repeat bg-cover">
+												<div className="py-0 group-hover:py-4 w-full h-[200px] flex flex-col items-center justify-center bg-center bg-no-repeat bg-cover">
 													<motion.button
 														initial={initialTwo}
 														whileInView={fadeIn}
