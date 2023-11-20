@@ -18,10 +18,10 @@
 	}
 
 	ul {
-		@apply px-10;
+		@apply px-4 py-4 sm:px-10 flex flex-col items-baseline justify-center;
 
 		li {
-			@apply px-0 list-disc;
+			@apply px-0 list-disc text-left;
 		}
 	}
 

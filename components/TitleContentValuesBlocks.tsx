@@ -88,7 +88,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentOne}
-								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentOneOpen
 										? "bg-white"
 										: "bg-red-default hover:bg-red-Two"
@@ -107,7 +107,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										className={
 											contentOneOpen
 												? `hidden`
-												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 										}
 									/>
 									<Image
@@ -117,7 +117,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										height={valuesBlockOne?.activeIcon?.mediaDetails?.height}
 										className={
 											contentOneOpen
-												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												? `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 												: `hidden`
 										}
 									/>
@@ -131,7 +131,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentTwo}
-								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentTwoOpen ? "bg-white" : "bg-red-dark hover:bg-red-Two"
 								}`}
 							>
@@ -148,7 +148,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										className={
 											contentTwoOpen
 												? `hidden`
-												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 										}
 									/>
 									<Image
@@ -158,7 +158,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										height={valuesBlockTwo?.activeIcon?.mediaDetails?.height}
 										className={
 											contentTwoOpen
-												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												? `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 												: `hidden`
 										}
 									/>
@@ -172,7 +172,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentThree}
-								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentThreeOpen
 										? "bg-white"
 										: "bg-red-darker hover:bg-red-Two"
@@ -191,7 +191,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										className={
 											contentThreeOpen
 												? `hidden`
-												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 										}
 									/>
 									<Image
@@ -201,7 +201,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										height={valuesBlockThree?.activeIcon?.mediaDetails?.height}
 										className={
 											contentThreeOpen
-												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												? `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 												: `hidden`
 										}
 									/>
@@ -217,7 +217,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentFour}
-								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-lg font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentFourOpen
 										? "bg-white"
 										: "bg-red-darkerTwo hover:bg-red-Two"
@@ -236,7 +236,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										className={
 											contentFourOpen
 												? `hidden`
-												: `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												: `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 										}
 									/>
 									<Image
@@ -246,7 +246,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										height={valuesBlockFour?.activeIcon?.mediaDetails?.height}
 										className={
 											contentFourOpen
-												? `block object-contain object-center w-full h-[50px] lg:h-[60px]`
+												? `block object-contain object-center w-full h-[35px] lg:h-[40px]`
 												: `hidden`
 										}
 									/>
