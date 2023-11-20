@@ -45,7 +45,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 		case "lightGrey":
 			titleColor = "text-black";
 			buttonColor = "lightGrey";
-			backgroundColor = "bg-lightGrey";
+			backgroundColor = "bg-lightGreyTwo";
 			paragraphColor = "text-black";
 			backgroundImage = `none`;
 			break;

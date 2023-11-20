@@ -23,7 +23,12 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 	featuredImage,
 }) => {
 	return (
-		<div className="w-full h-full px-4">
+		<div
+			className="w-full h-full p-0"
+			style={{
+				boxShadow: "28px 28px 2px -20px rgba(0,0,0,0.1)",
+			}}
+		>
 			<div
 				className="relative px-0 h-[300px] border-l-[5px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-red-default"
 				style={{
@@ -44,7 +49,7 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 				initial={initial}
 				viewport={{once: true}}
 				whileInView={stagger}
-				className="flex flex-col items-baseline justify-between px-4 py-10"
+				className="flex flex-col items-baseline justify-between px-8 pt-10 pb-4"
 			>
 				<Link href={uri ? `operational-insights${uri}` : `/`}>
 					<motion.h2

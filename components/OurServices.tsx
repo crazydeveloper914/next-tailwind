@@ -51,7 +51,7 @@ const OurServices: FC<IOurServices> = ({
 							tailwindStyling="lg:max-w-3xl text-pureBlack leading-[1.75rem] text-base sm:text-paragraph text-center"
 						/>
 					</div>
-					<div className="w-full relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-6 px-4 gap-6 items-center justify-center overflow-hidden">
+					<div className="w-full relative grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 py-16 px-0 sm:px-4 gap-12  2xl:gap-6 items-start justify-center">
 						{servicesGrid?.length > 0 ? (
 							servicesGrid.map((item: any, keys: any) => (
 								<Fragment key={keys}>
@@ -59,10 +59,10 @@ const OurServices: FC<IOurServices> = ({
 										<Link
 											href={`${item?.card?.link?.url}`}
 											target={item?.card?.link?.target}
-											className={styles.card + " group relative"}
+											className={styles.card + " group overflow-hidden"}
 										>
 											<div
-												className="flex flex-col lg:h-[550px] bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out hover:scale-105"
+												className="flex flex-col w-full h-[600px] justify-between items-center bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out hover:scale-105"
 												style={{
 													backgroundImage: `linear-gradient(
 														0deg,
@@ -70,13 +70,13 @@ const OurServices: FC<IOurServices> = ({
 														rgba(167, 0, 7, 0.85),
 														rgba(167, 0, 7, 1)
 													),url("${item?.card?.image?.sourceUrl}")`,
-													boxShadow: "23px 36px 2px -12px rgba(0,0,0,0.1)",
+													boxShadow: "23px 30px 2px -12px rgba(0,0,0,0.1)",
 												}}
 											>
 												<div
 													className={
 														styles.content +
-														" w-full h-3/4 group-hover:h-full p-10 gap-8 bg-white group-hover:border-none border-t-4 border-red-default flex flex-col"
+														" py-10 px-6 sm:p-10 gap-4 sm:gap-8 h-[400px] bg-white group-hover:border-none border-t-4 border-red-default flex flex-col"
 													}
 												>
 													<motion.div
@@ -109,30 +109,23 @@ const OurServices: FC<IOurServices> = ({
 															}
 														/>
 													</motion.div>
-													<motion.div
+													<motion.h4
 														initial={initialTwo}
 														whileInView={fadeIn}
 														viewport={{once: true}}
-														className="flex flex-col gap-4"
+														className="text-pureBlack group-hover:text-white font-extrabold text-xl leading-tight text-center tracking-[0.10rem]"
 													>
-														<motion.h4
-															initial={initialTwo}
-															whileInView={fadeIn}
-															viewport={{once: true}}
-															className="text-pureBlack group-hover:text-white font-extrabold text-xl leading-tight text-center tracking-[0.10rem]"
-														>
-															{item?.card?.title}
-														</motion.h4>
-														<Paragraph
-															content={paragraph}
-															tailwindStyling="lg:max-w-3xl text-darkGrey group-hover:text-white leading-[1.75rem] text-base text-center lg:text-left"
-														/>
-													</motion.div>
+														{item?.card?.title}
+													</motion.h4>
+													<Paragraph
+														content={paragraph}
+														tailwindStyling="text-darkGrey group-hover:text-white text-base text-center"
+													/>
 													<motion.button
 														initial={initialTwo}
 														whileInView={fadeIn}
 														viewport={{once: true}}
-														className="hidden group-hover:flex items-center justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
+														className="flex sm:flex group-hover:hidden items-center justify-center lg:justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
 													>
 														<h4 className="text-white">
 															{item?.card?.link?.title}
@@ -152,12 +145,42 @@ const OurServices: FC<IOurServices> = ({
 														</svg>
 													</motion.button>
 												</div>
-												<div
-													className="w-full h-[150px] block group-hover:hidden bg-center bg-no-repeat bg-cover"
-													style={{
-														backgroundImage: `url("${item?.card?.image?.sourceUrl}")`,
-													}}
-												></div>
+												<div className="py-0 group-hover:py-4 w-full min-h-[200px] flex flex-col items-center justify-center bg-center bg-no-repeat bg-cover">
+													<motion.button
+														initial={initialTwo}
+														whileInView={fadeIn}
+														viewport={{once: true}}
+														className="hidden group-hover:flex items-center justify-center lg:justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
+													>
+														<h4 className="text-white">
+															{item?.card?.link?.title}
+														</h4>
+														<svg
+															fill="none"
+															width="800px"
+															height="800px"
+															viewBox="0 0 24 24"
+															xmlns="http://www.w3.org/2000/svg"
+															className="w-[25px] h-[25px] object-center object-contain rotate-[-45deg]"
+														>
+															<path
+																d="M15.0377 6.34326L13.6268 7.76078L16.897 11.0157L3.29199 11.0294L3.294 13.0294L16.8618 13.0158L13.6466 16.246L15.0641 17.6569L20.7078 11.9869L15.0377 6.34326Z"
+																fill="#ffffff"
+															/>
+														</svg>
+													</motion.button>
+													<Image
+														alt={item?.card?.image?.altText}
+														src={item?.card?.image?.sourceUrl}
+														width={item?.card?.image?.mediaDetails?.width}
+														height={item?.card?.image?.mediaDetails?.height}
+														className={
+															item?.card?.image?.sourceUrl
+																? `block group-hover:hidden w-full h-full object-cover object-center`
+																: `hidden`
+														}
+													/>
+												</div>
 											</div>
 										</Link>
 									</>

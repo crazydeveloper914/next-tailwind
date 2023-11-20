@@ -56,7 +56,7 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="grid gap-4 -m-4 sm:gap-y-2 sm:gap-x-0 lg:gap-4 grid-col md:grid-cols-2 lg:grid-cols-3"
+					className="grid gap-4 -m-4 sm:gap-y-2 sm:gap-x-0 lg:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3"
 				>
 					{globalContext?.operationalInsightsThreeCards?.length > 0 ? (
 						globalContext?.operationalInsightsThreeCards?.map(

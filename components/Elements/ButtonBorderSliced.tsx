@@ -43,8 +43,8 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			textColorHover = "hover:text-white";
 			borderColorHover = "hover:border-yellow-default";
 			backgroundColorHover = "hover:bg-yellow-default";
-			afterBackgroundColor = "after:bg-lightGrey";
-			beforeBackgroundColor = "before:bg-lightGrey";
+			afterBackgroundColor = "after:bg-lightGreyTwo";
+			beforeBackgroundColor = "before:bg-lightGreyTwo";
 			afterBackgroundColorHover = "hover:after:bg-yellow-default";
 			beforeBackgroundColorHover = "hover:before:bg-yellow-default";
 			break;
