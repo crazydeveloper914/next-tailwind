@@ -146,12 +146,7 @@ const OurServices: FC<IOurServices> = ({
 													</motion.button>
 												</div>
 												<div className="py-0 group-hover:py-4 w-full h-[200px] flex flex-col items-center justify-center bg-center bg-no-repeat bg-cover">
-													<motion.button
-														initial={initialTwo}
-														whileInView={fadeIn}
-														viewport={{once: true}}
-														className="hidden group-hover:flex items-center justify-center lg:justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
-													>
+													<button className="hidden group-hover:flex items-center justify-center lg:justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500">
 														<h4 className="text-white">
 															{item?.card?.link?.title}
 														</h4>
@@ -168,7 +163,7 @@ const OurServices: FC<IOurServices> = ({
 																fill="#ffffff"
 															/>
 														</svg>
-													</motion.button>
+													</button>
 													<Image
 														alt={item?.card?.image?.altText}
 														src={item?.card?.image?.sourceUrl}
