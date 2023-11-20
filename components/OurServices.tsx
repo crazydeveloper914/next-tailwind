@@ -51,7 +51,7 @@ const OurServices: FC<IOurServices> = ({
 							tailwindStyling="lg:max-w-3xl text-pureBlack leading-[1.75rem] text-base sm:text-paragraph text-center"
 						/>
 					</div>
-					<div className="w-full relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-4 items-center justify-center overflow-hidden">
+					<div className="w-full relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-6 px-4 gap-6 items-center justify-center overflow-hidden">
 						{servicesGrid?.length > 0 ? (
 							servicesGrid.map((item: any, keys: any) => (
 								<Fragment key={keys}>
@@ -62,7 +62,7 @@ const OurServices: FC<IOurServices> = ({
 											className={styles.card + " group relative"}
 										>
 											<div
-												className="flex flex-col lg:h-[550px] bg-center bg-no-repeat bg-cover"
+												className="flex flex-col lg:h-[550px] bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out hover:scale-105"
 												style={{
 													backgroundImage: `linear-gradient(
 														0deg,
@@ -70,6 +70,7 @@ const OurServices: FC<IOurServices> = ({
 														rgba(167, 0, 7, 0.85),
 														rgba(167, 0, 7, 1)
 													),url("${item?.card?.image?.sourceUrl}")`,
+													boxShadow: "23px 36px 2px -12px rgba(0,0,0,0.1)",
 												}}
 											>
 												<div
@@ -131,7 +132,7 @@ const OurServices: FC<IOurServices> = ({
 														initial={initialTwo}
 														whileInView={fadeIn}
 														viewport={{once: true}}
-														className="hidden group-hover:flex items-center justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-red-dark transition-all ease-in-out duration-500"
+														className="hidden group-hover:flex items-center justify-between gap-2 bg-pureBlack py-4 px-4 hover:bg-yellow-default transition-all ease-in-out duration-500"
 													>
 														<h4 className="text-white">
 															{item?.card?.link?.title}
@@ -152,7 +153,7 @@ const OurServices: FC<IOurServices> = ({
 													</motion.button>
 												</div>
 												<div
-													className="w-full h-1/4 h-[150px] block group-hover:hidden bg-center bg-no-repeat bg-cover"
+													className="w-full h-[150px] block group-hover:hidden bg-center bg-no-repeat bg-cover"
 													style={{
 														backgroundImage: `url("${item?.card?.image?.sourceUrl}")`,
 													}}

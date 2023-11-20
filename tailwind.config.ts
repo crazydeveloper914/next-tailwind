@@ -37,7 +37,7 @@ const config: Config = {
 			pureBlack: "#000",
 			darkGrey: "#8f8f8f",
 			lightGrey: "#f7f7f7",
-			lightGreyTwo: "#eaeaea",
+			lightGreyTwo: "#eeeeee",
 
 			// Main colors
 			red: {

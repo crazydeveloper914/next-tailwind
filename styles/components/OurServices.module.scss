@@ -18,18 +18,6 @@
 	}
 
 	.card:hover {
-		color: #ffffff;
-		transform: scale(1.02);
-		background-color: #0f1934f7;
-		border: 2px solid #0f1934f7;
-		transition: all 0.5s ease-in-out;
-		box-shadow: 23px 26px 2px -12px rgba(0, 0, 0, 0.1);
-
-		h3,
-		div {
-			color: #ffffff;
-		}
-
 		.content {
 			height: 100%;
 			background: none;
