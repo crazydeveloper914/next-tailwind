@@ -82,7 +82,7 @@ const Navbar: FC = () => {
 					}`
 				}
 			>
-				<div className="container mx-auto flex flex-row items-center justify-between py-5 xl:py-6 px-4">
+				<div className="container mx-auto flex flex-row items-baseline sm:items-center justify-between py-5 xl:py-6 px-4">
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
@@ -95,7 +95,7 @@ const Navbar: FC = () => {
 								height={500}
 								alt="Bravo Group"
 								src="/img/logos/bravo-group-logo-white.png"
-								className="object-contain object-center w-full h-[25px] lg:h-[30px]"
+								className="object-contain object-center w-full h-[20px] sm:h-[25px] lg:h-[30px]"
 							/>
 						</Link>
 					</motion.div>

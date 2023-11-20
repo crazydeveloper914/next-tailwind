@@ -98,10 +98,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												(item: any, keys: any) => (
 													<Fragment key={keys}>
 														<Link href={item?.node?.url}>
-															<li className="hover:bg-red-default border-b-[1px] border-red-default border-opacity-50">
+															<li className="hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack">
 																<Link
 																	href={item?.node?.url}
-																	className="block p-4 text-base font-semibold text-white"
+																	className="block p-4 text-base font-semibold"
 																>
 																	{item?.node?.label}
 																</Link>
@@ -150,10 +150,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												(item: any, keys: any) => (
 													<Fragment key={keys}>
 														<Link href={item?.node?.url}>
-															<li className="hover:bg-red-default border-b-[1px] border-red-default border-opacity-50">
+															<li className="hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack">
 																<Link
 																	href={item?.node?.url}
-																	className="block p-4 text-base font-semibold text-white"
+																	className="block p-4 text-base font-semibold"
 																>
 																	{item?.node?.label}
 																</Link>
@@ -389,7 +389,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										viewport={{once: true}}
 										className={
 											styles.borderButton +
-											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
+											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-pureBlack after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
 										}
 									>
 										<span>

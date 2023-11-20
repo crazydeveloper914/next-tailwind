@@ -57,7 +57,7 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="grid gap-4 mb-32 -m-4 sm:gap-y-2 sm:gap-x-0 lg:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3"
+					className="grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3"
 				>
 					{globalContext?.operationalInsights?.length > 0 ? (
 						globalContext?.operationalInsights?.map((item: any, keys: any) => (
