@@ -5,6 +5,9 @@ import {
 	initial,
 	fadeInUp,
 	initialTwo,
+	slideInLeftInitial,
+	slideInRightFinish,
+	slideInRightInitial,
 } from "../../animations/animations";
 import {FC} from "react";
 import Link from "next/link";
@@ -91,8 +94,8 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 						}
 					>
 						<motion.div
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={slideInLeftInitial}
+							whileInView={slideInRightFinish}
 							viewport={{once: true}}
 							className={
 								imageLocation === "Left"
@@ -116,13 +119,16 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								}}
 							/>
 						</motion.div>
-						<div className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
-							<motion.div
-								initial={initial}
-								whileInView={stagger}
-								viewport={{once: true}}
-								className="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 items-center lg:items-baseline"
-							>
+						<motion.div
+							initial={
+								imageLocation === "Left"
+									? slideInRightInitial
+									: slideInLeftInitial
+							}
+							whileInView={slideInRightFinish}
+							className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0"
+						>
+							<div className="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 items-center lg:items-baseline">
 								<motion.h3
 									initial={initial}
 									whileInView={fadeInUp}
@@ -152,11 +158,11 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 										/>
 									</Link>
 								</div>
-							</motion.div>
-						</div>
+							</div>
+						</motion.div>
 						<motion.div
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={slideInRightInitial}
+							whileInView={slideInRightFinish}
 							viewport={{once: true}}
 							className={
 								imageLocation === "Right"
