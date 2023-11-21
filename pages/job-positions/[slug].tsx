@@ -9,9 +9,9 @@ import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAl
 
 // Components
 import Layout from "@/components/Layout/Layout";
-import BackHoverButton from "@/components/Elements/BackHoverButton";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
+import BackToVacanciesButton from "@/components/Elements/BackToVacanciesButton";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 import {getAllJobsPositionsPostsSlugs} from "@/functions/graphql/Queries/GetAllJobsPositionsPostsSlugs";
 
@@ -28,7 +28,11 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 		>
 			<Layout>
 				<BackToTopButton link={`#`} />
-				<BackHoverButton link={`/job-positions`} />
+				<BackToVacanciesButton
+					fullWidth={false}
+					link={`/job-positions`}
+					title="Back to Vacancies"
+				/>
 				<RenderFlexibleContent />
 			</Layout>
 		</PageContextProvider>

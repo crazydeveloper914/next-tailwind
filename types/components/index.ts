@@ -646,6 +646,11 @@ export type IButtonBorderSliced = {
 	fullWidth: boolean;
 	tailwindColor: string;
 };
+export type IBackToVacanciesButton = {
+	link: string;
+	title: string;
+	fullWidth: boolean;
+};
 export type IDownloadButtonLinks = {
 	title: string;
 	pdfLink: boolean;

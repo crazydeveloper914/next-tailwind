@@ -143,10 +143,7 @@ const Navbar: FC = () => {
 											>
 												{aboutUsSublinksOpen ? (
 													<>
-														<motion.ul
-															initial={initialTwo}
-															whileInView={stagger}
-															viewport={{once: true}}
+														<ul
 															className={
 																styles.businessServicesSublinks +
 																" p-0 w-full flex flex-col z-[999]"
@@ -173,7 +170,7 @@ const Navbar: FC = () => {
 															) : (
 																<></>
 															)}
-														</motion.ul>
+														</ul>
 													</>
 												) : null}
 											</div>
@@ -230,10 +227,7 @@ const Navbar: FC = () => {
 											>
 												{careerSublinksOpen ? (
 													<>
-														<motion.ul
-															initial={initialTwo}
-															whileInView={stagger}
-															viewport={{once: true}}
+														<ul
 															className={
 																styles.businessServicesSublinks +
 																" p-0 w-full flex flex-col z-[999]"
@@ -247,7 +241,7 @@ const Navbar: FC = () => {
 																	Job Positions
 																</Link>
 															</li>
-														</motion.ul>
+														</ul>
 													</>
 												) : null}
 											</div>
