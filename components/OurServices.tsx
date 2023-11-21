@@ -62,7 +62,7 @@ const OurServices: FC<IOurServices> = ({
 											className={styles.card + " group overflow-hidden"}
 										>
 											<div
-												className="flex flex-col w-full h-[600px] justify-between items-center bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out hover:scale-105"
+												className="flex flex-col w-full h-fit min-h-[600px] justify-between items-center bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out md:hover:scale-105"
 												style={{
 													backgroundImage: `linear-gradient(
 														0deg,
@@ -76,7 +76,7 @@ const OurServices: FC<IOurServices> = ({
 												<div
 													className={
 														styles.content +
-														" py-10 px-6 sm:p-10 gap-4 sm:gap-8 h-[400px] bg-white group-hover:border-none border-t-4 border-red-default flex flex-col"
+														" py-10 px-6 sm:p-10 group-hover:mt-28 sm:group-hover:mt-10 md:group-hover:mt-16 gap-4 sm:gap-8 h-[400px] bg-white group-hover:border-none border-t-4 border-red-default flex flex-col"
 													}
 												>
 													<motion.div
@@ -118,7 +118,9 @@ const OurServices: FC<IOurServices> = ({
 														{item?.card?.title}
 													</motion.h4>
 													<Paragraph
-														content={paragraph}
+														content={
+															item?.card?.paragraph.substring(0, 150) + "..."
+														}
 														tailwindStyling="text-darkGrey group-hover:text-white text-base text-center"
 													/>
 													<motion.button
