@@ -1,6 +1,6 @@
 // Imports
-import {IPostTypes, IPageContext, IFlexibleContentType} from "@/types/context";
 import {createContext, useContext} from "react";
+import {IPostTypes, IPageContext, IFlexibleContentType} from "@/types/context";
 
 /* PUBLIC PAGES & POSTS */
 /* PREVIEW PAGES & POSTS */
@@ -8,6 +8,7 @@ export const postType: IPostTypes = {
 	// Public pages
 	pages: "pages",
 	posts: "posts",
+	jobPositions: "jobPositions",
 	// Preview pages
 	previewPage: "page",
 	previewPost: "post",

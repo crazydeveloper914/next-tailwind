@@ -7,7 +7,6 @@ import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 import OperationalInsightsCard from "./Cards/OperationalInsightsCard";
 
 const OperationalInsights: FC<IOperationalInsights> = ({
@@ -75,18 +74,6 @@ const OperationalInsights: FC<IOperationalInsights> = ({
 						<></>
 					)}
 				</motion.div>
-				{/* <motion.div
-					initial={initial}
-					whileInView={fadeInUp}
-					viewport={{once: true}}
-					className="text-center"
-				>
-					<ButtonBorderSliced
-						fullWidth={false}
-						title="Load more articles"
-						tailwindColor="red-default"
-					/>
-				</motion.div> */}
 			</div>
 		</>
 	);

@@ -2,6 +2,7 @@
 	"cSpell.words": [
 		"Accreditations",
 		"Agricom",
+		"agricoms",
 		"changefreq",
 		"cmsbravogroup",
 		"EDQJ",
@@ -15,6 +16,7 @@
 		"mydummysite",
 		"posthog",
 		"recaptcha",
-		"sitekey"
+		"sitekey",
+		"subkeys"
 	]
 }

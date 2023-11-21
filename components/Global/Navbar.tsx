@@ -37,6 +37,7 @@ const Navbar: FC = () => {
 	const [navBackgroundSublinksOpen, setNavBackgroundSublinksOpen]: any =
 		useState(false);
 	const [aboutUsSublinksOpen, setAboutUsSublinksOpen]: any = useState(false);
+	const [careerSublinksOpen, setCareerSublinksOpen]: any = useState(false);
 	const [businessServicesSublinksOpen, setBusinessServicesSublinksOpen]: any =
 		useState(false);
 
@@ -53,18 +54,28 @@ const Navbar: FC = () => {
 	}
 
 	// Hides or Display about us sublinks
+	function displayCareerSublinks() {
+		setAboutUsSublinksOpen(false);
+		setBusinessServicesSublinksOpen(false);
+		setCareerSublinksOpen(!careerSublinksOpen);
+	}
+
+	// Hides or Display about us sublinks
 	function displayAboutUsSublinks() {
+		setCareerSublinksOpen(false);
 		setBusinessServicesSublinksOpen(false);
 		setAboutUsSublinksOpen(!aboutUsSublinksOpen);
 	}
 
 	// Hides or Display about us sublinks
 	function displayBusinessServicesSublinks() {
+		setCareerSublinksOpen(false);
 		setAboutUsSublinksOpen(false);
 		setBusinessServicesSublinksOpen(!businessServicesSublinksOpen);
 	}
 
 	function resetNavbarStyling() {
+		setCareerSublinksOpen(false);
 		setAboutUsSublinksOpen(false);
 		setNavBackgroundSublinksOpen(false);
 		setBusinessServicesSublinksOpen(false);
@@ -105,98 +116,153 @@ const Navbar: FC = () => {
 						viewport={{once: true}}
 						className="hidden xl:flex lg:items-center lg:gap-x-6"
 					>
-						<li className="relative">
-							<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
-								<Link
-									href="/about"
-									className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
-								>
-									About Us
-								</Link>
-								<Image
-									width={550}
-									height={550}
-									alt="White Arrow Icon"
-									onClick={displayAboutUsSublinks}
-									src="/img/navigation-menu-dropdown-arrow-white.png"
-									className="w-[25px] h-[25px] object-contain object-center"
-								/>
-							</span>
-							<div
-								onMouseLeave={resetNavbarStyling}
-								className="fixed mt-[1.65rem] w-[20%] bg-white flex flex-col items-center justify-center"
-							>
-								{aboutUsSublinksOpen ? (
-									<>
-										<motion.ul
-											initial={initialTwo}
-											whileInView={stagger}
-											viewport={{once: true}}
-											className={
-												styles.businessServicesSublinks +
-												" p-4 w-full flex flex-col z-[999]"
-											}
-										>
-											{/* Menu Link*/}
-											{globalContext?.aboutUsSublinks?.length > 0 ? (
-												globalContext?.aboutUsSublinks?.map(
-													(item: any, keys: any) => (
-														<Fragment key={keys}>
-															<Link href={item?.node?.url}>
-																<li className="w-full group hover:bg-red-default border-b-[2px] border-lightGrey hover:border-red-default">
-																	<Link
-																		href={item?.node?.url}
-																		className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
-																	>
-																		{item?.node?.label}
-																	</Link>
-																</li>
-															</Link>
-														</Fragment>
-													)
-												)
-											) : (
-												<></>
-											)}
-										</motion.ul>
-									</>
-								) : null}
-							</div>
-						</li>
-						<li className="relative" onClick={displayBusinessServicesSublinks}>
-							<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
-								<span className="text-white text-base text-center tracking-[0.05rem] transition-all ease-in-out duration-500">
-									Our Services
-								</span>
-								<Image
-									width={550}
-									height={550}
-									alt="White Arrow Icon"
-									src="/img/navigation-menu-dropdown-arrow-white.png"
-									className=" cursor-pointer w-[25px] h-[25px] object-contain object-center"
-								/>
-							</div>
-							{businessServicesSublinksOpen ? (
-								<>
-									<div
-										onMouseLeave={resetNavbarStyling}
-										onMouseEnter={displayNavBackgroundColor}
-									>
-										<SubMegaMenuLinks />
-									</div>
-								</>
-							) : null}
-						</li>
 						{globalContext?.navbarMenuLinks?.length > 0 ? (
 							globalContext?.navbarMenuLinks?.map((item: any, keys: any) => (
-								<li key={keys} className="hidden xl:block">
-									<Link
-										href={item?.node?.url}
-										className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
-									>
-										{item?.node?.label}
-									</Link>
-								</li>
+								<Fragment key={keys}>
+									{item?.node?.url === "/about" ? (
+										<li className="relative">
+											<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+												<Link
+													href="/about"
+													className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
+												>
+													About Us
+												</Link>
+												<Image
+													width={550}
+													height={550}
+													alt="White Arrow Icon"
+													onClick={displayAboutUsSublinks}
+													src="/img/navigation-menu-dropdown-arrow-white.png"
+													className="w-[25px] h-[25px] object-contain object-center"
+												/>
+											</span>
+											<div
+												onMouseLeave={resetNavbarStyling}
+												className="fixed mt-[1.65rem] w-[20%] bg-white flex flex-col items-center justify-center"
+											>
+												{aboutUsSublinksOpen ? (
+													<>
+														<motion.ul
+															initial={initialTwo}
+															whileInView={stagger}
+															viewport={{once: true}}
+															className={
+																styles.businessServicesSublinks +
+																" p-0 w-full flex flex-col z-[999]"
+															}
+														>
+															{/* Menu Link*/}
+															{globalContext?.aboutUsSublinks?.length > 0 ? (
+																globalContext?.aboutUsSublinks?.map(
+																	(item: any, keys: any) => (
+																		<Fragment key={keys}>
+																			<Link href={item?.node?.url}>
+																				<li className="w-full group hover:bg-red-default border-b-[2px] border-lightGrey hover:border-red-default">
+																					<Link
+																						href={item?.node?.url}
+																						className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
+																					>
+																						{item?.node?.label}
+																					</Link>
+																				</li>
+																			</Link>
+																		</Fragment>
+																	)
+																)
+															) : (
+																<></>
+															)}
+														</motion.ul>
+													</>
+												) : null}
+											</div>
+										</li>
+									) : item?.node?.label === "Our Services" ? (
+										<li
+											className="relative"
+											onClick={displayBusinessServicesSublinks}
+										>
+											<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+												<span className="text-white text-base text-center tracking-[0.05rem] transition-all ease-in-out duration-500">
+													Our Services
+												</span>
+												<Image
+													width={550}
+													height={550}
+													alt="White Arrow Icon"
+													src="/img/navigation-menu-dropdown-arrow-white.png"
+													className=" cursor-pointer w-[25px] h-[25px] object-contain object-center"
+												/>
+											</div>
+											{businessServicesSublinksOpen ? (
+												<>
+													<div
+														onMouseLeave={resetNavbarStyling}
+														onMouseEnter={displayNavBackgroundColor}
+													>
+														<SubMegaMenuLinks />
+													</div>
+												</>
+											) : null}
+										</li>
+									) : item?.node?.url === "/career" ? (
+										<li className="relative">
+											<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+												<Link
+													href={item?.node?.url}
+													className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
+												>
+													{item?.node?.label}
+												</Link>
+												<Image
+													width={550}
+													height={550}
+													alt="White Arrow Icon"
+													onClick={displayCareerSublinks}
+													src="/img/navigation-menu-dropdown-arrow-white.png"
+													className="w-[25px] h-[25px] object-contain object-center"
+												/>
+											</span>
+											<div
+												onMouseLeave={resetNavbarStyling}
+												className="fixed mt-[1.65rem] w-[20%] bg-white flex flex-col items-center justify-center"
+											>
+												{careerSublinksOpen ? (
+													<>
+														<motion.ul
+															initial={initialTwo}
+															whileInView={stagger}
+															viewport={{once: true}}
+															className={
+																styles.businessServicesSublinks +
+																" p-0 w-full flex flex-col z-[999]"
+															}
+														>
+															<li className="w-full group hover:bg-red-default border-b-[2px] border-lightGrey hover:border-red-default">
+																<Link
+																	href="/job-positions"
+																	className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
+																>
+																	Job Positions
+																</Link>
+															</li>
+														</motion.ul>
+													</>
+												) : null}
+											</div>
+										</li>
+									) : (
+										<li className="hidden xl:block">
+											<Link
+												href={item?.node?.url}
+												className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
+											>
+												{item?.node?.label}
+											</Link>
+										</li>
+									)}
+								</Fragment>
 							))
 						) : (
 							<></>
