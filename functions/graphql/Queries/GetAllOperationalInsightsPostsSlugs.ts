@@ -36,7 +36,7 @@ export const getAllOperationalInsightsPostsSlugs = async (): Promise<ISlug> => {
 };
 
 // All Operational Insights Content
-export async function getAllOperationalInsightsContent() {
+export const getAllOperationalInsightsContent = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -75,10 +75,10 @@ export async function getAllOperationalInsightsContent() {
 			"Something went wrong trying to fetch all the operational insight posts"
 		);
 	}
-}
+};
 
 // Latest Three Operational Insights Content
-export async function getThreeOperationalInsightsContent() {
+export const getThreeOperationalInsightsContent = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -117,4 +117,4 @@ export async function getThreeOperationalInsightsContent() {
 			"Something went wrong trying to fetch all the operational insight posts"
 		);
 	}
-}
+};

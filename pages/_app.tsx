@@ -29,7 +29,11 @@ import {
 // Components
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
 import PostHogContextProvider from "@/components/Context/PostHogProviderContext";
-import {getAllJobsPositionsContent} from "@/functions/graphql/Queries/GetAllJobsPositionsPostsSlugs";
+import {
+	getAllAgricomsTaxonomyJobs,
+	getAllBravoLogisticsTaxonomyJobs,
+	getAllJobsPositionsContent,
+} from "@/functions/graphql/Queries/GetAllJobsPositionsPostsSlugs";
 
 export default function App({
 	Component,
@@ -42,7 +46,7 @@ export default function App({
 
 	// PAGE LOADING ANIMATION //
 	// Page Animation Loader
-	function LoadingSquares() {
+	const LoadingSquares = () => {
 		const [loading, setLoading]: any = useState(false);
 
 		useEffect(() => {
@@ -101,7 +105,7 @@ export default function App({
 				</div>
 			)
 		);
-	}
+	};
 
 	return (
 		<ApolloProvider client={client}>
@@ -142,6 +146,8 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		businessServicesSublinks,
 		operationalInsights,
 		operationalInsightsThreeCards,
+		bravoLogisticsJobs,
+		agricomsJobs,
 	]: any = await Promise.all([
 		getNavbarMenuLinks(),
 		getAboutUsSublinks(),
@@ -151,13 +157,17 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getBusinessServicesSublinks(),
 		getAllOperationalInsightsContent(),
 		getThreeOperationalInsightsContent(),
+		getAllBravoLogisticsTaxonomyJobs(),
+		getAllAgricomsTaxonomyJobs(),
 	]);
 
 	const globalProps: IGlobalProps = {
+		agricomsJobs: agricomsJobs,
 		jobsPositions: jobsPositions,
 		navbarMenuLinks: navbarMenuLinks,
 		aboutUsSublinks: aboutUsSublinks,
 		footerMenuLinks: footerMenuLinks,
+		bravoLogisticsJobs: bravoLogisticsJobs,
 		operationalInsights: operationalInsights,
 		themesOptionsContent: themesOptionsContent,
 		businessServicesSublinks: businessServicesSublinks,

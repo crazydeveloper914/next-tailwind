@@ -14,6 +14,7 @@ import {IAchievementsStatsCTA} from "@/types/components/index";
 // Components
 import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
+import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 
 const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 	title,
@@ -144,18 +145,11 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 									target={buttonLink?.target}
 									className={buttonLink?.url ? "block" : "hidden"}
 								>
-									<motion.button
-										initial={initialTwo}
-										whileInView={fadeIn}
-										viewport={{once: true}}
-										className={`px-6 py-3 mt-3 text-base font-semibold tracking-widest text-white transition-all duration-500 ease-in-out bg-red-default hover:bg-yellow-default ${
-											displayAchievementsContent
-												? "lg:px-6 lg:py-3"
-												: "lg:px-12 lg:py-6"
-										}`}
-									>
-										{buttonLink?.title}
-									</motion.button>
+									<ButtonBorderSliced
+										fullWidth={false}
+										title={buttonLink?.title}
+										tailwindColor="white"
+									/>
 								</Link>
 							</motion.div>
 						</div>

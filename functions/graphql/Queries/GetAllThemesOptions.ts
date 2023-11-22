@@ -4,7 +4,7 @@ import {DocumentNode, gql} from "@apollo/client";
 /* THEMES OPTIONS CONTENT
  The ID number refers to the
 "Global Content" page ID*/
-export async function getThemesOptionsContent() {
+export const getThemesOptionsContent = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -53,4 +53,4 @@ export async function getThemesOptionsContent() {
 			"Something went wrong trying to fetch themes options content"
 		);
 	}
-}
+};

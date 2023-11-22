@@ -611,9 +611,10 @@ export type IOperationalInsightsCard = {
 	};
 };
 export type IJobPositionsCard = {
-	uri: string;
+	slug: string;
 	title: string;
 	paragraph: string;
+	tailwindStyling: string;
 	featuredImage: {
 		node: {
 			altText: string;
@@ -674,4 +675,9 @@ export type IBackToVacanciesButton = {
 export type IDownloadButtonLinks = {
 	title: string;
 	pdfLink: boolean;
+};
+export type IJobsCategoryButton = {
+	title: string;
+	active: boolean;
+	onClick: any;
 };

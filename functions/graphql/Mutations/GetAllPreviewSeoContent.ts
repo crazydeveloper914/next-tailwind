@@ -3,12 +3,12 @@ import {DocumentNode, gql} from "@apollo/client";
 
 /* PREVIEW PAGES, BLOGS SEO CONTENT */
 /* Fetch all Seo Content (For every flexible content page) */
-export async function getAllPreviewSeoContent(
+export const getAllPreviewSeoContent = async (
 	id: number,
 	authToken: string,
 	postType: string,
 	loginRedirectURL: string
-) {
+) => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -62,4 +62,4 @@ export async function getAllPreviewSeoContent(
 	} catch (error) {
 		return loginRedirectURL;
 	}
-}
+};

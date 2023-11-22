@@ -3,11 +3,12 @@ import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {ICTA} from "@/types/components/index";
-import {fadeIn, initialTwo} from "../animations/animations";
+import {initial, stagger} from "../animations/animations";
 
 // Components
 import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
+import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 
 const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 	return (
@@ -24,7 +25,12 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 				}}
 			>
 				<div className="container p-0 mx-auto">
-					<div className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row">
+					<motion.div
+						initial={initial}
+						whileInView={stagger}
+						viewport={{once: true}}
+						className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row"
+					>
 						<div className="flex flex-col justify-between gap-4">
 							<Title
 								content={title}
@@ -40,16 +46,13 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							target={buttonLink?.target}
 							className={buttonLink?.url ? "block" : "hidden"}
 						>
-							<motion.button
-								initial={initialTwo}
-								whileInView={fadeIn}
-								viewport={{once: true}}
-								className="px-6 py-3 lg:px-12 lg:py-6 mt-3 text-base font-semibold tracking-widest text-white transition-all duration-500 ease-in-out bg-red-default hover:bg-yellow-default"
-							>
-								{buttonLink?.title}
-							</motion.button>
+							<ButtonBorderSliced
+								fullWidth={false}
+								title={buttonLink?.title}
+								tailwindColor="white"
+							/>
 						</Link>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</>

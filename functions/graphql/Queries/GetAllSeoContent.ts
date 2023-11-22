@@ -4,7 +4,7 @@ import {DocumentNode, gql} from "@apollo/client";
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Seo Content (For 
 	every flexible content page) */
-export async function getAllSeoContent(slug: string, postType: string) {
+export const getAllSeoContent = async (slug: string, postType: string) => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -57,4 +57,4 @@ export async function getAllSeoContent(slug: string, postType: string) {
 			`Something went wrong trying to fetch all ${postType} seo content per page`
 		);
 	}
-}
+};

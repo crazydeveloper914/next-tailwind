@@ -78,7 +78,7 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 				>
 					<Link
 						href={uri ? `operational-insights${uri}` : `/`}
-						target="_blank"
+						target=""
 						className={uri ? "block" : "hidden"}
 					>
 						<ButtonBorderSliced

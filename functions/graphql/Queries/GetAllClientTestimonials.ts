@@ -3,7 +3,7 @@ import {DocumentNode, gql} from "@apollo/client";
 
 /* CLIENTS TESTIMONIALS */
 // Client Testimonials Content
-export async function getAllClientTestimonialsContent() {
+export const getAllClientTestimonialsContent = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -32,4 +32,4 @@ export async function getAllClientTestimonialsContent() {
 			"Something went wrong trying to fetch client Testimonials content"
 		);
 	}
-}
+};

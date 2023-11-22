@@ -1,51 +1,46 @@
 // Imports
-import {
-	fadeIn,
-	initial,
-	stagger,
-	fadeInUp,
-	initialTwo,
-} from "@/animations/animations";
 import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
 import {IJobPositions} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
+import {initial, stagger, fadeInUp} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
 import JobPositionsCard from "./Cards/JobPositionsCard";
+import JobsCategoryButton from "./Elements/JobsCategoryButton";
 
 const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 	const globalContext = useGlobalContext();
 
 	const [allJobsOpen, setAllJobsOpen]: any = useState(true);
+	const [agricomsJobsOpen, setAgricomsJobsOpen]: any = useState(false);
 	const [bravoLogisticsJobsOpen, setBravoLogisticsJobsOpen]: any =
 		useState(false);
-	const [agricomsJobsOpen, setAgricomsJobsOpen]: any = useState(false);
 
 	/* Hides or Display
 	 All Job Positions */
-	function displayAllJobs() {
+	const displayAllJobs = () => {
 		setAllJobsOpen(!allJobsOpen);
 		setBravoLogisticsJobsOpen(false);
 		setAgricomsJobsOpen(false);
-	}
+	};
 
 	/* Hides or Display Bravo Logistics
 	 Taxonomy Job Positions */
-	function displayBravoLogisticsJobs() {
+	const displayBravoLogisticsJobs = () => {
 		setAllJobsOpen(false);
 		setBravoLogisticsJobsOpen(!bravoLogisticsJobsOpen);
 		setAgricomsJobsOpen(false);
-	}
+	};
 
 	/* Hides or Display Agricoms
 	 Taxonomy Job Positions */
-	function displayAgricomsJobs() {
+	const displayAgricomsJobs = () => {
 		setAllJobsOpen(false);
 		setBravoLogisticsJobsOpen(false);
 		setAgricomsJobsOpen(!agricomsJobsOpen);
-	}
+	};
 
 	return (
 		<>
@@ -89,39 +84,27 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 					viewport={{once: true}}
 					className="flex flex-row py-8 mb-12 items-center justify-center gap-4 lg:gap-12"
 				>
-					<motion.button
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
+					<JobsCategoryButton
+						title="All"
+						active={allJobsOpen}
 						onClick={displayAllJobs}
-						className="flex items-center justify-center group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-red-default hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500 text-red-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-red-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-red-default"
-					>
-						All
-					</motion.button>
-					<motion.button
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
+					/>
+					<JobsCategoryButton
+						title="Bravo Logistics"
+						active={bravoLogisticsJobsOpen}
 						onClick={displayBravoLogisticsJobs}
-						className="flex items-center justify-center group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-red-default hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500 text-red-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-red-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-red-default"
-					>
-						Bravo Logistics
-					</motion.button>
-					<motion.button
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
+					/>
+					<JobsCategoryButton
+						title="Agricoms"
+						active={agricomsJobsOpen}
 						onClick={displayAgricomsJobs}
-						className="flex items-center justify-center group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-red-default hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500 text-red-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-red-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-red-default"
-					>
-						Agricoms
-					</motion.button>
+					/>
 				</motion.div>
 				<motion.div
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="grid mb-32 px-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3"
+					className="grid mb-32 px-4 gap-4 grid-col md:grid-cols-2 lg:grid-cols-3"
 				>
 					{allJobsOpen ? (
 						<>
@@ -129,10 +112,11 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 								globalContext?.jobsPositions?.map((item: any, keys: any) => (
 									<Fragment key={keys}>
 										<JobPositionsCard
-											uri={item?.node?.uri}
+											slug={item?.node?.slug}
 											title={item?.node?.title}
 											paragraph={item?.node?.excerpt}
 											featuredImage={item?.node?.featuredImage}
+											tailwindStyling="bg-darkGrey hover:bg-black"
 										/>
 									</Fragment>
 								))
@@ -142,31 +126,35 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 						</>
 					) : bravoLogisticsJobsOpen ? (
 						<>
-							{globalContext?.jobsPositions?.length > 0 ? (
-								globalContext?.jobsPositions?.map((item: any, keys: any) => (
-									<Fragment key={keys}>
-										<JobPositionsCard
-											uri={item?.node?.uri}
-											title={item?.node?.title}
-											paragraph={item?.node?.excerpt}
-											featuredImage={item?.node?.featuredImage}
-										/>
-									</Fragment>
-								))
+							{globalContext?.bravoLogisticsJobs?.length > 0 ? (
+								globalContext?.bravoLogisticsJobs?.map(
+									(item: any, keys: any) => (
+										<Fragment key={keys}>
+											<JobPositionsCard
+												slug={item?.slug}
+												title={item?.title}
+												paragraph={item?.excerpt}
+												featuredImage={item?.featuredImage}
+												tailwindStyling="bg-red-Two hover:bg-red-dark"
+											/>
+										</Fragment>
+									)
+								)
 							) : (
 								<></>
 							)}
 						</>
 					) : agricomsJobsOpen ? (
 						<>
-							{globalContext?.jobsPositions?.length > 0 ? (
-								globalContext?.jobsPositions?.map((item: any, keys: any) => (
+							{globalContext?.agricomsJobs?.length > 0 ? (
+								globalContext?.agricomsJobs?.map((item: any, keys: any) => (
 									<Fragment key={keys}>
 										<JobPositionsCard
-											uri={item?.node?.uri}
-											title={item?.node?.title}
-											paragraph={item?.node?.excerpt}
-											featuredImage={item?.node?.featuredImage}
+											slug={item?.slug}
+											title={item?.title}
+											paragraph={item?.excerpt}
+											featuredImage={item?.featuredImage}
+											tailwindStyling="bg-green-Three hover:bg-green-dark"
 										/>
 									</Fragment>
 								))

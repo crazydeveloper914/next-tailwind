@@ -16,13 +16,4 @@
 			@apply font-semibold underline text-red-Two hover:text-yellow-Two transition-all ease-in-out duration-500;
 		}
 	}
-
-	&:hover {
-		transform: scale(1.02);
-
-		.content {
-			height: 100%;
-			background: none;
-		}
-	}
 }

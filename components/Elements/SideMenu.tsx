@@ -351,7 +351,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 								Other Links
 							</h4>
 							<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-								<Link href="http://www.bravo.co.tz/" target="_blank">
+								<Link href="http://www.bravo.co.tz/" target="">
 									<motion.button
 										initial={initial}
 										whileInView={fadeInUp}
@@ -382,7 +382,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</span>
 									</motion.button>
 								</Link>
-								<Link href="https://agricom.co.tz/" target="_blank">
+								<Link href="https://agricom.co.tz/" target="">
 									<motion.button
 										initial={initial}
 										whileInView={fadeInUp}

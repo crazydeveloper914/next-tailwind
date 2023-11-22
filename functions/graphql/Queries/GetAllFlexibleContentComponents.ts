@@ -4,11 +4,11 @@ import {DocumentNode, gql} from "@apollo/client";
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
 (For every flexible content page) */
-export async function getAllFlexibleContentComponents(
+export const getAllFlexibleContentComponents = async (
 	slug: string,
 	postType: string,
 	postTypeFlexibleContent: string
-) {
+) => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -581,4 +581,4 @@ export async function getAllFlexibleContentComponents(
 			"Something went wrong trying to fetch all flexible content components"
 		);
 	}
-}
+};

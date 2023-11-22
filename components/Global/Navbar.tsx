@@ -43,43 +43,43 @@ const Navbar: FC = () => {
 
 	/* Hides or Displays the Full Nav Menu */
 
-	function toggleMenu() {
+	const toggleMenu = () => {
 		setMenuActive(!menuActive);
-	}
+	};
 
 	/* Display's Navbar background Color
 	when Mega sublinks are hovered*/
-	function displayNavBackgroundColor() {
+	const displayNavBackgroundColor = () => {
 		setNavBackgroundSublinksOpen(!navBackgroundSublinksOpen);
-	}
+	};
 
 	// Hides or Display about us sublinks
-	function displayCareerSublinks() {
+	const displayCareerSublinks = () => {
 		setAboutUsSublinksOpen(false);
 		setBusinessServicesSublinksOpen(false);
 		setCareerSublinksOpen(!careerSublinksOpen);
-	}
+	};
 
 	// Hides or Display about us sublinks
-	function displayAboutUsSublinks() {
+	const displayAboutUsSublinks = () => {
 		setCareerSublinksOpen(false);
 		setBusinessServicesSublinksOpen(false);
 		setAboutUsSublinksOpen(!aboutUsSublinksOpen);
-	}
+	};
 
 	// Hides or Display about us sublinks
-	function displayBusinessServicesSublinks() {
+	const displayBusinessServicesSublinks = () => {
 		setCareerSublinksOpen(false);
 		setAboutUsSublinksOpen(false);
 		setBusinessServicesSublinksOpen(!businessServicesSublinksOpen);
-	}
+	};
 
-	function resetNavbarStyling() {
+	const resetNavbarStyling = () => {
 		setCareerSublinksOpen(false);
 		setAboutUsSublinksOpen(false);
 		setNavBackgroundSublinksOpen(false);
 		setBusinessServicesSublinksOpen(false);
-	}
+	};
 
 	return (
 		<>

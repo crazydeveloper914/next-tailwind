@@ -77,7 +77,7 @@ const SubMegaMenuLinks: FC = () => {
 							viewport={{once: true}}
 							className="flex flex-col 2xl:flex-row items-center justify-center gap-4"
 						>
-							<Link href="http://www.bravo.co.tz/" target="_blank">
+							<Link href="http://www.bravo.co.tz/" target="">
 								<motion.button
 									initial={initial}
 									whileInView={fadeIn}
@@ -108,7 +108,7 @@ const SubMegaMenuLinks: FC = () => {
 									</span>
 								</motion.button>
 							</Link>
-							<Link href="https://agricom.co.tz/" target="_blank">
+							<Link href="https://agricom.co.tz/" target="">
 								<motion.button
 									initial={initial}
 									whileInView={fadeIn}

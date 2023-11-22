@@ -36,7 +36,7 @@ export const getAllJobsPositionsPostsSlugs = async (): Promise<ISlug> => {
 };
 
 // All Jobs Positions Content
-export async function getAllJobsPositionsContent() {
+export const getAllJobsPositionsContent = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -46,9 +46,7 @@ export async function getAllJobsPositionsContent() {
 				) {
 					edges {
 						node {
-							id
-							uri
-							date
+							slug
 							excerpt
 							title(format: RENDERED)
 							featuredImage {
@@ -78,22 +76,17 @@ export async function getAllJobsPositionsContent() {
 			"Something went wrong trying to fetch all the jobs positions posts"
 		);
 	}
-}
+};
 
 // Latest Three Jobs Positions Content
-export async function getThreeJobsPositionsContent() {
+export const getThreeJobsPositionsContent = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
-				operationalInsightsContent: jobPositions(
-					where: {status: PUBLISH}
-					first: 3
-				) {
+				jobsPositionsContent: jobPositions(where: {status: PUBLISH}, first: 3) {
 					edges {
 						node {
-							id
-							uri
-							date
+							slug
 							excerpt
 							title(format: RENDERED)
 							featuredImage {
@@ -123,11 +116,11 @@ export async function getThreeJobsPositionsContent() {
 			"Something went wrong trying to fetch all the jobs positions posts"
 		);
 	}
-}
+};
 
 /* JOBS POSITIONS TAXONOMIES (CONTENT) */
 // Bravo Logistics Taxonomy
-export async function getAllJobsPositionsBravoLogisticsSlugs() {
+export const getAllJobsPositionsBravoLogisticsSlugs = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -157,30 +150,31 @@ export async function getAllJobsPositionsBravoLogisticsSlugs() {
 			"Something went wrong trying to fetch all the jobs positions slugs for bravo logistics taxonomy"
 		);
 	}
-}
+};
 // All Bravo Logistics Taxonomy Jobs Positions Content
-export async function getAllJobsPositionsBravoLogisticsContent() {
+export const getAllBravoLogisticsTaxonomyJobs = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
-				bravoLogisticsTaxonomyContent: jobPositions(
-					where: {status: PUBLISH}
-					last: 100
-				) {
+				bravoLogisticsTaxonomyJobs: bravoLogistics {
 					edges {
 						node {
-							id
-							uri
-							date
-							excerpt
-							title(format: RENDERED)
-							featuredImage {
-								node {
-									altText
-									sourceUrl
-									mediaDetails {
-										height
-										width
+							jobPositions(last: 100, where: {status: PUBLISH}) {
+								edges {
+									node {
+										slug
+										excerpt
+										title(format: RENDERED)
+										featuredImage {
+											node {
+												altText
+												sourceUrl
+												mediaDetails {
+													height
+													width
+												}
+											}
+										}
 									}
 								}
 							}
@@ -194,17 +188,44 @@ export async function getAllJobsPositionsBravoLogisticsContent() {
 			query: content,
 		});
 
-		return response?.data?.bravoLogisticsTaxonomyContent?.edges;
+		let initialArray: any[] | undefined;
+		const finalArray: any = [];
+
+		// Setting the initial Array
+		initialArray = response?.data?.bravoLogisticsTaxonomyJobs?.edges;
+
+		// Agricoms Taxonomy Dynamic Links
+		initialArray?.forEach((keys: any) => {
+			keys?.node?.jobPositions?.edges?.forEach((subKeys: any) => {
+				const object = {
+					slug: subKeys?.node?.slug,
+					title: subKeys?.node?.title,
+					excerpt: subKeys?.node?.excerpt,
+					featuredImage: subKeys?.node?.featuredImage,
+				};
+
+				if (
+					object?.slug &&
+					object?.excerpt &&
+					object?.title &&
+					object?.featuredImage
+				) {
+					finalArray.push(object);
+				}
+			});
+		});
+
+		return finalArray;
 	} catch (error) {
 		console.log(error);
 		throw new Error(
-			"Something went wrong trying to fetch all the jobs positions slugs content for bravo logistics taxonomy"
+			"Something went wrong trying to fetch all jobs post for Bravo Logistics taxonomy"
 		);
 	}
-}
+};
 
 // Agricoms Taxonomy
-export async function getAllJobsPositionsAgricomsSlugs() {
+export const getAllJobsPositionsAgricomsSlugs = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
@@ -234,30 +255,31 @@ export async function getAllJobsPositionsAgricomsSlugs() {
 			"Something went wrong trying to fetch all the jobs positions slugs for Agricoms taxonomy"
 		);
 	}
-}
+};
 // All Agricoms Taxonomy Jobs Positions Content
-export async function getAllJobsPositionsAgricomsContent() {
+export const getAllAgricomsTaxonomyJobs = async () => {
 	try {
 		const content: DocumentNode = gql`
 			{
-				agricomsTaxonomyContent: jobPositions(
-					where: {status: PUBLISH}
-					last: 100
-				) {
+				agricomsTaxonomyJobs: agricoms {
 					edges {
 						node {
-							id
-							uri
-							date
-							excerpt
-							title(format: RENDERED)
-							featuredImage {
-								node {
-									altText
-									sourceUrl
-									mediaDetails {
-										height
-										width
+							jobPositions(last: 100, where: {status: PUBLISH}) {
+								edges {
+									node {
+										slug
+										excerpt
+										title(format: RENDERED)
+										featuredImage {
+											node {
+												altText
+												sourceUrl
+												mediaDetails {
+													height
+													width
+												}
+											}
+										}
 									}
 								}
 							}
@@ -271,11 +293,38 @@ export async function getAllJobsPositionsAgricomsContent() {
 			query: content,
 		});
 
-		return response?.data?.agricomsTaxonomyContent?.edges;
+		let initialArray: any[] | undefined;
+		const finalArray: any = [];
+
+		// Setting the initial Array
+		initialArray = response?.data?.agricomsTaxonomyJobs?.edges;
+
+		// Agricoms Taxonomy Dynamic Links
+		initialArray?.forEach((keys: any) => {
+			keys?.node?.jobPositions?.edges?.forEach((subKeys: any) => {
+				const object = {
+					slug: subKeys?.node?.slug,
+					title: subKeys?.node?.title,
+					excerpt: subKeys?.node?.excerpt,
+					featuredImage: subKeys?.node?.featuredImage,
+				};
+
+				if (
+					object?.slug &&
+					object?.excerpt &&
+					object?.title &&
+					object?.featuredImage
+				) {
+					finalArray.push(object);
+				}
+			});
+		});
+
+		return finalArray;
 	} catch (error) {
 		console.log(error);
 		throw new Error(
-			"Something went wrong trying to fetch all the jobs positions slugs content for Agricoms taxonomy"
+			"Something went wrong trying to fetch all jobs post for Agricoms taxonomy"
 		);
 	}
-}
+};

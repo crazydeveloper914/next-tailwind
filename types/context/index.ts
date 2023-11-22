@@ -70,6 +70,44 @@ export type IJobsPositions = [
 		};
 	}
 ];
+export type IBravoLogisticsJobs = [
+	{
+		node: {
+			slug: string;
+			title: string;
+			excerpt: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}
+];
+export type IAgricomsJobs = [
+	{
+		node: {
+			slug: string;
+			title: string;
+			excerpt: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}
+];
 
 export type IContent = [
 	{
@@ -159,10 +197,12 @@ export type IFlexibleContentType = {
 };
 
 export type IGlobalProps = {
+	agricomsJobs: IAgricomsJobs;
 	jobsPositions: IJobsPositions;
 	navbarMenuLinks: INavbarMenuLinks;
 	aboutUsSublinks: IAboutUsSublinks;
 	footerMenuLinks: IFooterMenuLinks;
+	bravoLogisticsJobs: IBravoLogisticsJobs;
 	operationalInsights: IOperationalInsights;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
@@ -170,10 +210,12 @@ export type IGlobalProps = {
 };
 
 export type IGlobalContext = {
+	agricomsJobs: IAgricomsJobs;
 	jobsPositions: IJobsPositions;
 	navbarMenuLinks: INavbarMenuLinks;
 	aboutUsSublinks: IAboutUsSublinks;
 	footerMenuLinks: IFooterMenuLinks;
+	bravoLogisticsJobs: IBravoLogisticsJobs;
 	operationalInsights: IOperationalInsights;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;

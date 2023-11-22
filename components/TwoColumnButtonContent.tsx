@@ -16,6 +16,7 @@ import styles from "../styles/components/TwoColumnButtonContent.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
+import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 
 const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	title,
@@ -32,23 +33,23 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	const [contentThreeOpen, setContentThreeOpen]: any = useState(false);
 
 	// Hides or Display about us sublinks
-	function displayContentOne() {
+	const displayContentOne = () => {
 		setContentOneOpen(!contentOneOpen);
 		setContentTwoOpen(false);
 		setContentThreeOpen(false);
-	}
+	};
 	// Hides or Display about us sublinks
-	function displayContentTwo() {
+	const displayContentTwo = () => {
 		setContentOneOpen(false);
 		setContentTwoOpen(!contentTwoOpen);
 		setContentThreeOpen(false);
-	}
+	};
 	// Hides or Display about us sublinks
-	function displayContentThree() {
+	const displayContentThree = () => {
 		setContentOneOpen(false);
 		setContentTwoOpen(false);
 		setContentThreeOpen(!contentThreeOpen);
-	}
+	};
 
 	switch (backgroundColor) {
 		case "White":
@@ -94,27 +95,13 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							tailwindStyling="max-w-xl text-black leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
 						/>
 						<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
-							<motion.button
-								initial={initial}
-								whileInView={fadeInUp}
-								viewport={{once: true}}
-								className={
-									buttonLink?.url
-										? styles.borderButton +
-										  ` block mt-3 relative px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-red-default hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500 text-red-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-red-default ${
-												backgroundColor === "White"
-													? "before:bg-white hover:before:bg-red-default"
-													: "before:bg-lightGrey hover:before:bg-red-default"
-										  } after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] ${
-												backgroundColor === "White"
-													? "after:bg-white hover:after:bg-red-default"
-													: "after:bg-lightGrey hover:after:bg-red-default"
-										  }`
-										: `hidden `
+							<ButtonBorderSliced
+								fullWidth={false}
+								title={buttonLink?.title}
+								tailwindColor={
+									backgroundColor === "White" ? "white" : "red-default"
 								}
-							>
-								{buttonLink?.title}
-							</motion.button>
+							/>
 						</Link>
 					</motion.div>
 					<motion.div

@@ -2,7 +2,7 @@ import {gql} from "@apollo/client";
 import {client} from "@/config/apollo";
 
 // Navbar Menu Links
-export async function getNavbarMenuLinks() {
+export const getNavbarMenuLinks = async () => {
 	try {
 		const content: any = gql`
 			{
@@ -29,10 +29,10 @@ export async function getNavbarMenuLinks() {
 			"Something went wrong trying to fetch main menu links content"
 		);
 	}
-}
+};
 
 // Navbar About Us Sublinks
-export async function getAboutUsSublinks() {
+export const getAboutUsSublinks = async () => {
 	try {
 		const content: any = gql`
 			{
@@ -59,10 +59,10 @@ export async function getAboutUsSublinks() {
 			"Something went wrong trying to fetch main menu links content"
 		);
 	}
-}
+};
 
 // Navbar Our Business Services Sublinks
-export async function getBusinessServicesSublinks() {
+export const getBusinessServicesSublinks = async () => {
 	try {
 		const content: any = gql`
 			{
@@ -92,10 +92,10 @@ export async function getBusinessServicesSublinks() {
 			"Something went wrong trying to fetch business services sublinks content"
 		);
 	}
-}
+};
 
 // Footer Menu Links
-export async function getFooterMenuLinks() {
+export const getFooterMenuLinks = async () => {
 	try {
 		const content: any = gql`
 			{
@@ -122,4 +122,4 @@ export async function getFooterMenuLinks() {
 			"Something went wrong trying to fetch footer menu links content"
 		);
 	}
-}
+};
