@@ -11,7 +11,6 @@ import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IAchievementsStatsCTA} from "@/types/components/index";
-
 // Components
 import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";

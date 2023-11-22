@@ -513,6 +513,11 @@ export type IOperationalInsights = {
 	italic: string;
 	paragraph: string;
 };
+export type IJobPositions = {
+	title: string;
+	italic: string;
+	paragraph: string;
+};
 
 // Global
 export type ILayout = {
@@ -591,6 +596,21 @@ export type IValuesBlocksImageOrMapCard = {
 	};
 };
 export type IOperationalInsightsCard = {
+	uri: string;
+	title: string;
+	paragraph: string;
+	featuredImage: {
+		node: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+};
+export type IJobPositionsCard = {
 	uri: string;
 	title: string;
 	paragraph: string;

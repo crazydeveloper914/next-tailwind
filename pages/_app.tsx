@@ -29,6 +29,7 @@ import {
 // Components
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
 import PostHogContextProvider from "@/components/Context/PostHogProviderContext";
+import {getAllJobsPositionsContent} from "@/functions/graphql/Queries/GetAllJobsPositionsPostsSlugs";
 
 export default function App({
 	Component,
@@ -137,6 +138,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		aboutUsSublinks,
 		footerMenuLinks,
 		themesOptionsContent,
+		jobsPositions,
 		businessServicesSublinks,
 		operationalInsights,
 		operationalInsightsThreeCards,
@@ -145,12 +147,14 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getAboutUsSublinks(),
 		getFooterMenuLinks(),
 		getThemesOptionsContent(),
+		getAllJobsPositionsContent(),
 		getBusinessServicesSublinks(),
 		getAllOperationalInsightsContent(),
 		getThreeOperationalInsightsContent(),
 	]);
 
 	const globalProps: IGlobalProps = {
+		jobsPositions: jobsPositions,
 		navbarMenuLinks: navbarMenuLinks,
 		aboutUsSublinks: aboutUsSublinks,
 		footerMenuLinks: footerMenuLinks,

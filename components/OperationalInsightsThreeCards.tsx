@@ -63,7 +63,6 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 							(item: any, keys: any) => (
 								<Fragment key={keys}>
 									<OperationalInsightsCard
-										key={keys}
 										uri={item?.node?.uri}
 										title={item?.node?.title}
 										paragraph={item?.node?.excerpt}

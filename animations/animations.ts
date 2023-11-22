@@ -18,11 +18,9 @@ export const initial: Initial | any = {
 	y: 30,
 	opacity: 0,
 };
-
 export const initialTwo: InitialTwo | any = {
 	opacity: 0,
 };
-
 export const fadeIn: FadeIn | any = {
 	opacity: 1,
 	transition: {
@@ -31,7 +29,6 @@ export const fadeIn: FadeIn | any = {
 		ease: "easeOut",
 	},
 };
-
 export const fadeInTwo: FadeInTwo | any = {
 	y: 0,
 	opacity: 1,
@@ -41,7 +38,6 @@ export const fadeInTwo: FadeInTwo | any = {
 		ease: "easeOut",
 	},
 };
-
 export const fadeInUp: FadeInUp = {
 	y: 0,
 	opacity: 1,
@@ -51,7 +47,6 @@ export const fadeInUp: FadeInUp = {
 		ease: "easeInOut",
 	},
 };
-
 export const stagger: Stagger = {
 	y: 0,
 	opacity: 1,
@@ -59,7 +54,7 @@ export const stagger: Stagger = {
 		delay: 0.25,
 		duration: 0.5,
 		ease: "easeInOut",
-		staggerChildren: 0.1,
+		staggerChildren: 0.5,
 		delayChildren: 0.3,
 	},
 };
@@ -70,13 +65,11 @@ export const slideInRightInitial: SlideInRightInitial | any = {
 	x: 200,
 	opacity: 0,
 };
-
 export const slideInLeftInitial: SlideInLeftInitial | any = {
 	y: 0,
 	x: -200,
 	opacity: 0,
 };
-
 export const slideInRightFinish: SlideInRightFinish = {
 	y: 0,
 	x: 0,

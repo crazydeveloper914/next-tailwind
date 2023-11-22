@@ -462,6 +462,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 									}
 								}
 							}
+							... on ${postTypeFlexibleContent}_JobPositionsGrid {
+								fieldGroupName
+								title
+								italic
+								paragraph
+							}
 							... on ${postTypeFlexibleContent}_OperationalInsightsGrid {
 								fieldGroupName
 								title

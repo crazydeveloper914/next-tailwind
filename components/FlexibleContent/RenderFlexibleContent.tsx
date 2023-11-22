@@ -13,6 +13,7 @@ import ContactInfo from "../ContactInfo";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
 import Maintenance from "../Maintenance";
+import JobPositions from "../JobPositions";
 import ErrorPage from "../Global/ErrorPage";
 import GoogleReviews from "../GoogleReviews";
 import TitleParagraph from "../TitleParagraph";
@@ -172,6 +173,15 @@ const RenderFlexibleContent: FC = () => {
 									valuesBlockTwo={item?.valuesBlockTwo}
 									valuesBlockThree={item?.valuesBlockThree}
 									backgroundImage={item?.backgroundImage?.sourceUrl}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_JobPositionsGrid` ? (
+							<>
+								<JobPositions
+									title={item?.title}
+									italic={item?.italic}
+									paragraph={item?.paragraph}
 								/>
 							</>
 						) : item?.fieldGroupName ===

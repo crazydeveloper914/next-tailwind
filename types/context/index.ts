@@ -49,6 +49,27 @@ export type IOperationalInsights = [
 		};
 	}
 ];
+export type IJobsPositions = [
+	{
+		node: {
+			id: string;
+			uri: string;
+			date: string;
+			title: string;
+			excerpt: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}
+];
 
 export type IContent = [
 	{
@@ -138,6 +159,7 @@ export type IFlexibleContentType = {
 };
 
 export type IGlobalProps = {
+	jobsPositions: IJobsPositions;
 	navbarMenuLinks: INavbarMenuLinks;
 	aboutUsSublinks: IAboutUsSublinks;
 	footerMenuLinks: IFooterMenuLinks;
@@ -148,6 +170,7 @@ export type IGlobalProps = {
 };
 
 export type IGlobalContext = {
+	jobsPositions: IJobsPositions;
 	navbarMenuLinks: INavbarMenuLinks;
 	aboutUsSublinks: IAboutUsSublinks;
 	footerMenuLinks: IFooterMenuLinks;
