@@ -9,6 +9,27 @@ export type ICTA = {
 		target: string;
 	};
 };
+export type ICTATwo = {
+	title: string;
+	highlightText: string;
+	backgroundColor: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
+export type ILinkedInCta = {
+	title: string;
+	highlightText: string;
+	backgroundColor: string;
+	displayLinkedinIcon: Boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
 export type IFAQ = {
 	title: string;
 	subtitle: string;
@@ -615,16 +636,6 @@ export type IJobPositionsCard = {
 	title: string;
 	paragraph: string;
 	tailwindStyling: string;
-	featuredImage: {
-		node: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
 };
 export type IJumboContentSectionCard = {
 	title: string;

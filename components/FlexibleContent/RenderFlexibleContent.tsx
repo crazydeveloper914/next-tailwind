@@ -8,7 +8,9 @@ import {usePageContext} from "@/context/pages";
 import CTA from "../CTA";
 import FAQ from "../FAQ";
 import Hero from "../Hero";
+import CTATwo from "../CTATwo";
 import HeroTwo from "../HeroTwo";
+import LinkedInCta from "../LinkedInCta";
 import ContactInfo from "../ContactInfo";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
@@ -209,6 +211,25 @@ const RenderFlexibleContent: FC = () => {
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
 									backgroundImage={item?.backgroundImage?.sourceUrl}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_CtaTwo` ? (
+							<>
+								<CTATwo
+									title={item?.title}
+									buttonLink={item?.buttonLink}
+									highlightText={item?.highlightText}
+									backgroundColor={item?.backgroundColor}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_LinkedinCta` ? (
+							<>
+								<LinkedInCta
+									title={item?.title}
+									buttonLink={item?.buttonLink}
+									highlightText={item?.highlightText}
+									backgroundColor={item?.backgroundColor}
+									displayLinkedinIcon={item?.displayLinkedinIcon}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_ContactInfo` ? (

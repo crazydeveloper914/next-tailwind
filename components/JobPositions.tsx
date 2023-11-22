@@ -82,7 +82,7 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="flex flex-row py-8 mb-12 items-center justify-center gap-4 lg:gap-12"
+					className="flex flex-col sm:flex-row py-8 mb-12 items-center justify-center gap-4 lg:gap-12"
 				>
 					<JobsCategoryButton
 						title="All"
@@ -115,8 +115,7 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 											slug={item?.node?.slug}
 											title={item?.node?.title}
 											paragraph={item?.node?.excerpt}
-											featuredImage={item?.node?.featuredImage}
-											tailwindStyling="bg-darkGrey hover:bg-black"
+											tailwindStyling="bg-red-dark hover:bg-yellow-dark"
 										/>
 									</Fragment>
 								))
@@ -134,7 +133,6 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 												slug={item?.slug}
 												title={item?.title}
 												paragraph={item?.excerpt}
-												featuredImage={item?.featuredImage}
 												tailwindStyling="bg-red-Two hover:bg-red-dark"
 											/>
 										</Fragment>
@@ -153,7 +151,6 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 											slug={item?.slug}
 											title={item?.title}
 											paragraph={item?.excerpt}
-											featuredImage={item?.featuredImage}
 											tailwindStyling="bg-green-Three hover:bg-green-dark"
 										/>
 									</Fragment>

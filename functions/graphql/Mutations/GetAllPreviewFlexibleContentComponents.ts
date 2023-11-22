@@ -532,6 +532,29 @@ export const getAllPreviewFlexibleContentComponents = async (
 									sourceUrl
 								}
 							}
+							... on ${postTypeFlexibleContent}_CtaTwo {
+								fieldGroupName
+								title
+								highlightText
+								backgroundColor
+								buttonLink {
+									url
+									title
+									target
+								}
+							}
+							... on ${postTypeFlexibleContent}_LinkedinCta {
+								fieldGroupName
+								title
+								highlightText
+								backgroundColor
+								displayLinkedinIcon
+								buttonLink {
+									url
+									title
+									target
+								}
+							}
 							... on ${postTypeFlexibleContent}_ContactInfo {
 								fieldGroupName
 								title

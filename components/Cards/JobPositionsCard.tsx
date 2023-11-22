@@ -22,7 +22,6 @@ const JobPositionsCard: FC<IJobPositionsCard> = ({
 	slug,
 	title,
 	paragraph,
-	featuredImage,
 	tailwindStyling,
 }) => {
 	return (

@@ -26,7 +26,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 	switch (tailwindColor) {
 		case "white":
 			sgvOneColor = "#ffffff";
-			sgvTwoColor = "#e4a002";
+			sgvTwoColor = "#ffffff";
 			sgvOneColorHover = "#000";
 			sgvTwoColorHover = "#e4a002";
 			textColor = "text-white";
