@@ -274,6 +274,25 @@ export const getAllPreviewFlexibleContentComponents = async (
 									}
 								}
 							}
+							... on ${postTypeFlexibleContent}_TitleContentImage {
+								fieldGroupName
+								title
+								paragraph
+								imageLocation
+								buttonLink {
+									url
+									title
+									target
+								}
+								image {
+									altText
+									sourceUrl
+									mediaDetails {
+										height
+										width
+									}
+								}
+							}
 							... on ${postTypeFlexibleContent}_TitleContentValuesBlocks {
 								fieldGroupName
 								backgroundImage {

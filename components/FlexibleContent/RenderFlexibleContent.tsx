@@ -20,6 +20,7 @@ import ErrorPage from "../Global/ErrorPage";
 import GoogleReviews from "../GoogleReviews";
 import TitleParagraph from "../TitleParagraph";
 import FeaturedProjects from "../FeaturedProjects";
+import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import JumboContentSection from "../JumboContentSection";
 import OperationalInsights from "../OperationalInsights";
@@ -175,6 +176,17 @@ const RenderFlexibleContent: FC = () => {
 									valuesBlockThree={item?.valuesBlockThree}
 									valuesBlockFour={item?.valuesBlockFour}
 									backgroundImage={item?.backgroundImage?.sourceUrl}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_TitleContentImage` ? (
+							<>
+								<TitleContentImage
+									title={item?.title}
+									image={item?.image}
+									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
+									imageLocation={item?.imageLocation}
 								/>
 							</>
 						) : item?.fieldGroupName ===

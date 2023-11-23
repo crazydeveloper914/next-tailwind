@@ -429,6 +429,24 @@ export type IOurServices = {
 		}
 	];
 };
+export type ITitleContentImage = {
+	title: string;
+	paragraph: string;
+	imageLocation: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+};
 export type IJumboContentSection = {
 	jumboContentSection: [
 		{

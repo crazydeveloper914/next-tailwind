@@ -5,8 +5,8 @@ import {flexibleContentType, postType} from "@/context/pages";
 
 // Queries Functions
 import {getAllSeoContent} from "@/functions/graphql/Queries/GetAllSeoContent";
-import {getAllOperationalInsightsPostsSlugs} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
 import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAllFlexibleContentComponents";
+import {getAllOperationalInsightsPostsSlugs} from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
 
 // Components
 import Layout from "@/components/Layout/Layout";
@@ -14,6 +14,7 @@ import BackHoverButton from "@/components/Elements/BackHoverButton";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
+import OperationalInsightsThreeCards from "@/components/OperationalInsightsThreeCards";
 
 const dynamicSinglePosts: NextPage<IPageContext> = ({
 	seo,
@@ -30,6 +31,12 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 				<BackToTopButton link={`#`} />
 				<BackHoverButton link={`/operational-insights`} />
 				<RenderFlexibleContent />
+
+				<OperationalInsightsThreeCards
+					title={``}
+					italic={``}
+					paragraph={`<p></p>`}
+				/>
 			</Layout>
 		</PageContextProvider>
 	);

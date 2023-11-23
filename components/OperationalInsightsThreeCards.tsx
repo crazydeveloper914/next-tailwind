@@ -23,7 +23,11 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="max-w-2xl mx-auto mb-24 text-center flex flex-col items-center lg:max-w-5xl"
+					className={
+						title && italic
+							? "max-w-2xl mx-auto mb-24 text-center flex flex-col items-center lg:max-w-5xl"
+							: "hidden"
+					}
 				>
 					<motion.h2
 						initial={initial}

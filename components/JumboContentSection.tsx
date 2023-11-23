@@ -34,4 +34,3 @@ const JumboContentSection: FC<IJumboContentSection> = ({
 };
 
 export default JumboContentSection;
-// blob-haikei-red-darkRed
