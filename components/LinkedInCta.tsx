@@ -18,7 +18,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				initial={initial}
 				whileInView={stagger}
 				viewport={{once: true}}
-				className="linked-in m-auto justify-center items-center py-16"
+				className="relative z-10 py-16 md:py-10"
 				style={{
 					backgroundColor: `${backgroundColor}`,
 					clipPath: `polygon(77% 0, 100% 0, 100% 98%, 21% 89%, 0 98%, 0 0)`,
@@ -30,7 +30,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 					viewport={{once: true}}
 					className="max-w-8xl mx-auto text-center font-bold leading-loose text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
 				>
-					<span className="p-2 mr-3 bg-yellow-default text-white">
+					<span className="p-2 mr-3 bg-yellow-dark text-white">
 						{highlightText}
 					</span>
 					{title}
@@ -40,7 +40,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 					target={buttonLink?.target}
 					className={buttonLink?.url ? "block" : "hidden"}
 				>
-					<span className="font-bold max-w-fit px-6 flex justify-evenly items-center font-bold text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-default hover:bg-yellow-default">
+					<span className="font-bold max-w-md lg:max-w-fit px-6 flex justify-evenly items-center text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark">
 						<span>{buttonLink?.title}</span>
 						<span>
 							{displayLinkedinIcon ? (
@@ -53,7 +53,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 										className="ml-4 w-full h-[40px] object-contain object-center"
 									>
 										<defs>
-											<clipPath id="clip-path">
+											<clipPath id="clipPath">
 												<rect
 													id="Rectangle_498"
 													data-name="Rectangle 498"
@@ -72,7 +72,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 												id="Group_1604"
 												data-name="Group 1604"
 												transform="translate(175.35 23.5)"
-												clip-path="url(#clip-path)"
+												clipPath="url(#clipPath)"
 											>
 												<path
 													id="Subtraction_16"
@@ -81,8 +81,8 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 													transform="translate(36.193 -0.001)"
 													fill="#fff"
 													stroke="rgba(0,0,0,0)"
-													stroke-miterlimit="10"
-													stroke-width="1"
+													strokeMiterlimit="10"
+													strokeWidth="1"
 												></path>
 												<path
 													id="Path_5489"

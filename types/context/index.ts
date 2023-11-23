@@ -27,7 +27,27 @@ export type ISeo = {
 		mediaItemUrl: string;
 	};
 };
-
+export type IExecutiveLeadership = [
+	{
+		node: {
+			id: string;
+			uri: string;
+			date: string;
+			title: string;
+			excerpt: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}
+];
 export type IOperationalInsights = [
 	{
 		node: {
@@ -108,21 +128,19 @@ export type IAgricomsJobs = [
 		};
 	}
 ];
-
 export type IContent = [
 	{
 		content: any;
 	}
 ];
-
 export type IPostTypes = {
 	pages: string;
 	posts: string;
-	jobPositions: string;
 	previewPage: string;
 	previewPost: string;
+	jobPositions: string;
+	executiveLeaderships: string;
 };
-
 export type INavbarMenuLinks = [
 	{
 		node: {
@@ -132,7 +150,6 @@ export type INavbarMenuLinks = [
 		};
 	}
 ];
-
 export type IAboutUsSublinks = [
 	{
 		node: {
@@ -142,7 +159,6 @@ export type IAboutUsSublinks = [
 		};
 	}
 ];
-
 export type IFooterMenuLinks = [
 	{
 		node: {
@@ -152,7 +168,6 @@ export type IFooterMenuLinks = [
 		};
 	}
 ];
-
 export type IBusinessServicesSublinks = [
 	{
 		node: {
@@ -162,7 +177,6 @@ export type IBusinessServicesSublinks = [
 		};
 	}
 ];
-
 export type IThemesOptionsContent = {
 	email: string;
 	address: string;
@@ -195,7 +209,6 @@ export type IFlexibleContentType = {
 	previewPage: string;
 	previewPost: string;
 };
-
 export type IGlobalProps = {
 	agricomsJobs: IAgricomsJobs;
 	jobsPositions: IJobsPositions;
@@ -204,11 +217,11 @@ export type IGlobalProps = {
 	footerMenuLinks: IFooterMenuLinks;
 	bravoLogisticsJobs: IBravoLogisticsJobs;
 	operationalInsights: IOperationalInsights;
+	executiveLeadership: IExecutiveLeadership;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
 	operationalInsightsThreeCards: IOperationalInsights;
 };
-
 export type IGlobalContext = {
 	agricomsJobs: IAgricomsJobs;
 	jobsPositions: IJobsPositions;
@@ -217,26 +230,23 @@ export type IGlobalContext = {
 	footerMenuLinks: IFooterMenuLinks;
 	bravoLogisticsJobs: IBravoLogisticsJobs;
 	operationalInsights: IOperationalInsights;
+	executiveLeadership: IExecutiveLeadership;
 	themesOptionsContent: IThemesOptionsContent;
 	businessServicesSublinks: IBusinessServicesSublinks;
 	operationalInsightsThreeCards: IOperationalInsights;
 };
-
 export type IGlobalContextProvider = {
 	globalProps: IGlobalContext;
 	children: React.ReactNode;
 };
-
 export type IPageContext = {
 	seo: ISeo;
 	content: IContent;
 	postTypeFlexibleContent: IPostTypeFlexibleContent;
 };
-
 export type IPostTypeFlexibleContent = {
 	postTypeFlexibleContent: string;
 };
-
 export type IPageContextProvider = {
 	seo: ISeo;
 	content: IContent;

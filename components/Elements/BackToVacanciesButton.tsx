@@ -13,7 +13,7 @@ const BackToVacanciesButton: FC<IBackToVacanciesButton> = ({
 	return (
 		<>
 			<div className="absolute items-center justify-center hidden w-full h-full xl:flex">
-				<div className="fixed left-10 z-0 top-[7.5rem] flex justify-center">
+				<div className="fixed left-10 z-20 top-[7.5rem] flex justify-center">
 					<Link href={`${link}`}>
 						<motion.button
 							initial={initialTwo}

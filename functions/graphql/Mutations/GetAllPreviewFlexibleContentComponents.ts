@@ -200,6 +200,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 									displayButtonOrImage
 								}
 							}
+							... on ${postTypeFlexibleContent}_ExecutiveLeadership {
+								fieldGroupName
+								title
+								paragraph
+								highlightText
+							}
 							... on ${postTypeFlexibleContent}_AchievementsStatsCta {
 								fieldGroupName
 								title
@@ -465,8 +471,8 @@ export const getAllPreviewFlexibleContentComponents = async (
 							... on ${postTypeFlexibleContent}_JobPositionsGrid {
 								fieldGroupName
 								title
-								italic
 								paragraph
+								highlightText
 							}
 							... on ${postTypeFlexibleContent}_OperationalInsightsGrid {
 								fieldGroupName

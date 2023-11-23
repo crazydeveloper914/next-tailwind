@@ -534,10 +534,15 @@ export type IOperationalInsights = {
 	italic: string;
 	paragraph: string;
 };
+export type IExecutiveLeadership = {
+	title: string;
+	paragraph: string;
+	highlightText: string;
+};
 export type IJobPositions = {
 	title: string;
-	italic: string;
 	paragraph: string;
+	highlightText: string;
 };
 
 // Global
@@ -618,6 +623,21 @@ export type IValuesBlocksImageOrMapCard = {
 };
 export type IOperationalInsightsCard = {
 	uri: string;
+	title: string;
+	paragraph: string;
+	featuredImage: {
+		node: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+};
+export type IExecutiveLeadershipCard = {
+	slug: string;
 	title: string;
 	paragraph: string;
 	featuredImage: {

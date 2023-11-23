@@ -20,20 +20,21 @@ import {
 	getAboutUsSublinks,
 	getBusinessServicesSublinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
-import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
+import {
+	getAllAgricomsTaxonomyJobs,
+	getAllJobsPositionsContent,
+	getAllBravoLogisticsTaxonomyJobs,
+} from "@/functions/graphql/Queries/GetAllJobsPositionsPostsSlugs";
 import {
 	getAllOperationalInsightsContent,
 	getThreeOperationalInsightsContent,
 } from "@/functions/graphql/Queries/GetAllOperationalInsightsPostsSlugs";
+import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
+import {getAllExecutiveLeadershipContent} from "@/functions/graphql/Queries/GetAllExecutiveLeadership";
 
 // Components
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
 import PostHogContextProvider from "@/components/Context/PostHogProviderContext";
-import {
-	getAllAgricomsTaxonomyJobs,
-	getAllBravoLogisticsTaxonomyJobs,
-	getAllJobsPositionsContent,
-} from "@/functions/graphql/Queries/GetAllJobsPositionsPostsSlugs";
 
 export default function App({
 	Component,
@@ -148,6 +149,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		operationalInsightsThreeCards,
 		bravoLogisticsJobs,
 		agricomsJobs,
+		executiveLeadership,
 	]: any = await Promise.all([
 		getNavbarMenuLinks(),
 		getAboutUsSublinks(),
@@ -159,6 +161,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getThreeOperationalInsightsContent(),
 		getAllBravoLogisticsTaxonomyJobs(),
 		getAllAgricomsTaxonomyJobs(),
+		getAllExecutiveLeadershipContent(),
 	]);
 
 	const globalProps: IGlobalProps = {
@@ -168,6 +171,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		aboutUsSublinks: aboutUsSublinks,
 		footerMenuLinks: footerMenuLinks,
 		bravoLogisticsJobs: bravoLogisticsJobs,
+		executiveLeadership: executiveLeadership,
 		operationalInsights: operationalInsights,
 		themesOptionsContent: themesOptionsContent,
 		businessServicesSublinks: businessServicesSublinks,

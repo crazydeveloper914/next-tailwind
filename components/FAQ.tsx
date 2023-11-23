@@ -147,7 +147,7 @@ const FAQ: FC<IFAQ> = ({
 															viewport={{once: true}}
 															className={
 																item?.node?.url
-																	? `flex items-center justify-center text-left group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base text-white w-full sm:mx-0 border-2 border-solid border-white hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500 text-red-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-red-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-red-default`
+																	? `flex items-center justify-center text-left group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base text-white w-full sm:mx-0 border-2 border-solid border-white hover:bg-red-default hover:border-red-default transition-all ease-in-out duration-500  hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-red-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-red-default`
 																	: `hidden`
 															}
 														>

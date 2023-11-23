@@ -32,7 +32,7 @@ const Hero: FC<IHero> = ({
 		<>
 			<div className={styles.hero}>
 				<div
-					className="relative flex flex-col h-screen bg-center bg-no-repeat bg-cover"
+					className="relative z-50 flex flex-col h-screen bg-center bg-no-repeat bg-cover"
 					style={{
 						backgroundImage: `linear-gradient(
 							0deg,

@@ -23,6 +23,7 @@ import FeaturedProjects from "../FeaturedProjects";
 import JumboContentImage from "../JumboContentImage";
 import JumboContentSection from "../JumboContentSection";
 import OperationalInsights from "../OperationalInsights";
+import ExecutiveLeadership from "../ExecutiveLeadership";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import RequestQuoteFormBlocks from "../RequestQuoteFormBlocks";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
@@ -99,6 +100,15 @@ const RenderFlexibleContent: FC = () => {
 									contentBox={item?.contentBox}
 									reliability={item?.reliability}
 									bottomContent={item?.bottomContent}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_ExecutiveLeadership` ? (
+							<>
+								<ExecutiveLeadership
+									title={item?.title}
+									paragraph={item?.paragraph}
+									highlightText={item?.highlightText}
 								/>
 							</>
 						) : item?.fieldGroupName ===
@@ -182,8 +192,8 @@ const RenderFlexibleContent: FC = () => {
 							<>
 								<JobPositions
 									title={item?.title}
-									italic={item?.italic}
 									paragraph={item?.paragraph}
+									highlightText={item?.highlightText}
 								/>
 							</>
 						) : item?.fieldGroupName ===

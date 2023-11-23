@@ -10,7 +10,7 @@ import Paragraph from "./Elements/Paragraph";
 import JobPositionsCard from "./Cards/JobPositionsCard";
 import JobsCategoryButton from "./Elements/JobsCategoryButton";
 
-const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
+const JobPositions: FC<IJobPositions> = ({title, highlightText, paragraph}) => {
 	const globalContext = useGlobalContext();
 
 	const [allJobsOpen, setAllJobsOpen]: any = useState(true);
@@ -51,28 +51,19 @@ const JobPositions: FC<IJobPositions> = ({title, italic, paragraph}) => {
 					viewport={{once: true}}
 					className="max-w-2xl mx-auto mb-12 text-center lg:max-w-5xl"
 				>
-					<motion.h2
-						initial={initial}
-						whileInView={stagger}
-						viewport={{once: true}}
-						className="my-2 mb-6 max-w-2xl mx-auto text-center font-semibold text-4xl lg:text-5xl"
-					>
-						<motion.span
+					<div className="max-w-2xl mx-auto text-left">
+						<motion.h2
 							initial={initial}
+							whileInView={stagger}
 							viewport={{once: true}}
-							whileInView={fadeInUp}
+							className="text-center font-bold leading-loose text-4xl lg:text-5xl p-4 pl-0 text-black"
 						>
 							{title}
-						</motion.span>
-						<motion.span
-							initial={initial}
-							viewport={{once: true}}
-							whileInView={fadeInUp}
-							className="ml-4 font-serif font-bold uppercase italic px-4 py-2 bg-red-Two text-white"
-						>
-							{italic}
-						</motion.span>
-					</motion.h2>
+							<span className="p-2 ml-3 bg-red-Two text-white">
+								{highlightText}
+							</span>
+						</motion.h2>
+					</div>
 					<Paragraph
 						content={paragraph}
 						tailwindStyling="max-w-3xl mx-auto text-black text-base sm:text-paragraph"
