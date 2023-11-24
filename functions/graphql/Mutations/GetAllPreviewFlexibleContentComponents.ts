@@ -494,6 +494,23 @@ export const getAllPreviewFlexibleContentComponents = async (
 								paragraph
 								highlightText
 							}
+							... on ${postTypeFlexibleContent}_VideoBlock {
+								fieldGroupName
+								title
+								video
+								subtitle
+								paragraph
+								highlightText
+								displayYoutubeIcon
+								buttonLink {
+									url
+									title
+									target
+								}
+								videoBackgroundImage {
+            						sourceUrl
+              					}
+							}
 							... on ${postTypeFlexibleContent}_Gallery {
 								fieldGroupName
 								title

@@ -178,12 +178,12 @@ export const getAllFlexibleContentComponents = async (
 													text
 													subtext
 													icon {
-														altText
-														sourceUrl
-														mediaDetails {
-															height
-															width
-														}
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 													}
 												}
 												bottomContent {
@@ -500,6 +500,23 @@ export const getAllFlexibleContentComponents = async (
 												paragraph
 												highlightText
 											}
+											... on ${postTypeFlexibleContent}_VideoBlock {
+												fieldGroupName
+												title
+												video
+												subtitle
+												paragraph
+												highlightText
+												displayYoutubeIcon
+												buttonLink {
+													url
+													title
+													target
+												}
+												videoBackgroundImage {
+            										sourceUrl
+              									}
+											}
 											... on ${postTypeFlexibleContent}_Gallery {
 												fieldGroupName
 												title
@@ -525,10 +542,6 @@ export const getAllFlexibleContentComponents = async (
 												title
 												italic
 												paragraph
-											}
-											... on ${postTypeFlexibleContent}_GoogleReviews {
-												fieldGroupName
-												title
 											}
 											... on ${postTypeFlexibleContent}_Faq {
 												fieldGroupName
@@ -564,6 +577,10 @@ export const getAllFlexibleContentComponents = async (
 														target
 													}
 												}
+											}
+											... on ${postTypeFlexibleContent}_GoogleReviews {
+												fieldGroupName
+												title
 											}
 											... on ${postTypeFlexibleContent}_Cta {
 												fieldGroupName

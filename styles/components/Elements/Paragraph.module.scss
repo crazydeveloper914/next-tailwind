@@ -19,7 +19,7 @@
 
 	ul,
 	ol {
-		@apply px-4 py-4 sm:px-10 flex flex-col items-baseline justify-center;
+		@apply px-4 py-4 sm:px-10 flex flex-col items-baseline justify-center border-l-2 border-red-dark;
 
 		li {
 			@apply px-0 list-disc text-left;

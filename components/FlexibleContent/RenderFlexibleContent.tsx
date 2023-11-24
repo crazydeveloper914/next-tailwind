@@ -11,6 +11,7 @@ import Hero from "../Hero";
 import CTATwo from "../CTATwo";
 import HeroTwo from "../HeroTwo";
 import Gallery from "../Gallery";
+import VideoBlock from "../VideoBlock";
 import LinkedInCta from "../LinkedInCta";
 import ContactInfo from "../ContactInfo";
 import OurPartners from "../OurPartners";
@@ -208,6 +209,19 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									paragraph={item?.paragraph}
 									highlightText={item?.highlightText}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_VideoBlock` ? (
+							<>
+								<VideoBlock
+									title={item?.title}
+									video={item?.video}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
+									highlightText={item?.highlightText}
+									displayYoutubeIcon={item?.displayYoutubeIcon}
+									videoBackgroundImage={item?.videoBackgroundImage?.sourceUrl}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Gallery` ? (

@@ -1,15 +1,9 @@
 // Imports
-import {
-	fadeIn,
-	initial,
-	stagger,
-	fadeInUp,
-	initialTwo,
-} from "../animations/animations";
 import Link from "next/link";
 import {FC, useState} from "react";
 import {motion} from "framer-motion";
 import {ITwoColumnButtonContent} from "@/types/components/index";
+import {fadeIn, stagger, initialTwo} from "../animations/animations";
 
 // Styling
 import styles from "../styles/components/TwoColumnButtonContent.module.scss";

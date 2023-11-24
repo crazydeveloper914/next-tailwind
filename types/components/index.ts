@@ -573,6 +573,22 @@ export type IExecutiveLeadership = {
 	paragraph: string;
 	highlightText: string;
 };
+export type IVideoBlock = {
+	title: string;
+	video: string;
+	subtitle: string;
+	paragraph: string;
+	highlightText: string;
+	displayYoutubeIcon: boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	videoBackgroundImage: {
+		sourceUrl: string;
+	};
+};
 export type IJobPositions = {
 	title: string;
 	paragraph: string;
@@ -731,6 +747,11 @@ export type IButtonBorderSliced = {
 	title: string;
 	fullWidth: boolean;
 	tailwindColor: string;
+};
+export type IYoutubeButtonBorderSliced = {
+	title: string;
+	fullWidth: boolean;
+	displayYoutubeIcon: boolean;
 };
 export type IBackToVacanciesButton = {
 	link: string;
