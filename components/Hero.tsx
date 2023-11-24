@@ -17,6 +17,7 @@ import styles from "../styles/components/Hero.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
+import VideoHeroWrapper from "./Elements/VideoHeroWrapper";
 
 const Hero: FC<IHero> = ({
 	title,
@@ -43,32 +44,18 @@ const Hero: FC<IHero> = ({
 					}}
 				>
 					{/* Background Video */}
-					{/* <div className="absolute top-0 bottom-0 left-0 w-full h-full overflow-hidden">
+					<div className="absolute top-0 bottom-0 left-0 w-full h-full overflow-hidden">
+						<VideoHeroWrapper>
+							{displayVideo ? backgroundVideoUrl : ""}
+						</VideoHeroWrapper>
 						<div
 							className={
 								displayVideo
-									? "hidden xl:block relative pb-[56.25%] overflow-hidden max-w-full h-auto bg-center bg-no-repeat bg-cover min-h-full xl:min-h-screen"
-									: "hidden"
-							}
-						>
-							<iframe
-								allowFullScreen
-								className={
-									backgroundVideoUrl && displayVideo
-										? "absolute top-0 left-0 border-none w-full h-full"
-										: `hidden`
-								}
-								src={backgroundVideoUrl}
-							/>
-						</div>
-						<div
-							className={
-								displayVideo
-									? "hidden xl:block absolute top-0 h-screen bottom-0 left-0 w-full opacity-[55%] bg-gradient-to-b from-pureBlack from-5% via-pureBlack via-10% to-pureBlack to-100%"
-									: "Hidden"
+									? "absolute top-0 h-screen bottom-0 left-0 w-full opacity-70 bg-gradient-to-b from-pureBlack from-5% via-pureBlack via-10% to-pureBlack to-100%"
+									: ""
 							}
 						/>
-					</div> */}
+					</div>
 					<div className="container relative flex flex-col items-center sm:items-baseline justify-center py-20 px-4 m-auto text-center sm:text-left">
 						<div className="max-w-3xl">
 							<motion.h1

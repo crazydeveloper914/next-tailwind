@@ -589,6 +589,7 @@ export type IVideoBlock = {
 		sourceUrl: string;
 	};
 };
+
 export type IJobPositions = {
 	title: string;
 	paragraph: string;
@@ -739,6 +740,12 @@ export type ITitle = {
 export type IParagraph = {
 	content: string;
 	tailwindStyling: string;
+};
+export type IVideoWrapper = {
+	children: React.ReactNode;
+};
+export type IVideoHeroWrapper = {
+	children: React.ReactNode;
 };
 export type IBackHoverButton = {
 	link: string;

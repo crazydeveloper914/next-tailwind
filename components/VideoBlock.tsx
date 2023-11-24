@@ -2,8 +2,6 @@
 import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import parse from "html-react-parser";
-import styled from "styled-components";
 import {IVideoBlock} from "@/types/components";
 import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
@@ -12,6 +10,7 @@ import styles from "../styles/components/VideoBlock.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
+import VideoWrapper from "./Elements/VideoWrapper";
 import YoutubeButtonBorderSliced from "./Elements/YoutubeButtonBorderSliced";
 
 const VideoBlock: FC<IVideoBlock> = ({
@@ -24,32 +23,6 @@ const VideoBlock: FC<IVideoBlock> = ({
 	displayYoutubeIcon,
 	videoBackgroundImage,
 }) => {
-	const VimeoVideo = styled.div`
-		height: auto;
-		max-width: 100%;
-		overflow: hidden;
-		position: relative;
-
-		iframe,
-		object,
-		embed {
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			position: static;
-			min-height: 500px;
-			max-height: 500px;
-		}
-
-		video {
-			height: 100%;
-			width: 1280px;
-			margin: 0 auto;
-			max-height: 1080px;
-		}
-	`;
-
 	return (
 		<>
 			<div
@@ -119,7 +92,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 							}")`,
 						}}
 					>
-						<VimeoVideo>{parse(video)}</VimeoVideo>
+						<VideoWrapper>{video}</VideoWrapper>
 					</motion.div>
 				</div>
 			</div>
