@@ -72,6 +72,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 									: slideInLeftInitial
 							}
 							whileInView={slideInRightFinish}
+							viewport={{once: true}}
 							className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0"
 						>
 							<div className="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 items-center lg:items-baseline">

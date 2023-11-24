@@ -47,8 +47,8 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 			</div>
 			<motion.div
 				initial={initial}
-				viewport={{once: true}}
 				whileInView={stagger}
+				viewport={{once: true}}
 				className="flex flex-col items-baseline justify-between px-8 pt-10 pb-4"
 			>
 				<Link href={uri ? `operational-insights${uri}` : `/`}>
@@ -63,8 +63,8 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 				</Link>
 				<motion.div
 					initial={initial}
-					viewport={{once: true}}
 					whileInView={fadeInUp}
+					viewport={{once: true}}
 				>
 					<Paragraph
 						content={paragraph ? paragraph.substring(0, 350) + "..." : ""}
@@ -73,8 +73,8 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 				</motion.div>
 				<motion.div
 					initial={initialTwo}
-					viewport={{once: true}}
 					whileInView={fadeIn}
+					viewport={{once: true}}
 				>
 					<Link
 						href={uri ? `operational-insights${uri}` : `/`}

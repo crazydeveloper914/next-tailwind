@@ -35,8 +35,8 @@ const JobPositionsCard: FC<IJobPositionsCard> = ({
 				<Link href={`/job-positions/${slug}`} target="">
 					<motion.div
 						initial={initial}
-						viewport={{once: true}}
 						whileInView={stagger}
+						viewport={{once: true}}
 						className="flex flex-col items-baseline justify-between gap-4 p-10"
 					>
 						<Link href={`${slug}`}>
@@ -51,8 +51,8 @@ const JobPositionsCard: FC<IJobPositionsCard> = ({
 						</Link>
 						<motion.div
 							initial={initial}
-							viewport={{once: true}}
 							whileInView={fadeInUp}
+							viewport={{once: true}}
 						>
 							<Paragraph
 								content={paragraph ? paragraph.substring(0, 200) + "..." : ""}
@@ -61,8 +61,8 @@ const JobPositionsCard: FC<IJobPositionsCard> = ({
 						</motion.div>
 						<motion.div
 							initial={initialTwo}
-							viewport={{once: true}}
 							whileInView={fadeIn}
+							viewport={{once: true}}
 						>
 							<Link
 								href={`/job-positions/${slug}`}

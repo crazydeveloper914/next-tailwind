@@ -37,15 +37,15 @@ const OperationalInsightsThreeCards: FC<IOperationalInsights> = ({
 					>
 						<motion.span
 							initial={initial}
-							viewport={{once: true}}
 							whileInView={fadeInUp}
+							viewport={{once: true}}
 						>
 							{title}
 						</motion.span>
 						<motion.span
 							initial={initial}
-							viewport={{once: true}}
 							whileInView={fadeInUp}
+							viewport={{once: true}}
 							className="ml-4 font-serif font-normal italic"
 						>
 							{italic}
