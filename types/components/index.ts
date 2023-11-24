@@ -448,6 +448,32 @@ export type ITitleContentImage = {
 		};
 	};
 };
+export type IIndividualExecutiveMember = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	logo: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+};
 export type IJumboContentSection = {
 	jumboContentSection: [
 		{
@@ -589,7 +615,6 @@ export type IVideoBlock = {
 		sourceUrl: string;
 	};
 };
-
 export type IJobPositions = {
 	title: string;
 	paragraph: string;

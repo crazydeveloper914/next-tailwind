@@ -42,7 +42,7 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="grid sm:gap-4 grid-col md:grid-cols-2 lg:grid-cols-4"
+					className="grid gap-4 grid-cols-2 lg:grid-cols-4"
 				>
 					{gallery?.length > 0 ? (
 						gallery?.map((item: any, keys: any) => (
@@ -55,7 +55,7 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 										height={item?.mediaDetails?.height}
 										className={
 											item?.sourceUrl
-												? `block object-cover object-center w-full h-[250px]`
+												? `block object-cover object-center w-full h-[175px] sm:h-[250px]`
 												: `hidden`
 										}
 									/>

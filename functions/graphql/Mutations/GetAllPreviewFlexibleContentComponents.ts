@@ -206,6 +206,33 @@ export const getAllPreviewFlexibleContentComponents = async (
 								paragraph
 								highlightText
 							}
+							... on ${postTypeFlexibleContent}_IndividualExecutiveMember {
+								fieldGroupName
+								title
+								subtitle
+								paragraph
+								buttonLink {
+									url
+									title
+									target
+								}
+								logo {
+									altText
+									sourceUrl
+									mediaDetails {
+										height
+										width
+									}
+								}
+								image {
+									altText
+									sourceUrl
+									mediaDetails {
+										height
+										width
+									}
+								}
+							}
 							... on ${postTypeFlexibleContent}_AchievementsStatsCta {
 								fieldGroupName
 								title

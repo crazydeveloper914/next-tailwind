@@ -31,6 +31,7 @@ import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import RequestQuoteFormBlocks from "../RequestQuoteFormBlocks";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
 import TitleContentValuesBlocks from "../TitleContentValuesBlocks";
+import IndividualExecutiveMember from "../IndividualExecutiveMember";
 import OperationalInsightsThreeCards from "../OperationalInsightsThreeCards";
 
 const RenderFlexibleContent: FC = () => {
@@ -112,6 +113,18 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									paragraph={item?.paragraph}
 									highlightText={item?.highlightText}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_IndividualExecutiveMember` ? (
+							<>
+								<IndividualExecutiveMember
+									logo={item?.logo}
+									title={item?.title}
+									image={item?.image}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
 								/>
 							</>
 						) : item?.fieldGroupName ===

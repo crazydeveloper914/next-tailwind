@@ -29,6 +29,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 	backgroundDisplay,
 }) => {
 	let titleColor;
+	let subtitleColor;
 	let buttonColor;
 	let paragraphColor;
 	let backgroundColor;
@@ -37,6 +38,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 	switch (backgroundDisplay) {
 		case "White":
 			titleColor = "text-black";
+			subtitleColor = "text-yellow-Two";
 			buttonColor = "red-default";
 			backgroundColor = "bg-white";
 			paragraphColor = "text-black";
@@ -44,6 +46,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			break;
 		case "lightGrey":
 			titleColor = "text-black";
+			subtitleColor = "text-red-Two";
 			buttonColor = "lightGrey";
 			backgroundColor = "bg-lightGreyTwo";
 			paragraphColor = "text-black";
@@ -51,6 +54,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			break;
 		case "Red":
 			titleColor = "text-white";
+			subtitleColor = "text-yellow-Two";
 			buttonColor = "white";
 			paragraphColor = "text-white";
 			backgroundColor = "bg-red-darkerTwo";
@@ -58,6 +62,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			break;
 		case "GoldYellow":
 			titleColor = "text-white";
+			subtitleColor = "text-white";
 			buttonColor = "white";
 			paragraphColor = "text-white";
 			backgroundColor = "bg-yellow-darker";
@@ -130,7 +135,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-Two"
+									className={`mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] ${subtitleColor}`}
 								>
 									{subtitle}
 								</motion.h3>
