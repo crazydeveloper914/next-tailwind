@@ -431,6 +431,7 @@ export type IOurServices = {
 };
 export type ITitleContentImage = {
 	title: string;
+	subtitle: string;
 	paragraph: string;
 	imageLocation: string;
 	buttonLink: {
@@ -546,6 +547,21 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 	displayParagraph: boolean;
+};
+export type IGallery = {
+	title: string;
+	highlightText: string;
+	paragraph: string;
+	gallery: [
+		{
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		}
+	];
 };
 export type IOperationalInsights = {
 	title: string;

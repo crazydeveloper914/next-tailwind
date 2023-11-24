@@ -68,7 +68,7 @@ const OperationalInsightsCard: FC<IOperationalInsightsCard> = ({
 				>
 					<Paragraph
 						content={paragraph ? paragraph.substring(0, 350) + "..." : ""}
-						tailwindStyling="block px-0 text-base sm:text-paragraph text-darkGrey"
+						tailwindStyling="block px-0 text-base text-darkGrey"
 					/>
 				</motion.div>
 				<motion.div

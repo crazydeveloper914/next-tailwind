@@ -10,6 +10,7 @@ import FAQ from "../FAQ";
 import Hero from "../Hero";
 import CTATwo from "../CTATwo";
 import HeroTwo from "../HeroTwo";
+import Gallery from "../Gallery";
 import LinkedInCta from "../LinkedInCta";
 import ContactInfo from "../ContactInfo";
 import OurPartners from "../OurPartners";
@@ -184,6 +185,7 @@ const RenderFlexibleContent: FC = () => {
 								<TitleContentImage
 									title={item?.title}
 									image={item?.image}
+									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
 									imageLocation={item?.imageLocation}
@@ -204,6 +206,15 @@ const RenderFlexibleContent: FC = () => {
 							<>
 								<JobPositions
 									title={item?.title}
+									paragraph={item?.paragraph}
+									highlightText={item?.highlightText}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_Gallery` ? (
+							<>
+								<Gallery
+									title={item?.title}
+									gallery={item?.gallery}
 									paragraph={item?.paragraph}
 									highlightText={item?.highlightText}
 								/>

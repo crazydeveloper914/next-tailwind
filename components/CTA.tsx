@@ -14,7 +14,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 	return (
 		<>
 			<div
-				className="px-4 py-20 bg-center bg-no-repeat bg-cover lg:px-0"
+				className="px-4 py-10 bg-center bg-no-repeat bg-cover lg:px-0"
 				style={{
 					backgroundImage: `linear-gradient(
 							0deg,

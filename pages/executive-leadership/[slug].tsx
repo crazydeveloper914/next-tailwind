@@ -11,7 +11,6 @@ import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAl
 import Layout from "@/components/Layout/Layout";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
-import BackToVacanciesButton from "@/components/Elements/BackToVacanciesButton";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 import {getAllExecutiveLeadershipSlugs} from "@/functions/graphql/Queries/GetAllExecutiveLeadership";
 
@@ -28,11 +27,6 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 		>
 			<Layout>
 				<BackToTopButton link={`#`} />
-				<BackToVacanciesButton
-					fullWidth={false}
-					link={`/executive-leadership`}
-					title="Executive leadership"
-				/>
 				<RenderFlexibleContent />
 			</Layout>
 		</PageContextProvider>

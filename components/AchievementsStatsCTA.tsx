@@ -102,7 +102,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 					</motion.div>
 				</div>
 				<div
-					className="px-4 py-20 bg-center bg-no-repeat bg-cover lg:px-0 min-h-[400px]"
+					className="px-4 py-12 bg-center bg-no-repeat bg-cover lg:px-0 min-h-[400px]"
 					style={{
 						backgroundImage: `linear-gradient(
 							0deg,

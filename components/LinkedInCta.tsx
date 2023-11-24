@@ -28,7 +28,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="max-w-8xl mx-auto text-center font-bold leading-loose text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
+					className="max-w-6xl mx-auto text-center font-bold leading-normal text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
 				>
 					<span className="p-2 mr-3 bg-yellow-dark text-white">
 						{highlightText}

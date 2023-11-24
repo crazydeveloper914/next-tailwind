@@ -283,6 +283,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_TitleContentImage {
 												fieldGroupName
 												title
+												subtitle
 												paragraph
 												imageLocation
 												buttonLink {
@@ -498,6 +499,20 @@ export const getAllFlexibleContentComponents = async (
 												title
 												paragraph
 												highlightText
+											}
+											... on ${postTypeFlexibleContent}_Gallery {
+												fieldGroupName
+												title
+												paragraph
+												highlightText
+												gallery {
+            										altText
+            										sourceUrl
+            										mediaDetails {
+            											height
+            											width
+            										}
+												}
 											}
 											... on ${postTypeFlexibleContent}_OperationalInsightsGrid {
 												fieldGroupName
