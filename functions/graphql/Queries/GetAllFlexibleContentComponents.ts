@@ -614,6 +614,8 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_GoogleReviews {
 												fieldGroupName
 												title
+												paragraph
+												highlightText
 											}
 											... on ${postTypeFlexibleContent}_Cta {
 												fieldGroupName

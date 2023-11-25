@@ -608,6 +608,8 @@ export const getAllPreviewFlexibleContentComponents = async (
 							... on ${postTypeFlexibleContent}_GoogleReviews {
 								fieldGroupName
 								title
+								paragraph
+								highlightText
 							}
 							... on ${postTypeFlexibleContent}_Cta {
 								fieldGroupName

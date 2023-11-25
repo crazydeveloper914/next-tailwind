@@ -159,7 +159,11 @@ const RenderFlexibleContent: FC = () => {
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_GoogleReviews` ? (
 							<>
-								<GoogleReviews title={item?.title} />
+								<GoogleReviews
+									title={item?.title}
+									paragraph={item?.paragraph}
+									highlightText={item?.highlightText}
+								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Faq` ? (
 							<>

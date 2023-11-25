@@ -56,7 +56,7 @@ const JobPositions: FC<IJobPositions> = ({title, highlightText, paragraph}) => {
 							initial={initial}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="text-center font-bold leading-loose text-4xl lg:text-5xl p-4 pl-0 text-black"
+							className="text-center font-bold leading-normal text-4xl lg:text-5xl p-4 pl-0 text-black"
 						>
 							{title}
 							<span className="p-2 ml-3 bg-red-Two text-white">

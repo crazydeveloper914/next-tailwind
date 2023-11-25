@@ -568,6 +568,8 @@ export type IMaintenance = {
 };
 export type IGoogleReviews = {
 	title: string;
+	paragraph: string;
+	highlightText: string;
 };
 export type ITitleParagraph = {
 	title: string;
