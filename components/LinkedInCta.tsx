@@ -40,13 +40,13 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						href={buttonLink?.url}
 						target={buttonLink?.target}
 						className={
-							buttonLink?.url ? "block w-fit mx-auto max-w-[350px]" : "hidden"
+							buttonLink?.url ? "block w-fit mx-auto max-w-[275px]" : "hidden"
 						}
 					>
 						<span
 							className={`font-bold px-6 flex ${
 								displayLinkedinIcon ? "flex-col sm:flex-row" : "flex-row"
-							} justify-center items-center gap-4 text-white border-2 border-white p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark`}
+							} justify-center items-center text-white border-2 border-white p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark`}
 						>
 							<span className="w-full text-center sm:text-left mx-auto sm:mx-0">
 								{buttonLink?.title}
