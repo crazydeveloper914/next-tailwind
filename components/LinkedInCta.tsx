@@ -38,9 +38,9 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				<Link
 					href={buttonLink?.url}
 					target={buttonLink?.target}
-					className={buttonLink?.url ? "block" : "hidden"}
+					className={buttonLink?.url ? "block px-6" : "hidden"}
 				>
-					<span className="font-bold max-w-md lg:max-w-fit px-6 flex justify-evenly items-center text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark">
+					<span className="font-bold w-fit px-6 flex justify-evenly items-center text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark">
 						<span>{buttonLink?.title}</span>
 						<span>
 							{displayLinkedinIcon ? (

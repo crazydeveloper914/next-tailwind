@@ -81,7 +81,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							initial={initialTwo}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
+							className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 items-center justify-center lg:justify-start"
 						>
 							<motion.button
 								initial={initialTwo}
@@ -180,7 +180,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockThree?.icon?.sourceUrl ? "block" : "hidden"
+										valuesBlockThree?.icon?.sourceUrl ? "block w-1/2" : "hidden"
 									}
 								>
 									<Image
@@ -207,7 +207,9 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 									/>
 								</span>
 								<span
-									className={contentThreeOpen ? "text-black" : "text-white"}
+									className={
+										contentThreeOpen ? "text-black w-1/2" : "text-white"
+									}
 								>
 									{valuesBlockThree?.blockTitle}
 								</span>
@@ -251,7 +253,11 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 										}
 									/>
 								</span>
-								<span className={contentFourOpen ? "text-black" : "text-white"}>
+								<span
+									className={
+										contentFourOpen ? "text-black w-full" : "text-white"
+									}
+								>
 									{valuesBlockFour?.blockTitle}
 								</span>
 							</motion.button>

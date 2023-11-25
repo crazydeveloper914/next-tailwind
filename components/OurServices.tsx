@@ -24,9 +24,6 @@ const OurServices: FC<IOurServices> = ({
 				className={
 					styles.ourServices + " py-40 sm:py-24 px-4 bg-lightGreyTwo relative"
 				}
-				style={{
-					clipPath: `polygon(76% 6%, 100% 3%, 100% 94%, 23% 100%, 0 96%, 0 2%)`,
-				}}
 			>
 				<div className="container relative m-auto flex flex-col items-center">
 					<div className="flex flex-col py-8 items-center gap-2">

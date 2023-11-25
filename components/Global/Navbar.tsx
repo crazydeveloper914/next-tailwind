@@ -229,7 +229,7 @@ const Navbar: FC = () => {
 													<>
 														<ul
 															className={
-																styles.businessServicesSublinks +
+																styles.careerServicesSublinks +
 																" p-0 w-full flex flex-col z-[999]"
 															}
 														>

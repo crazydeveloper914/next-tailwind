@@ -20,20 +20,30 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 	const globalContext = useGlobalContext();
 
 	const [aboutUsSublinksOpen, setAboutUsSublinksOpen]: any = useState(false);
+	const [careerSublinksOpen, setCareerSublinksOpen]: any = useState(false);
 	const [businessServicesSublinksOpen, setBusinessServicesSublinksOpen]: any =
 		useState(false);
 
 	// Hides or Display about us sublinks
 	function displayAboutUsSublinks() {
-		setBusinessServicesSublinksOpen(false);
 		setAboutUsSublinksOpen(!aboutUsSublinksOpen);
+		setBusinessServicesSublinksOpen(false);
+		setCareerSublinksOpen(false);
 	}
 
 	// Hides or Display about us sublinks
 	function displayBusinessServicesSublinks() {
 		setAboutUsSublinksOpen(false);
 		setBusinessServicesSublinksOpen(!businessServicesSublinksOpen);
+		setCareerSublinksOpen(false);
 	}
+
+	// Hides or Display about us sublinks
+	const displayCareerSublinks = () => {
+		setAboutUsSublinksOpen(false);
+		setBusinessServicesSublinksOpen(false);
+		setCareerSublinksOpen(!careerSublinksOpen);
+	};
 
 	return (
 		<>
@@ -63,123 +73,183 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 						whileInView={stagger}
 						className="px-4 mt-12"
 					>
-						<li
-							onClick={displayAboutUsSublinks}
-							className="relative border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
-						>
-							<span className="py-4 flex flex-row justify-between items-center gap-2">
-								<Link
-									href="/about"
-									className="text-white text-base font-semibold text-center tracking-[0.05rem] hover:text-red-Two transition-all ease-in-out duration-500"
-								>
-									About Us
-								</Link>
-								<Image
-									width={550}
-									height={550}
-									alt="White Arrow Icon"
-									src="/img/navigation-menu-dropdown-arrow-white.png"
-									className="w-[25px] h-[25px] object-contain object-center"
-								/>
-							</span>
-							{aboutUsSublinksOpen ? (
-								<>
-									<motion.ul
-										initial={initialTwo}
-										whileInView={stagger}
-										viewport={{once: true}}
-										className={
-											styles.aboutUsSublinks + ` flex flex-col my-4 z-[999]`
-										}
-									>
-										{/* Menu Link*/}
-										{globalContext?.aboutUsSublinks?.length > 0 ? (
-											globalContext?.aboutUsSublinks?.map(
-												(item: any, keys: any) => (
-													<Fragment key={keys}>
-														<Link href={item?.node?.url}>
-															<li className="hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack">
-																<Link
-																	href={item?.node?.url}
-																	className="block p-4 text-base font-semibold"
-																>
-																	{item?.node?.label}
-																</Link>
-															</li>
-														</Link>
-													</Fragment>
-												)
-											)
-										) : (
-											<></>
-										)}
-									</motion.ul>
-								</>
-							) : null}
-						</li>
-						<li
-							onClick={displayBusinessServicesSublinks}
-							className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
-						>
-							<div className="py-4 flex flex-row justify-between items-center gap-2">
-								<span className="text-white text-base font-semibold text-center tracking-[0.05rem]hover:text-red-Two transition-all ease-in-out duration-500">
-									Our Services
-								</span>
-								<Image
-									width={550}
-									height={550}
-									alt="White Arrow Icon"
-									src="/img/navigation-menu-dropdown-arrow-white.png"
-									className="w-[25px] h-[25px] object-contain object-center"
-								/>
-							</div>
-							{businessServicesSublinksOpen ? (
-								<>
-									<motion.ul
-										initial={initialTwo}
-										whileInView={stagger}
-										viewport={{once: true}}
-										className={
-											styles.businessServicesSublinks +
-											` flex flex-col my-4 z-[999]`
-										}
-									>
-										{/* Menu Link*/}
-										{globalContext?.businessServicesSublinks?.length > 0 ? (
-											globalContext?.businessServicesSublinks?.map(
-												(item: any, keys: any) => (
-													<Fragment key={keys}>
-														<Link href={item?.node?.url}>
-															<li className="hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack">
-																<Link
-																	href={item?.node?.url}
-																	className="block p-4 text-base font-semibold"
-																>
-																	{item?.node?.label}
-																</Link>
-															</li>
-														</Link>
-													</Fragment>
-												)
-											)
-										) : (
-											<></>
-										)}
-									</motion.ul>
-								</>
-							) : null}
-						</li>
 						{globalContext?.navbarMenuLinks.length > 0 ? (
 							globalContext?.navbarMenuLinks.map((item: any, keys: number) => (
 								<Fragment key={keys}>
-									<li className="border-b-[1px] border-yellow-dark border-opacity-50">
-										<Link
-											href={item?.node?.url}
-											className="block py-4 text-base font-semibold text-white hover:text-red-Two"
+									{item?.node?.url === "/about" ? (
+										<li
+											onClick={displayAboutUsSublinks}
+											className="relative border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
 										>
-											{item?.node?.label}
-										</Link>
-									</li>
+											<span className="py-4 flex flex-row justify-between items-center gap-2">
+												<Link
+													href="/about"
+													className="text-white text-base font-semibold text-center tracking-[0.05rem] hover:text-red-Two transition-all ease-in-out duration-500"
+												>
+													About Us
+												</Link>
+												<Image
+													width={550}
+													height={550}
+													alt="White Arrow Icon"
+													src="/img/navigation-menu-dropdown-arrow-white.png"
+													className="w-[25px] h-[25px] object-contain object-center"
+												/>
+											</span>
+											{aboutUsSublinksOpen ? (
+												<>
+													<motion.ul
+														initial={initialTwo}
+														whileInView={stagger}
+														viewport={{once: true}}
+														className={
+															styles.aboutUsSublinks +
+															` flex flex-col my-4 z-[999]`
+														}
+													>
+														{/* Menu Link*/}
+														{globalContext?.aboutUsSublinks?.length > 0 ? (
+															globalContext?.aboutUsSublinks?.map(
+																(item: any, keys: any) => (
+																	<Fragment key={keys}>
+																		<Link href={item?.node?.url}>
+																			<li
+																				className={`${
+																					keys < 1
+																						? "border-t-[1px] border-darkGrey border-opacity-50"
+																						: "border-t-[0px]"
+																				} hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack`}
+																			>
+																				<Link
+																					href={item?.node?.url}
+																					className="block p-4 text-base font-semibold"
+																				>
+																					{item?.node?.label}
+																				</Link>
+																			</li>
+																		</Link>
+																	</Fragment>
+																)
+															)
+														) : (
+															<></>
+														)}
+													</motion.ul>
+												</>
+											) : null}
+										</li>
+									) : item?.node?.label === "Our Services" ? (
+										<li
+											onClick={displayBusinessServicesSublinks}
+											className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
+										>
+											<div className="py-4 flex flex-row justify-between items-center gap-2">
+												<span className="text-white text-base font-semibold text-center tracking-[0.05rem]hover:text-red-Two transition-all ease-in-out duration-500">
+													Our Services
+												</span>
+												<Image
+													width={550}
+													height={550}
+													alt="White Arrow Icon"
+													src="/img/navigation-menu-dropdown-arrow-white.png"
+													className="w-[25px] h-[25px] object-contain object-center"
+												/>
+											</div>
+											{businessServicesSublinksOpen ? (
+												<>
+													<motion.ul
+														initial={initialTwo}
+														whileInView={stagger}
+														viewport={{once: true}}
+														className={
+															styles.businessServicesSublinks +
+															` flex flex-col my-4 z-[999]`
+														}
+													>
+														{/* Menu Link*/}
+														{globalContext?.businessServicesSublinks?.length >
+														0 ? (
+															globalContext?.businessServicesSublinks?.map(
+																(item: any, keys: any) => (
+																	<Fragment key={keys}>
+																		<Link href={item?.node?.url}>
+																			<li
+																				className={`${
+																					keys < 1
+																						? "border-t-[1px] border-darkGrey border-opacity-50"
+																						: "border-t-[0px]"
+																				} hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack`}
+																			>
+																				<Link
+																					href={item?.node?.url}
+																					className="block p-4 text-base font-semibold"
+																				>
+																					{item?.node?.label}
+																				</Link>
+																			</li>
+																		</Link>
+																	</Fragment>
+																)
+															)
+														) : (
+															<></>
+														)}
+													</motion.ul>
+												</>
+											) : null}
+										</li>
+									) : item?.node?.url === "/career" ? (
+										<li
+											onClick={displayCareerSublinks}
+											className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
+										>
+											<div className="py-4 flex flex-row justify-between items-center gap-2">
+												<span className="text-white text-base font-semibold text-center tracking-[0.05rem]hover:text-red-Two transition-all ease-in-out duration-500">
+													<Link
+														href="/career"
+														className="text-white text-base font-semibold text-center tracking-[0.05rem] hover:text-red-Two transition-all ease-in-out duration-500"
+													>
+														Career
+													</Link>
+												</span>
+												<Image
+													width={550}
+													height={550}
+													alt="White Arrow Icon"
+													src="/img/navigation-menu-dropdown-arrow-white.png"
+													className="w-[25px] h-[25px] object-contain object-center"
+												/>
+											</div>
+											{careerSublinksOpen ? (
+												<>
+													<ul
+														className={
+															styles.careerServicesSublinks +
+															` flex flex-col my-4 z-[999]`
+														}
+													>
+														<li className="hover:border-lightGreyTwo hover:bg-lightGreyTwo border-y-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack">
+															<Link
+																href="/job-positions"
+																className="block p-4 text-base font-semibold"
+															>
+																Job Positions
+															</Link>
+														</li>
+													</ul>
+												</>
+											) : null}
+										</li>
+									) : (
+										<li className="border-b-[1px] border-yellow-dark border-opacity-50">
+											<Link
+												href={item?.node?.url}
+												className="block py-4 text-base font-semibold text-white hover:text-red-Two"
+											>
+												{item?.node?.label}
+											</Link>
+										</li>
+									)}
 								</Fragment>
 							))
 						) : (
