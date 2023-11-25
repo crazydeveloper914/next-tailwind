@@ -1,8 +1,8 @@
 "use client";
 
 // Imports
-import {FC, useState} from "react";
 import postHog from "posthog-js";
+import {FC, useState} from "react";
 import {motion} from "framer-motion";
 import Paragraph from "../Elements/Paragraph";
 import {fadeInUp, initial, stagger} from "@/animations/animations";
