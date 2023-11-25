@@ -9,6 +9,9 @@ import {stagger, initial} from "../../animations/animations";
 // Styling
 import styles from "../../styles/components/GoogleReviews.module.scss";
 
+// Components
+import Paragraph from "../Elements/Paragraph";
+
 const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 	name,
 	date,
@@ -25,10 +28,13 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 				viewport={{once: true}}
 				className={
 					styles.googleReviews +
-					" flex flex-col justify-start gap-4 p-8 border-2 border-solid border-yellow-default min-h-[400px] sm:min-h-[225px]"
+					" flex flex-col justify-start gap-4 p-8 w-full h-full border-[5px] border-lightGrey min-h-[200px] sm:min-h-[225px]"
 				}
+				style={{
+					boxShadow: "28px 28px 2px -20px rgba(0,0,0,0.1)",
+				}}
 			>
-				<div className="flex flex-row justify-between item-center">
+				<div className="flex justify-between items-center">
 					<div className="flex flex-col gap-4 mx-auto sm:mx-0 sm:flex-row">
 						<Image
 							width={500}
@@ -39,10 +45,10 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 									? `${profilePhoto}`
 									: `/img/logos/default-avatar-profile.jpg`
 							}
-							className="object-cover object-center mx-auto sm:mx-0 w-16 h-16 transition-all duration-200 ease-in-out rounded-full cursor-pointer ring-[3px] ring-yellow-default"
+							className="object-cover object-center mx-auto sm:mx-0 w-12 h-12 transition-all duration-200 ease-in-out rounded-full cursor-pointer ring-[3px] ring-red-Two"
 						/>
 						<div className="flex flex-col gap-2">
-							<span className="font-semibold tracking-normal text-center text-black lg:text-left text-medium">
+							<span className="font-semibold tracking-normal text-center text-black lg:text-left text-base">
 								{name}
 							</span>
 							<span className="flex flex-row items-center justify-start gap-1 text-lg font-semibold tracking-normal text-center text-black">
@@ -107,11 +113,10 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 						/>
 					</svg>
 				</div>
-				<div className="flex flex-col gap-4 mt-4">
-					<span className="max-w-lg text-base tracking-normal text-center text-black lg:text-left sm:text-paragraph">
-						{textarea}
-					</span>
-				</div>
+				<Paragraph
+					content={textarea}
+					tailwindStyling="max-w-lg mt-4 text-black text-base text-center lg:text-left overflow-hidden"
+				/>
 			</motion.div>
 		</>
 	);

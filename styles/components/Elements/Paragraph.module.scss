@@ -19,10 +19,14 @@
 
 	ul,
 	ol {
-		@apply px-4 py-4 sm:px-10 flex flex-col items-baseline justify-center border-l-2 border-red-dark;
+		@apply p-4 flex gap-2 sm:px-6 flex flex-col items-baseline justify-center border-l-2 border-red-dark;
 
 		li {
-			@apply px-0 list-disc text-left;
+			@apply px-2 list-disc text-left ml-4;
+
+			&::marker {
+				@apply ml-2;
+			}
 		}
 	}
 

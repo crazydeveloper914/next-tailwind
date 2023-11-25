@@ -75,7 +75,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			<div
 				className={
 					styles.jumboContentSectionCard +
-					` relative py-10 overflow-hidden bg-center bg-no-repeat bg-cover ${backgroundColor}`
+					` relative pb-20 pt-10 sm:py-10 overflow-hidden bg-center bg-no-repeat bg-cover ${backgroundColor}`
 				}
 				style={{
 					backgroundImage: `url("${backgroundImage}")`,
