@@ -70,7 +70,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 					clipPath: `polygon(0 0, 69% 0, 100% 0, 100% 98%, 28% 95%, 0 98%)`,
 				}}
 			>
-				<div className="container m-auto flex flex-col gap-16 lg:gap-x-24">
+				<div className="container mx-auto flex flex-col gap-16 lg:gap-x-24">
 					<motion.div
 						initial={initial}
 						whileInView={stagger}
