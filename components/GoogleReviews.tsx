@@ -61,7 +61,7 @@ const GoogleReviews: FC<IGoogleReviews> = ({
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="grid py-10 gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-between"
+					className="grid h-fit py-10 gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-between"
 				>
 					{reviewsArray?.length > 0 ? (
 						reviewsArray?.map((item: any, keys: any) => (
