@@ -28,7 +28,7 @@ const GoogleReviewsCard: FC<IGoogleReviewsCard> = ({
 				viewport={{once: true}}
 				className={
 					styles.googleReviews +
-					" flex flex-col justify-start gap-4 p-8 w-full h-full border-[5px] border-lightGrey min-h-fit lg:min-h-[225px]"
+					" flex flex-col justify-start gap-4 p-8 w-full h-full border-[5px] border-lightGrey min-h-[200px] lg:min-h-[225px]"
 				}
 				style={{
 					boxShadow: "28px 28px 2px -20px rgba(0,0,0,0.1)",
