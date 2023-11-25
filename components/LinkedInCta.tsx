@@ -48,7 +48,9 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 								displayLinkedinIcon ? "flex-col sm:flex-row" : "flex-row"
 							} justify-center items-center gap-4 text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark`}
 						>
-							<span className="w-full">{buttonLink?.title}</span>
+							<span className="w-full mx-auto sm:mx-0">
+								{buttonLink?.title}
+							</span>
 							<span className="w-max">
 								{displayLinkedinIcon ? (
 									<>
