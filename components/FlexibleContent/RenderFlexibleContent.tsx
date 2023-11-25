@@ -30,6 +30,7 @@ import ExecutiveLeadership from "../ExecutiveLeadership";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import RequestQuoteFormBlocks from "../RequestQuoteFormBlocks";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
+import JobPositionsThreeCards from "../JobPositionsThreeCards";
 import TitleContentValuesBlocks from "../TitleContentValuesBlocks";
 import IndividualExecutiveMember from "../IndividualExecutiveMember";
 import OperationalInsightsThreeCards from "../OperationalInsightsThreeCards";
@@ -219,6 +220,15 @@ const RenderFlexibleContent: FC = () => {
 						  `${FlexibleContent}_JobPositionsGrid` ? (
 							<>
 								<JobPositions
+									title={item?.title}
+									paragraph={item?.paragraph}
+									highlightText={item?.highlightText}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_JobPositionsThreeCardsGrid` ? (
+							<>
+								<JobPositionsThreeCards
 									title={item?.title}
 									paragraph={item?.paragraph}
 									highlightText={item?.highlightText}

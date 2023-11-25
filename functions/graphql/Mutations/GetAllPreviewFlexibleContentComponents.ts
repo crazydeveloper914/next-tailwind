@@ -521,6 +521,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 								paragraph
 								highlightText
 							}
+							... on ${postTypeFlexibleContent}_JobPositionsThreeCardsGrid {
+								fieldGroupName
+								title
+								paragraph
+								highlightText
+							}
 							... on ${postTypeFlexibleContent}_VideoBlock {
 								fieldGroupName
 								title

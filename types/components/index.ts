@@ -620,6 +620,11 @@ export type IJobPositions = {
 	paragraph: string;
 	highlightText: string;
 };
+export type IJobPositionsThreeCardsGrid = {
+	title: string;
+	paragraph: string;
+	highlightText: string;
+};
 
 // Global
 export type ILayout = {
