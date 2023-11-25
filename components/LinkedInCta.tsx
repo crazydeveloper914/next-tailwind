@@ -43,7 +43,11 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 							buttonLink?.url ? "block w-fit mx-auto max-w-[350px]" : "hidden"
 						}
 					>
-						<span className="font-bold px-6 flex justify-center items-center text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark">
+						<span
+							className={`font-bold px-6 flex ${
+								displayLinkedinIcon ? "flex-col sm:flex-row gap-4" : "flex-row"
+							} justify-center items-center text-primary text-white border-2 border-white mx-auto p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark`}
+						>
 							<span>{buttonLink?.title}</span>
 							<span>
 								{displayLinkedinIcon ? (
@@ -53,7 +57,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 											width="59.65"
 											viewBox="0 0 59.65 35"
 											xmlns="http://www.w3.org/2000/svg"
-											className="ml-4 w-full h-[40px] object-contain object-center"
+											className="ml-0 sm:ml-4 w-full h-[40px] object-contain object-center"
 										>
 											<defs>
 												<clipPath id="clipPath">
