@@ -41,6 +41,53 @@ p {
 	@apply py-2;
 }
 
+// Google Translate Navigation SVG
+.openGoogleTranslateSVG,
+.closeGoogleTranslateSVG:hover {
+	fill: none;
+
+	g,
+	path {
+		fill: none;
+	}
+	line {
+		fill: none;
+	}
+}
+
+#google_translate_element {
+	select {
+		border: none;
+		@apply py-[10px] px-[8px] border-none bg-[#e1e5e7] rounded-sm text-pureBlack;
+
+		option {
+			@apply text-pureBlack py-1;
+		}
+	}
+
+	.goog-te-gadget {
+		@apply relative h-fit;
+	}
+
+	.goog-te-gadget .goog-te-combo {
+		border: none;
+		color: $pureBlack !important;
+		@apply my-0;
+
+		p {
+			@apply hidden;
+		}
+	}
+
+	.goog-te-gadget {
+		color: $white !important;
+	}
+
+	.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+		display: none !important;
+	}
+}
+
 /* SQUARE BOX CUBES
 PAGE LOADING ANIMATION */
 .spinner-wrapper {

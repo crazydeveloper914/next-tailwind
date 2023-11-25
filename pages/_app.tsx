@@ -35,6 +35,7 @@ import {getAllExecutiveLeadershipContent} from "@/functions/graphql/Queries/GetA
 // Components
 import GlobalContextProvider from "@/components/Context/GlobalContextProvider";
 import PostHogContextProvider from "@/components/Context/PostHogProviderContext";
+import GoogleTranslateContextProvider from "@/components/Context/GoogleTranslateContextProvider";
 
 export default function App({
 	Component,
@@ -111,18 +112,20 @@ export default function App({
 	return (
 		<ApolloProvider client={client}>
 			<GlobalContextProvider globalProps={globalProps}>
-				<motion.div
-					exit={{
-						opacity: 0,
-					}}
-					initial="initial"
-					animate="animate"
-				>
-					<LoadingSquares />
-					{/* Cookie Policy Pop Up */}
-					<PostHogContextProvider />
-					<Component {...pageProps} />
-				</motion.div>
+				<GoogleTranslateContextProvider>
+					<motion.div
+						exit={{
+							opacity: 0,
+						}}
+						initial="initial"
+						animate="animate"
+					>
+						<LoadingSquares />
+						{/* Cookie Policy Pop Up */}
+						<PostHogContextProvider />
+						<Component {...pageProps} />
+					</motion.div>
+				</GoogleTranslateContextProvider>
 			</GlobalContextProvider>
 		</ApolloProvider>
 	);

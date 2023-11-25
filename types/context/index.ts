@@ -239,6 +239,9 @@ export type IGlobalContextProvider = {
 	globalProps: IGlobalContext;
 	children: React.ReactNode;
 };
+export type IGoogleTranslateContextProvider = {
+	children: React.ReactNode;
+};
 export type IPageContext = {
 	seo: ISeo;
 	content: IContent;
