@@ -22,7 +22,8 @@ const OurServices: FC<IOurServices> = ({
 		<>
 			<div
 				className={
-					styles.ourServices + " py-40 sm:py-24 px-4 bg-lightGreyTwo relative"
+					styles.ourServices +
+					" py-12 lg:py-40 sm:py-24 px-4 bg-lightGreyTwo relative"
 				}
 			>
 				<div className="container relative m-auto flex flex-col items-center">
@@ -48,7 +49,7 @@ const OurServices: FC<IOurServices> = ({
 							tailwindStyling="lg:max-w-3xl text-pureBlack leading-[1.75rem] text-base sm:text-paragraph text-center"
 						/>
 					</div>
-					<div className="w-full relative grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 py-16 px-0 sm:px-4 gap-12 2xl:gap-6 items-start justify-center">
+					<div className="w-full relative grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 py-6 lg:py-16 px-0 sm:px-4 gap-6 items-start justify-center">
 						{servicesGrid?.length > 0 ? (
 							servicesGrid.map((item: any, keys: any) => (
 								<Fragment key={keys}>
