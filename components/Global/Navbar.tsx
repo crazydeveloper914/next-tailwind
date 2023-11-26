@@ -389,7 +389,7 @@ const Navbar: FC = () => {
 								aria-label="Google Translate Options Button"
 								className={
 									revealGoogleTranslateOptions
-										? "block absolute p-4 bg-white w-fit top-[55px] right-[0px]"
+										? "block absolute p-4 pb-0 bg-white w-fit top-[55px] right-[0px]"
 										: "hidden"
 								}
 							/>
