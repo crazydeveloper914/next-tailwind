@@ -37,7 +37,6 @@ const IndividualExecutiveMember: FC<IIndividualExecutiveMember> = ({
 					" py-10 bg-pureBlack overflow-hidden bg-center bg-no-repeat bg-cover"
 				}
 				style={{
-					clipPath: `polygon(0 0, 100% 0, 100% 98%, 83% 93%, 0 100%, 0 100%)`,
 					backgroundImage: `url("/svg/background/blob-scene-haikei-black-pureblack.svg")`,
 				}}
 			>
