@@ -1,4 +1,5 @@
 // Imports
+import Link from "next/link";
 import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
 import {useGlobalContext} from "@/context/global";
@@ -172,18 +173,20 @@ const JobPositionsThreeCardsGrid: FC<IJobPositionsThreeCardsGrid> = ({
 					)}
 				</motion.div>
 				{
-					<motion.div
-						initial={initial}
-						whileInView={fadeInUp}
-						viewport={{once: true}}
-						className="flex items-center justify-center"
-					>
-						<ButtonBorderSliced
-							fullWidth={false}
-							title="View All Vacancies"
-							tailwindColor="red-default"
-						/>
-					</motion.div>
+					<Link href="/job-positions">
+						<motion.div
+							initial={initial}
+							whileInView={fadeInUp}
+							viewport={{once: true}}
+							className="flex items-center justify-center"
+						>
+							<ButtonBorderSliced
+								fullWidth={false}
+								title="View All Vacancies"
+								tailwindColor="red-default"
+							/>
+						</motion.div>
+					</Link>
 				}
 			</div>
 		</>
