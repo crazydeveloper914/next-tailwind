@@ -96,7 +96,9 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockOne?.icon?.sourceUrl ? "block" : "hidden"
+										valuesBlockOne?.icon?.sourceUrl
+											? "block w-1/4 sm:w-1/2 lg:w-full"
+											: "hidden"
 									}
 								>
 									<Image
@@ -137,7 +139,9 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockTwo?.icon?.sourceUrl ? "block" : "hidden"
+										valuesBlockTwo?.icon?.sourceUrl
+											? "block w-1/4 sm:w-1/2 lg:w-full"
+											: "hidden"
 									}
 								>
 									<Image
@@ -227,7 +231,9 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockFour?.icon?.sourceUrl ? "block" : "hidden"
+										valuesBlockFour?.icon?.sourceUrl
+											? "block w-1/4 sm:w-1/2 lg:w-full"
+											: "hidden"
 									}
 								>
 									<Image
@@ -255,7 +261,9 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								</span>
 								<span
 									className={
-										contentFourOpen ? "text-black w-full" : "text-white"
+										contentFourOpen
+											? "text-black w-3/4 sm:w-1/2 lg:w-full"
+											: "text-white"
 									}
 								>
 									{valuesBlockFour?.blockTitle}

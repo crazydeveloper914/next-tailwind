@@ -203,10 +203,10 @@ const Navbar: FC = () => {
 																	globalContext?.aboutUsSublinks?.map(
 																		(item: any, keys: any) => (
 																			<Fragment key={keys}>
-																				<Link href={item?.node?.url}>
+																				<Link href={`${item?.node?.url}`}>
 																					<li className="w-full group hover:bg-red-default border-b-[2px] border-lightGrey hover:border-red-default">
 																						<Link
-																							href={item?.node?.url}
+																							href={`${item?.node?.url}`}
 																							className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
 																						>
 																							{item?.node?.label}
@@ -256,7 +256,7 @@ const Navbar: FC = () => {
 											<li className="relative">
 												<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
 													<Link
-														href={item?.node?.url}
+														href={`${item?.node?.url}`}
 														className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
 													>
 														{item?.node?.label}
@@ -298,7 +298,7 @@ const Navbar: FC = () => {
 										) : (
 											<li className="hidden xl:block">
 												<Link
-													href={item?.node?.url}
+													href={`${item?.node?.url}`}
 													className="text-white text-base text-center tracking-[0.05rem] hover:text-yellow-default transition-all ease-in-out duration-500"
 												>
 													{item?.node?.label}

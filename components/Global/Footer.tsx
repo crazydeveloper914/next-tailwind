@@ -227,19 +227,34 @@ const Footer: FC = () => {
 									globalContext?.footerMenuLinks?.map(
 										(item: any, keys: any) => (
 											<Fragment key={keys}>
-												<motion.li
-													className="px-0"
-													initial={initial}
-													whileInView={fadeInUp}
-													viewport={{once: true}}
-												>
-													<Link
-														href={item?.node?.url}
-														className="text-white text-base text-center lg:text-left hover:text-red-Two"
+												{item?.node?.label === "Our Services" ? (
+													<>
+														<motion.li
+															className="px-0"
+															initial={initial}
+															whileInView={fadeInUp}
+															viewport={{once: true}}
+														>
+															<span className="text-white text-base text-center lg:text-left cursor-default">
+																{item?.node?.label}
+															</span>
+														</motion.li>
+													</>
+												) : (
+													<motion.li
+														className="px-0"
+														initial={initial}
+														whileInView={fadeInUp}
+														viewport={{once: true}}
 													>
-														{item?.node?.label}
-													</Link>
-												</motion.li>
+														<Link
+															href={`${item?.node?.url}`}
+															className="text-white text-base text-center lg:text-left hover:text-red-Two"
+														>
+															{item?.node?.label}
+														</Link>
+													</motion.li>
+												)}
 											</Fragment>
 										)
 									)
@@ -269,7 +284,7 @@ const Footer: FC = () => {
 													viewport={{once: true}}
 												>
 													<Link
-														href={item?.node?.url}
+														href={`${item?.node?.url}`}
 														className="text-white text-base text-center lg:text-left hover:text-red-Two"
 													>
 														{item?.node?.label}

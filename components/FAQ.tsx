@@ -138,7 +138,7 @@ const FAQ: FC<IFAQ> = ({
 											(item: any, keys: any) => (
 												<Fragment key={keys}>
 													<Link
-														href={item?.node?.url}
+														href={`${item?.node?.url}`}
 														target={item?.node?.target}
 													>
 														<motion.button
