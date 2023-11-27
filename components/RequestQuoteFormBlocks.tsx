@@ -44,6 +44,7 @@ const RequestQuoteFormBlocks: FC<IRequestQuoteFormBlocks> = ({
 	return (
 		<>
 			<div
+			id="RequestQuoteFormBlocks"
 				className={
 					styles.requestQuoteFormBlocks +
 					" bg-white px-4 py-6 md:py-10 lg:py-20 bg-center bg-no-repeat bg-cover"
