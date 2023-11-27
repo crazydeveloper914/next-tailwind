@@ -173,12 +173,14 @@ const JobPositionsThreeCardsGrid: FC<IJobPositionsThreeCardsGrid> = ({
 					)}
 				</motion.div>
 				{
-					<Link href="/job-positions">
+					<Link
+						href="/job-positions"
+						className="flex items-center justify-center w-fit mx-auto"
+					>
 						<motion.div
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="flex items-center justify-center"
 						>
 							<ButtonBorderSliced
 								fullWidth={false}
