@@ -88,7 +88,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentOne}
-								className={`p-8 h-full flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentOneOpen
 										? "bg-white"
 										: "bg-red-default hover:bg-red-Two"
@@ -96,9 +96,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockOne?.icon?.sourceUrl
-											? "block w-1/4 sm:w-1/2 lg:w-1/4"
-											: "hidden"
+										valuesBlockOne?.icon?.sourceUrl ? "block w-1/4" : "hidden"
 									}
 								>
 									<Image
@@ -125,11 +123,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 									/>
 								</span>
 								<span
-									className={
-										contentOneOpen
-											? "text-black w-3/4 sm:w-1/2 lg:w-3/4"
-											: "text-white"
-									}
+									className={contentOneOpen ? "text-black w-3/4" : "text-white"}
 								>
 									{valuesBlockOne?.blockTitle}
 								</span>
@@ -139,15 +133,13 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentTwo}
-								className={`p-8 h-full flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentTwoOpen ? "bg-white" : "bg-red-dark hover:bg-red-Two"
 								}`}
 							>
 								<span
 									className={
-										valuesBlockTwo?.icon?.sourceUrl
-											? "block w-1/4 sm:w-1/2 lg:w-1/4"
-											: "hidden"
+										valuesBlockTwo?.icon?.sourceUrl ? "block w-1/4" : "hidden"
 									}
 								>
 									<Image
@@ -174,11 +166,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 									/>
 								</span>
 								<span
-									className={
-										contentTwoOpen
-											? "text-black w-3/4 sm:w-1/2 lg:w-3/4"
-											: "text-white"
-									}
+									className={contentTwoOpen ? "text-black w-3/4" : "text-white"}
 								>
 									{valuesBlockTwo?.blockTitle}
 								</span>
@@ -188,7 +176,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentThree}
-								className={`p-8 h-full flex sm:gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
+								className={`p-8 flex sm:gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentThreeOpen
 										? "bg-white"
 										: "bg-red-darker hover:bg-red-Two"
@@ -196,9 +184,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockThree?.icon?.sourceUrl
-											? "block w-1/4 sm:w-1/2 lg:w-1/4"
-											: "hidden"
+										valuesBlockThree?.icon?.sourceUrl ? "block w-1/4" : "hidden"
 									}
 								>
 									<Image
@@ -226,9 +212,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								</span>
 								<span
 									className={
-										contentThreeOpen
-											? "text-black w-3/4 sm:w-1/2 lg:w-3/4"
-											: "text-white"
+										contentThreeOpen ? "text-black w-3/4" : "text-white"
 									}
 								>
 									{valuesBlockThree?.blockTitle}
@@ -239,7 +223,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentFour}
-								className={`p-8 h-full flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
+								className={`p-8 flex gap-4 justify-center items-center sm:justify-start text-center sm:text-left text-medium font-extrabold ${
 									contentFourOpen
 										? "bg-white"
 										: "bg-red-darkerTwo hover:bg-red-Two"
@@ -247,9 +231,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 							>
 								<span
 									className={
-										valuesBlockFour?.icon?.sourceUrl
-											? "block w-1/4 sm:w-1/2 lg:w-1/4"
-											: "hidden"
+										valuesBlockFour?.icon?.sourceUrl ? "block w-1/4" : "hidden"
 									}
 								>
 									<Image
@@ -277,9 +259,7 @@ const TitleContentValuesBlocks: FC<ITitleContentValuesBlocks> = ({
 								</span>
 								<span
 									className={
-										contentFourOpen
-											? "text-black w-3/4 sm:w-1/2 lg:w-3/4"
-											: "text-white"
+										contentFourOpen ? "text-black w-3/4" : "text-white"
 									}
 								>
 									{valuesBlockFour?.blockTitle}
